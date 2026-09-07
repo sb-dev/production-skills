@@ -1,0 +1,18 @@
+{
+  "id": "character-performance-skills",
+  "repository": "https://github.com/sb-dev/character-performance-skills",
+  "domain": "character-performance",
+  "status": "proposed",
+  "capabilities": [
+    "character-design",
+    "npc-production",
+    "character-lod",
+    "game-readiness",
+    "locomotion",
+    "retargeting",
+    "procedural-animation",
+    "physics-animation",
+    "animation-evaluation"
+  ],
+  "pactwright": "planned"
+}
