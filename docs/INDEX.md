@@ -15,7 +15,13 @@
 
 ## Research
 
-- `research-logs/cross-domain/2026-09-04-pactwright-production-skills-integration-and-cross-domain-delivery-research.md`
+- `research-logs/2026-09-07-ui-ux-design-skills-new-project-bootstrap-process.md`
+- `research-logs/2026-09-07-production-skills-central-repository-design-specification.md`
+- `research-logs/2026-09-07-production-skills-and-extension-packs-project-family-brief.md`
+- `research-logs/2026-09-04-pactwright-production-skills-integration-and-cross-domain-delivery-research.md`
+- `research-logs/2026-08-20-creative-production-skills-open-source-project-family-organisation-v3.md`
+- `research-logs/2026-08-20-creative-production-skills-new-project-bootstrap-process.md`
+- `research-logs/2026-08-20-extraction-candidates.md`
 
 ## Decisions
 
