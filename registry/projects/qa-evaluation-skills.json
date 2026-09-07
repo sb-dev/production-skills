@@ -1,0 +1,14 @@
+{
+  "id": "qa-evaluation-skills",
+  "repository": "https://github.com/sb-dev/qa-evaluation-skills",
+  "domain": "qa-evaluation",
+  "status": "proposed",
+  "capabilities": [
+    "integration-testing",
+    "game-qa",
+    "performance-testing",
+    "regression-gauntlets",
+    "agent-playtesting"
+  ],
+  "pactwright": "planned"
+}

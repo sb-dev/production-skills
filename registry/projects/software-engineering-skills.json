@@ -1,0 +1,14 @@
+{
+  "id": "software-engineering-skills",
+  "repository": "https://github.com/sb-dev/software-engineering-skills",
+  "domain": "software-engineering",
+  "status": "proposed",
+  "capabilities": [
+    "architecture",
+    "implementation",
+    "testing",
+    "performance",
+    "runtime-engineering"
+  ],
+  "pactwright": "planned"
+}

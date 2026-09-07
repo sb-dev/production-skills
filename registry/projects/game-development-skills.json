@@ -1,0 +1,14 @@
+{
+  "id": "game-development-skills",
+  "repository": "https://github.com/sb-dev/game-development-skills",
+  "domain": "game-development",
+  "status": "proposed",
+  "capabilities": [
+    "gameplay-systems",
+    "prototyping",
+    "test-games",
+    "integration-games",
+    "open-world-systems"
+  ],
+  "pactwright": "planned"
+}

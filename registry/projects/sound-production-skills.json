@@ -1,0 +1,14 @@
+{
+  "id": "sound-production-skills",
+  "repository": "https://github.com/sb-dev/sound-production-skills",
+  "domain": "sound",
+  "status": "proposed",
+  "capabilities": [
+    "sound-design",
+    "foley",
+    "environmental-audio",
+    "vehicle-audio",
+    "spatial-audio"
+  ],
+  "pactwright": "planned"
+}

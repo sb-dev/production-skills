@@ -1,0 +1,14 @@
+{
+  "id": "animation-production-skills",
+  "repository": "https://github.com/sb-dev/animation-production-skills",
+  "domain": "animation",
+  "status": "proposed",
+  "capabilities": [
+    "locomotion",
+    "retargeting",
+    "procedural-animation",
+    "physics-animation",
+    "animation-evaluation"
+  ],
+  "pactwright": "planned"
+}

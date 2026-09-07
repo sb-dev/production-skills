@@ -1,0 +1,14 @@
+{
+  "id": "3d-production-skills",
+  "repository": "https://github.com/sb-dev/3d-production-skills",
+  "domain": "3d-production",
+  "status": "proposed",
+  "capabilities": [
+    "modelling",
+    "materials",
+    "lod",
+    "game-ready-assets",
+    "procedural-geometry"
+  ],
+  "pactwright": "planned"
+}

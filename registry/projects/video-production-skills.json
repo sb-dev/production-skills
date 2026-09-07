@@ -1,0 +1,15 @@
+{
+  "id": "video-production-skills",
+  "repository": "https://github.com/sb-dev/video-production-skills",
+  "domain": "video-cinematography",
+  "status": "mature",
+  "capabilities": [
+    "video-production",
+    "previsualisation",
+    "shot-development",
+    "editorial",
+    "video-evaluation",
+    "extension-packs"
+  ],
+  "pactwright": "planned"
+}

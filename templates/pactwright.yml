@@ -1,0 +1,14 @@
+version: 1
+id: example-production-skills
+
+compatibility:
+  pactwright: "TBD"
+
+bindings:
+  delivery-execution:
+    skills:
+      - example-production
+
+  delivery-review:
+    skills:
+      - example-evaluate

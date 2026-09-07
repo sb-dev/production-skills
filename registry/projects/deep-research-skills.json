@@ -1,0 +1,13 @@
+{
+  "id": "deep-research-skills",
+  "repository": "https://github.com/sb-dev/deep-research-skills",
+  "domain": "deep-research",
+  "status": "proposed",
+  "capabilities": [
+    "evidence-research",
+    "technology-evaluation",
+    "case-studies",
+    "reference-research"
+  ],
+  "pactwright": "planned"
+}

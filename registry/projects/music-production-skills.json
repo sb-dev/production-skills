@@ -1,0 +1,14 @@
+{
+  "id": "music-production-skills",
+  "repository": "https://github.com/sb-dev/music-production-skills",
+  "domain": "music",
+  "status": "mature",
+  "capabilities": [
+    "music-production",
+    "composition",
+    "arrangement",
+    "music-evaluation",
+    "extension-packs"
+  ],
+  "pactwright": "planned"
+}

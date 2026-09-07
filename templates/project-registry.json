@@ -1,0 +1,10 @@
+{
+  "id": "example-production-skills",
+  "repository": "https://github.com/sb-dev/example-production-skills",
+  "domain": "example",
+  "status": "proposed",
+  "capabilities": [
+    "example-capability"
+  ],
+  "pactwright": "planned"
+}

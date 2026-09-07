@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sb-dev.github.io/production-skills/schemas/project-registry.schema.json",
+  "title": "Production Skills Project Registry Entry",
+  "type": "object",
+  "required": [
+    "id",
+    "repository",
+    "domain",
+    "status",
+    "capabilities",
+    "pactwright"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "repository": {
+      "type": "string",
+      "pattern": "^https://github\\.com/sb-dev/[A-Za-z0-9_.-]+$"
+    },
+    "domain": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "proposed",
+        "researching",
+        "specified",
+        "scaffolded",
+        "working",
+        "benchmarked",
+        "mature"
+      ]
+    },
+    "capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string"
+      }
+    },
+    "pactwright": {
+      "enum": [
+        "none",
+        "planned",
+        "compatible"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

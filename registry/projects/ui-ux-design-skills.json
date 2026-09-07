@@ -1,0 +1,13 @@
+{
+  "id": "ui-ux-design-skills",
+  "repository": "https://github.com/sb-dev/ui-ux-design-skills",
+  "domain": "ui-ux",
+  "status": "proposed",
+  "capabilities": [
+    "interaction-design",
+    "game-hud",
+    "accessibility",
+    "user-evaluation"
+  ],
+  "pactwright": "planned"
+}

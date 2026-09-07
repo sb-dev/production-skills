@@ -1,0 +1,14 @@
+{
+  "id": "world-environment-production-skills",
+  "repository": "https://github.com/sb-dev/world-environment-production-skills",
+  "domain": "world-environment-production",
+  "status": "proposed",
+  "capabilities": [
+    "world-design",
+    "real-world-ingestion",
+    "city-production",
+    "modular-environments",
+    "environment-evaluation"
+  ],
+  "pactwright": "planned"
+}

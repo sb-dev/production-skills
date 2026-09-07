@@ -1,0 +1,14 @@
+{
+  "id": "narrative-production-skills",
+  "repository": "https://github.com/sb-dev/narrative-production-skills",
+  "domain": "narrative",
+  "status": "mature",
+  "capabilities": [
+    "narrative-development",
+    "writing",
+    "continuity",
+    "narrative-evaluation",
+    "extension-packs"
+  ],
+  "pactwright": "planned"
+}
