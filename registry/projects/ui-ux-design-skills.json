@@ -2,12 +2,15 @@
   "id": "ui-ux-design-skills",
   "repository": "https://github.com/sb-dev/ui-ux-design-skills",
   "domain": "ui-ux",
-  "status": "proposed",
+  "status": "scaffolded",
   "capabilities": [
+    "user-research",
     "interaction-design",
-    "game-hud",
+    "human-science",
     "accessibility",
-    "user-evaluation"
+    "ux-evaluation",
+    "engineering-handoff",
+    "extension-packs"
   ],
   "pactwright": "planned"
 }
