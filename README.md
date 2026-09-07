@@ -16,6 +16,18 @@ The initial evidence base comes from three mature repositories:
 - [Music Production Skills](https://github.com/sb-dev/music-production-skills)
 - [Video Production Skills](https://github.com/sb-dev/video-production-skills)
 
+Production Skills coming soon:
+
+- `game-development-skills`
+- `software-engineering-skills`
+- `deep-research-skills`
+- `ui-ux-design-skills`
+- `world-environment-production-skills`
+- `3d-production-skills`
+- `character-performance-skills` (`character-production-skills` + `animation-production-skills`)
+- `audio-production-skills` (`music-production-skills` + `sound-production-skills`)
+- `qa-evaluation-skills`
+
 They independently support a common pattern:
 
 ```text
