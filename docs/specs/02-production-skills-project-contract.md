@@ -1,7 +1,7 @@
 # Production Skills Project Contract
 
 **Status:** Canonical  
-**Version:** 1.0  
+**Version:** 1.1  
 **Date:** 7 September 2026
 
 ## 1. Purpose
@@ -21,7 +21,10 @@ A Production Skills project must:
 7. document installation and examples;
 8. separate project-specific instructions from reusable expertise;
 9. keep domain-specific artefacts and stages domain-owned;
-10. participate in the family registry.
+10. participate in the family registry;
+11. define a first-class Extension Pack architecture for mature use;
+12. demonstrate progressive production responsibility through public examples;
+13. validate installation from outside the source repository before maturity claims are made.
 
 ## 3. Canonical specification model
 
@@ -46,7 +49,10 @@ Existing mature repositories do not require immediate cosmetic migration. Equiva
 - domain boundary;
 - production principles;
 - skill architecture;
-- non-goals.
+- execution architecture;
+- cost / fidelity / commitment policy;
+- non-goals;
+- system acceptance.
 
 ### Spec 02 owns
 
@@ -54,16 +60,20 @@ Existing mature repositories do not require immediate cosmetic migration. Equiva
 - artefacts;
 - production state;
 - approval/selection where relevant;
+- cheap representations;
 - lineage;
 - handoffs;
+- failure taxonomy;
 - domain repair behaviour.
 
 ### Spec 03 owns
 
 - repository structure;
-- SKILL.md and command contracts;
+- `SKILL.md` and command contracts;
+- skill self-containment;
 - installation;
 - tools and scripts;
+- CI expectations;
 - technical acceptance.
 
 ### Spec 04 owns
@@ -71,20 +81,32 @@ Existing mature repositories do not require immediate cosmetic migration. Equiva
 - testing layers;
 - domain benchmark;
 - regression strategy;
-- release quality.
+- progressive-example coverage;
+- Extension Pack evaluation;
+- release quality;
+- measured evidence and limitations.
 
 ### Spec 05 owns
 
 - Extension Pack semantics for the domain;
+- pack dimensions and activation;
+- precedence against explicit instructions and approved work;
 - pack boundaries;
-- creation and validation.
+- core-skill effects;
+- pack-aware evaluation;
+- pack packaging;
+- pack creation and validation.
 
 ### Spec 06 owns
 
 - current pack catalogue;
+- production profile for each pack;
 - showcase examples;
-- example prompts;
+- exact copyable generation prompts;
+- pack-specific evaluation expectations;
 - maturity/status.
+
+The pack contract and the actual catalogue remain separate because they evolve for different reasons.
 
 ## 4. Repository baseline
 
@@ -100,7 +122,8 @@ A new repository should begin from the smallest useful form of:
 ├── docs/
 ├── skills/
 ├── examples/
-├── evals/
+├── evals/                       # where useful
+├── benchmarks/                  # where useful
 ├── tests/
 ├── tools/                       # where useful
 ├── integrations/                # optional
@@ -109,7 +132,64 @@ A new repository should begin from the smallest useful form of:
 
 Directories must not be created solely for visual symmetry. Add them when they contain working material.
 
-## 5. Skill package contract
+## 5. Public README contract
+
+The README is a product surface, not only a repository description.
+
+Mature repositories should follow the proven public structure established by Video Production Skills while adapting it to the domain.
+
+It should make visible, where relevant:
+
+- project positioning and production capabilities;
+- approval, cost, fidelity or commitment control;
+- canonical installation;
+- a strong Level 1 quick start;
+- five progressive example levels;
+- three primary examples per level;
+- project structure that grows with the work;
+- core skills;
+- Extension Packs;
+- execution layer;
+- testing and benchmark entry points;
+- documentation index;
+- project boundary;
+- contributing and licence information.
+
+The README must not claim examples, packs, benchmark results or provider support that are only planned.
+
+## 6. Progressive example contract
+
+Mature projects target:
+
+```text
+5 progressive levels
+×
+3 primary examples per level
+=
+15 primary progressive examples
+```
+
+The exact level names and meaning remain domain-owned.
+
+The three examples at each level should be selected as a complementary set that maximises capability coverage rather than as three cosmetic variants of the same production pattern.
+
+Across the 15 primary examples, the repository should demonstrate the important combination of:
+
+- core skills;
+- commands;
+- artefacts;
+- execution paths;
+- production challenges;
+- preservation and repair behaviour;
+- quality dimensions;
+- Extension Pack interaction;
+- cross-domain handoffs where relevant.
+
+Every primary example must include its complete copyable generation prompt.
+
+Additional examples may exist as supplementary showcases, benchmark fixtures or regressions without appearing in the primary README progression.
+
+## 7. Skill package contract
 
 An installable skill should normally be self-contained:
 
@@ -127,7 +207,7 @@ Only include subdirectories used by the skill.
 
 A skill must not require undocumented repository-relative files that disappear when the skill is installed independently.
 
-## 6. Command contract
+## 8. Command contract
 
 Commands are bounded production operations internal to the skill architecture.
 
@@ -141,13 +221,13 @@ They exist to improve:
 
 Commands must not silently become lifecycle stages in Pactwright or a universal family workflow engine.
 
-## 7. References and assets
+## 9. References and assets
 
 Reusable domain knowledge should be placed near the skills that consume it. Shared repository-level references are acceptable when multiple skills genuinely need the same source.
 
 Project-specific briefs, research or accepted project decisions must not be promoted into reusable skill references unless they have been generalised and validated.
 
-## 8. Tools and provider interaction
+## 10. Tools and provider interaction
 
 Production Skills may use:
 
@@ -161,9 +241,44 @@ Production Skills may use:
 
 Provider capabilities should stay below the production layer. A Production Skill should express the production decision and select the execution mechanism rather than make the provider implementation the workflow.
 
-## 9. Standalone installation
+## 11. Extension Pack contract
+
+A mature Production Skills project defines a domain-native specialisation mechanism through Extension Packs or equivalent semantics.
+
+The core skills must remain useful without a pack.
+
+Each implemented catalogue pack should:
+
+- materially change production behaviour;
+- remain self-contained and installable where applicable;
+- respect explicit instructions and approved work;
+- define pack-aware evaluation;
+- include at least one realistic showcase;
+- include the exact copyable generation prompt for that showcase;
+- have behavioural evaluation coverage;
+- support meaningful comparison of core vs core+pack behaviour.
+
+A mature project should also provide a domain-native pack-authoring skill or equivalent authoring workflow that checks whether an existing pack already satisfies the need before creating a new one.
+
+## 12. Standalone installation
 
 README documentation must show how to install or consume the skills without Pactwright.
+
+Before a project is considered mature, installation must be proven from outside the source checkout.
+
+The project should distinguish:
+
+```text
+local repository validation
+```
+
+from:
+
+```text
+clean consumer-project installation smoke test
+```
+
+where the selected Agent Skills can be discovered and used without undocumented repository-local dependencies.
 
 Pactwright-compatible repositories may additionally expose:
 
@@ -174,7 +289,7 @@ integrations/
 
 The integration is optional and one-way.
 
-## 10. Pactwright manifest boundary
+## 13. Pactwright manifest boundary
 
 A Pactwright integration manifest may declare:
 
@@ -193,47 +308,71 @@ It must not define:
 - provider routing;
 - the domain production workflow itself.
 
-## 11. New-project bootstrap lifecycle
+## 14. New-project bootstrap lifecycle
 
-Every new family project follows the central bootstrap process:
+Every new family project first generates a domain-specific bootstrap specification using `docs/bootstrap/README.md` and the source recipes under `docs/bootstrap/`.
+
+The family-level progression is:
 
 ```text
 boundary
 → domain research
 → AI/tool research
-→ workflow model
-→ canonical specs
-→ repository scaffold
-→ core skills
-→ command decomposition
+→ workflow + artefacts
+→ core skills + commands
+→ Extension Pack architecture
+→ 5×3 progressive examples
 → benchmarks/evals
-→ Extension Packs
+→ six canonical specs
+→ public README design
+→ repository scaffold
+→ core vertical
+→ progressive + pack implementation
+→ local and clean external validation
 → optional Pactwright integration
 → registry promotion
+→ shared-abstraction review
 ```
 
-The detailed process lives in `docs/bootstrap/new-project-process.md`.
+The exact domain-specific stages may differ.
 
-## 12. Working-project minimum
+## 15. Working-project minimum
 
 A project may move to `working` only when it can demonstrate at least one meaningful end-to-end domain workflow using its installed skills.
 
-## 13. Benchmarked-project minimum
+The demonstrated behaviour must come from implemented repository surfaces, not only planned specifications.
+
+## 16. Benchmarked-project minimum
 
 A project may move to `benchmarked` only when:
 
 - its domain benchmark exists;
 - benchmark fixtures are reproducible enough to compare changes;
-- command-level or skill-level failures can be isolated;
-- at least one regression can be detected.
+- command-level or skill-level failures can be isolated where applicable;
+- at least one regression can be detected;
+- structural correctness and domain quality remain distinguishable;
+- implemented Extension Packs have corresponding evaluation coverage.
 
-## 14. Mature-project minimum
+## 17. Mature-project minimum
 
-A project may move to `mature` when its core workflow, evaluation approach, examples and specialisation mechanism have been demonstrated in practice.
+A project may move to `mature` when evidence demonstrates that:
+
+- the core workflow works end to end;
+- the six specification responsibilities are represented;
+- the public README accurately exposes the product;
+- five progressive levels and three primary examples per level are represented or an explicit temporary migration note exists for an older mature repository;
+- primary examples contain copyable prompts;
+- domain evaluation and regression protection are operational;
+- the Extension Pack contract and catalogue are represented;
+- implemented catalogue packs have showcases and behavioural eval coverage;
+- a pack-authoring capability or equivalent workflow exists;
+- the core remains useful without packs;
+- installation works from a clean consumer project;
+- quality claims are backed by measured evidence or explicitly marked unmeasured.
 
 `mature` does not mean feature-complete.
 
-## 15. Release compatibility
+## 18. Release compatibility
 
 A project should version changes that materially alter:
 
@@ -241,18 +380,26 @@ A project should version changes that materially alter:
 - installation;
 - command behaviour;
 - Extension Pack compatibility;
+- benchmark interpretation;
 - Pactwright bindings.
 
 Historical revisions should remain obtainable where practical because orchestrated systems may lock exact Production Skills revisions for reproducibility.
 
-## 16. Central conformance
+## 19. Central conformance
 
 The central repository may audit structural family requirements. It must not grade domain quality.
 
 Examples of valid conformance checks:
 
 - README exists;
-- canonical responsibilities are documented;
+- six specification responsibilities are represented;
 - skills are independently packageable;
+- progressive example structure is represented;
+- primary example prompts are present;
+- Extension Pack contract/catalogue surfaces exist for mature projects;
+- pack-authoring capability is represented for mature projects;
 - benchmark definition exists for benchmarked/mature projects;
+- installation guidance exists;
 - optional Pactwright integration stays within its boundary.
+
+A conformance result should report evidence and status rather than only opaque booleans.
