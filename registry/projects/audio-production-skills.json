@@ -1,0 +1,20 @@
+{
+  "id": "audio-production-skills",
+  "repository": "https://github.com/sb-dev/audio-production-skills",
+  "domain": "audio-production",
+  "status": "proposed",
+  "capabilities": [
+    "music-production",
+    "composition",
+    "arrangement",
+    "adaptive-music",
+    "sound-design",
+    "foley",
+    "environmental-audio",
+    "vehicle-audio",
+    "spatial-audio",
+    "audio-evaluation",
+    "extension-packs"
+  ],
+  "pactwright": "planned"
+}
