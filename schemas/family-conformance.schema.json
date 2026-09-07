@@ -5,6 +5,7 @@
   "required": [
     "project",
     "checked_at",
+    "summary",
     "checks"
   ],
   "properties": {
@@ -12,12 +13,38 @@
       "type": "string"
     },
     "checked_at": {
-      "type": "string"
+      "type": "string",
+      "format": "date-time"
+    },
+    "summary": {
+      "type": "object",
+      "required": ["pass", "warn", "fail", "not_applicable"],
+      "properties": {
+        "pass": { "type": "integer", "minimum": 0 },
+        "warn": { "type": "integer", "minimum": 0 },
+        "fail": { "type": "integer", "minimum": 0 },
+        "not_applicable": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
     },
     "checks": {
       "type": "object",
       "additionalProperties": {
-        "type": "boolean"
+        "type": "object",
+        "required": ["status", "message", "evidence"],
+        "properties": {
+          "status": {
+            "enum": ["pass", "warn", "fail", "not-applicable"]
+          },
+          "message": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "additionalProperties": false
       }
     }
   },
