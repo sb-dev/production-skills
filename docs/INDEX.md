@@ -9,9 +9,27 @@
 
 ## Bootstrap
 
-- `bootstrap/new-project-process.md`
-- `bootstrap/domain-research-process.md`
-- `bootstrap/shared-abstraction-process.md`
+- `bootstrap/README.md` — how to generate a custom domain bootstrap specification
+- `bootstrap/new-project-process.md` — canonical family-level project progression
+- `bootstrap/domain-research-process.md` — domain-first production research
+- `bootstrap/shared-abstraction-process.md` — evidence threshold for shared family abstractions
+
+## Project templates
+
+Under `../templates/`:
+
+- `specs/01-system-spec-template.md`
+- `specs/02-workflows-and-artifacts-spec-template.md`
+- `specs/03-repository-and-contracts-spec-template.md`
+- `specs/04-testing-and-benchmark-spec-template.md`
+- `specs/05-customisation-packs-spec-template.md`
+- `specs/06-extension-pack-catalogue-template.md`
+- `README-template.md`
+- `progressive-example-template.md`
+- `extension-pack-showcase-template.md`
+- `extension-pack-author-skill-template.md`
+- `pactwright.yml`
+- `project-registry.json`
 
 ## Research
 
@@ -26,3 +44,10 @@
 ## Decisions
 
 - `decisions/0001-no-shared-production-runtime.md`
+
+## Schemas and conformance
+
+- `../schemas/project-registry.schema.json`
+- `../schemas/family-conformance.schema.json`
+- `../tooling/audit-project.mjs`
+- `../tooling/validate-registry.mjs`
