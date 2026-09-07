@@ -10,25 +10,32 @@ This repository **does not implement those domain workflows and does not own con
 
 > Share an abstraction only after multiple production domains demonstrably need the same concept.
 
-The initial evidence base comes from three mature repositories:
+## Project family
+
+### Mature evidence base
 
 - [Narrative Production Skills](https://github.com/sb-dev/narrative-production-skills)
 - [Music Production Skills](https://github.com/sb-dev/music-production-skills)
 - [Video Production Skills](https://github.com/sb-dev/video-production-skills)
 
-Production Skills coming soon:
+These repositories provide the strongest current evidence for the family architecture, including progressive examples, domain-owned benchmarks and first-class Extension Packs.
+
+### In development
+
+- [UI/UX Design Skills](https://github.com/sb-dev/ui-ux-design-skills)
+
+### Planned / researching
 
 - `game-development-skills`
 - `software-engineering-skills`
 - `deep-research-skills`
-- `ui-ux-design-skills`
 - `world-environment-production-skills`
 - `3d-production-skills`
 - `character-performance-skills` (`character-production-skills` + `animation-production-skills`)
 - `audio-production-skills` (`music-production-skills` + `sound-production-skills`)
 - `qa-evaluation-skills`
 
-They independently support a common pattern:
+The family independently supports a common production principle:
 
 ```text
 cheap uncertainty reduction
@@ -38,7 +45,7 @@ cheap uncertainty reduction
 → targeted correction
 ```
 
-The exact artefacts and workflows remain domain-owned.
+The exact artefacts, workflows, quality criteria and repair units remain domain-owned.
 
 ## Repository responsibilities
 
@@ -46,8 +53,8 @@ The exact artefacts and workflows remain domain-owned.
 |---|---|
 | Family design | Common terminology, principles, boundaries, contracts |
 | Research | Cross-domain research and abstraction evidence |
-| Bootstrap | Process for creating a new Production Skills project |
-| Registry | Authoritative list and maturity of Production Skills projects |
+| Bootstrap | Recipes for generating a domain-specific bootstrap specification for each new Production Skills project |
+| Registry | Authoritative list and demonstrated maturity of Production Skills projects |
 | Evaluation contract | Common evaluation layers, not domain quality metrics |
 | Extension Packs | Family-level semantics and qualification rules |
 | Cross-domain integration | Generic handoff and composition contracts |
@@ -57,6 +64,29 @@ Individual Production Skills repositories own their skills, commands, workflows,
 
 **Consuming projects own their own specifications, research logs, capability maps, roadmaps, Production Skills selection, Extension Pack selection, and integration decisions.** A game, software product, film, or other project may depend on many Production Skills repositories without becoming part of this central repository.
 
+## Bootstrap a new Production Skills project
+
+Start with [`docs/bootstrap/README.md`](docs/bootstrap/README.md).
+
+The bootstrap directory contains reusable family processes. They are used to generate a custom domain bootstrap under `docs/research-logs/` before the new repository is scaffolded.
+
+A mature project targets:
+
+```text
+6 canonical specification responsibilities
+5 progressive example levels
+3 primary examples per level
+15 primary progressive examples
+first-class Extension Pack architecture
+Extension Pack catalogue
+pack-authoring capability
+pack showcases with exact prompts
+core-vs-pack evaluation
+local + clean external installation validation
+```
+
+These are family-level product responsibilities; their implementation remains domain-native.
+
 ## Canonical specifications
 
 1. [`01-production-skills-family-system.md`](docs/specs/01-production-skills-family-system.md)
@@ -64,12 +94,33 @@ Individual Production Skills repositories own their skills, commands, workflows,
 3. [`03-production-skills-evaluation-and-extension-packs.md`](docs/specs/03-production-skills-evaluation-and-extension-packs.md)
 4. [`04-cross-domain-orchestration-and-integration.md`](docs/specs/04-cross-domain-orchestration-and-integration.md)
 
-## Validate the registry
+## Templates
+
+Reusable structural templates live under [`templates/`](templates/), including:
+
+- six project specification templates;
+- a Video-style project README template;
+- progressive example template;
+- Extension Pack showcase template;
+- Extension Pack authoring skill template;
+- optional Pactwright and registry templates.
+
+Templates bootstrap a project; they do not overwrite mature domain knowledge or force identical workflows across domains.
+
+## Validate the registry and family structure
 
 ```bash
 pnpm validate
 pnpm test
 ```
+
+Audit a local Production Skills repository against structural family expectations:
+
+```bash
+pnpm audit:project -- ../<domain>-production-skills
+```
+
+The audit reports `pass`, `warn`, `fail`, or `not-applicable` with evidence. It deliberately does **not** score domain quality.
 
 The repository intentionally has no runtime dependencies at bootstrap.
 
@@ -81,6 +132,8 @@ This repository is not:
 - a shared workflow engine;
 - a central provider or model registry;
 - a universal artefact graph;
+- a universal Extension Pack interpreter;
+- a universal benchmark score;
 - a replacement for domain benchmarks;
 - a replacement for Pactwright;
 - a monorepo containing every Production Skills implementation;
@@ -89,4 +142,4 @@ This repository is not:
 
 ## Status
 
-Early canonical family design. Existing mature projects are evidence sources; new family abstractions should remain conservative until additional domains mature.
+Early canonical family design. Mature projects are evidence sources; new family abstractions should remain conservative until additional domains independently prove them.
