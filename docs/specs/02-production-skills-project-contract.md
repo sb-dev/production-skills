@@ -1,8 +1,8 @@
 # Production Skills Project Contract
 
 **Status:** Canonical  
-**Version:** 1.1  
-**Date:** 7 September 2026
+**Version:** 1.2  
+**Date:** 8 September 2026
 
 ## 1. Purpose
 
@@ -24,7 +24,8 @@ A Production Skills project must:
 10. participate in the family registry;
 11. define a first-class Extension Pack architecture for mature use;
 12. demonstrate progressive production responsibility through public examples;
-13. validate installation from outside the source repository before maturity claims are made.
+13. validate installation from outside the source repository before maturity claims are made;
+14. preserve substantive bootstrap research and staged design outputs under `docs/research-logs/` so later work can rely on durable repository evidence rather than conversation history alone.
 
 ## 3. Canonical specification model
 
@@ -108,9 +109,37 @@ Existing mature repositories do not require immediate cosmetic migration. Equiva
 
 The pack contract and the actual catalogue remain separate because they evolve for different reasons.
 
-## 4. Repository baseline
+## 4. Bootstrap workspace baseline
 
-A new repository should begin from the smallest useful form of:
+Before substantial bootstrap research begins, create the target repository in a deliberately minimal form:
+
+```text
+<domain>-production-skills/
+├── README.md
+└── docs/
+    └── research-logs/
+        └── README.md
+```
+
+The bootstrap workspace exists to persist:
+
+- the domain-specific bootstrap specification;
+- domain research;
+- capability/tool comparisons;
+- workflow and artefact reasoning;
+- example candidate/coverage analysis;
+- benchmark design;
+- material architectural decisions.
+
+The root README is provisional and should state only the project identity, purpose and bootstrap/research status.
+
+The bootstrap workspace is **not** the production scaffold and does not by itself justify `scaffolded` maturity.
+
+Do not add production surfaces such as `skills/`, `examples/`, `evals/`, `benchmarks/`, CI or package metadata until the bootstrap has designed them, unless one is genuinely required to perform the bootstrap.
+
+## 5. Production repository baseline
+
+After the canonical specs and public repository design exist, evolve the bootstrap workspace into the smallest useful production form of:
 
 ```text
 <domain>-production-skills/
@@ -120,6 +149,7 @@ A new repository should begin from the smallest useful form of:
 ├── CHANGELOG.md
 ├── package.json                 # where useful
 ├── docs/
+│   └── research-logs/
 ├── skills/
 ├── examples/
 ├── evals/                       # where useful
@@ -132,7 +162,9 @@ A new repository should begin from the smallest useful form of:
 
 Directories must not be created solely for visual symmetry. Add them when they contain working material.
 
-## 5. Public README contract
+Preserve `docs/research-logs/` as the design record that led to the production scaffold.
+
+## 6. Public README contract
 
 The README is a product surface, not only a repository description.
 
@@ -157,7 +189,7 @@ It should make visible, where relevant:
 
 The README must not claim examples, packs, benchmark results or provider support that are only planned.
 
-## 6. Progressive example contract
+## 7. Progressive example contract
 
 Mature projects target:
 
@@ -189,7 +221,7 @@ Every primary example must include its complete copyable generation prompt.
 
 Additional examples may exist as supplementary showcases, benchmark fixtures or regressions without appearing in the primary README progression.
 
-## 7. Skill package contract
+## 8. Skill package contract
 
 An installable skill should normally be self-contained:
 
@@ -207,7 +239,7 @@ Only include subdirectories used by the skill.
 
 A skill must not require undocumented repository-relative files that disappear when the skill is installed independently.
 
-## 8. Command contract
+## 9. Command contract
 
 Commands are bounded production operations internal to the skill architecture.
 
@@ -221,13 +253,13 @@ They exist to improve:
 
 Commands must not silently become lifecycle stages in Pactwright or a universal family workflow engine.
 
-## 9. References and assets
+## 10. References and assets
 
 Reusable domain knowledge should be placed near the skills that consume it. Shared repository-level references are acceptable when multiple skills genuinely need the same source.
 
 Project-specific briefs, research or accepted project decisions must not be promoted into reusable skill references unless they have been generalised and validated.
 
-## 10. Tools and provider interaction
+## 11. Tools and provider interaction
 
 Production Skills may use:
 
@@ -241,7 +273,7 @@ Production Skills may use:
 
 Provider capabilities should stay below the production layer. A Production Skill should express the production decision and select the execution mechanism rather than make the provider implementation the workflow.
 
-## 11. Extension Pack contract
+## 12. Extension Pack contract
 
 A mature Production Skills project defines a domain-native specialisation mechanism through Extension Packs or equivalent semantics.
 
@@ -260,7 +292,7 @@ Each implemented catalogue pack should:
 
 A mature project should also provide a domain-native pack-authoring skill or equivalent authoring workflow that checks whether an existing pack already satisfies the need before creating a new one.
 
-## 12. Standalone installation
+## 13. Standalone installation
 
 README documentation must show how to install or consume the skills without Pactwright.
 
@@ -289,7 +321,7 @@ integrations/
 
 The integration is optional and one-way.
 
-## 13. Pactwright manifest boundary
+## 14. Pactwright manifest boundary
 
 A Pactwright integration manifest may declare:
 
@@ -308,14 +340,15 @@ It must not define:
 - provider routing;
 - the domain production workflow itself.
 
-## 14. New-project bootstrap lifecycle
+## 15. New-project bootstrap lifecycle
 
-Every new family project first generates a domain-specific bootstrap specification using `docs/bootstrap/README.md` and the source recipes under `docs/bootstrap/`.
+Every new family project first creates a minimal target repository and then generates a domain-specific bootstrap specification using `docs/bootstrap/README.md` and the source recipes under `docs/bootstrap/`.
 
 The family-level progression is:
 
 ```text
-boundary
+minimal bootstrap workspace repository
+→ boundary
 → domain research
 → AI/tool research
 → workflow + artefacts
@@ -325,7 +358,7 @@ boundary
 → benchmarks/evals
 → six canonical specs
 → public README design
-→ repository scaffold
+→ production repository scaffold
 → core vertical
 → progressive + pack implementation
 → local and clean external validation
@@ -334,15 +367,17 @@ boundary
 → shared-abstraction review
 ```
 
+Substantive stage outputs should be persisted under `docs/research-logs/` so later stages can consume canonical files rather than depend on full conversation history.
+
 The exact domain-specific stages may differ.
 
-## 15. Working-project minimum
+## 16. Working-project minimum
 
 A project may move to `working` only when it can demonstrate at least one meaningful end-to-end domain workflow using its installed skills.
 
 The demonstrated behaviour must come from implemented repository surfaces, not only planned specifications.
 
-## 16. Benchmarked-project minimum
+## 17. Benchmarked-project minimum
 
 A project may move to `benchmarked` only when:
 
@@ -353,7 +388,7 @@ A project may move to `benchmarked` only when:
 - structural correctness and domain quality remain distinguishable;
 - implemented Extension Packs have corresponding evaluation coverage.
 
-## 17. Mature-project minimum
+## 18. Mature-project minimum
 
 A project may move to `mature` when evidence demonstrates that:
 
@@ -372,7 +407,7 @@ A project may move to `mature` when evidence demonstrates that:
 
 `mature` does not mean feature-complete.
 
-## 18. Release compatibility
+## 19. Release compatibility
 
 A project should version changes that materially alter:
 
@@ -385,7 +420,7 @@ A project should version changes that materially alter:
 
 Historical revisions should remain obtainable where practical because orchestrated systems may lock exact Production Skills revisions for reproducibility.
 
-## 19. Central conformance
+## 20. Central conformance
 
 The central repository may audit structural family requirements. It must not grade domain quality.
 
