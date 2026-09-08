@@ -77,7 +77,8 @@ Current domain bootstrap specifications include:
 
 - [`Legal Skills`](docs/research-logs/2026-09-08-legal-skills-new-project-bootstrap-process.md), using Kakeibo and Worldstack as deliberately different legal stress-test fixtures while keeping project-specific legal conclusions in the consuming projects;
 - [`World / Environment Production Skills`](docs/research-logs/2026-09-08-world-environment-production-skills-new-project-bootstrap-process.md), using Worldstack as a major simulation-driven consumer while also requiring an independent fictional-world proving path so reusable environment production does not become Worldstack-specific;
-- [`3D Production Skills`](docs/research-logs/2026-09-08-3d-production-skills-new-project-bootstrap-process.md), treating 3D asset production as a contract-driven pipeline from proxy and editable source through surfaces, runtime representation, interchange and technical/visual validation, with Worldstack as one consumer rather than the owning architecture.
+- [`3D Production Skills`](docs/research-logs/2026-09-08-3d-production-skills-new-project-bootstrap-process.md), treating 3D asset production as a contract-driven pipeline from proxy and editable source through surfaces, runtime representation, interchange and technical/visual validation, with Worldstack as one consumer rather than the owning architecture;
+- [`Character Performance Skills`](docs/research-logs/2026-09-08-character-performance-skills-new-project-bootstrap-process.md), combining character production and animation so identity, rig/deformation, retargeting, body/facial performance, runtime animation and character/crowd fidelity are designed as one coherent production lifecycle while preserving boundaries with 3D, Narrative, Game Development, Audio and Worldstack.
 
 A mature project targets:
 
