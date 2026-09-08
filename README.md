@@ -73,7 +73,10 @@ Start with [`docs/bootstrap/README.md`](docs/bootstrap/README.md).
 
 The bootstrap directory contains reusable family processes. They are used to generate a custom domain bootstrap under `docs/research-logs/` before the new repository is scaffolded.
 
-Current domain bootstrap specifications include [`Legal Skills`](docs/research-logs/2026-09-08-legal-skills-new-project-bootstrap-process.md), which uses Kakeibo and Worldstack as deliberately different canonical stress-test fixtures while keeping their project-specific legal conclusions in the consuming projects.
+Current domain bootstrap specifications include:
+
+- [`Legal Skills`](docs/research-logs/2026-09-08-legal-skills-new-project-bootstrap-process.md), using Kakeibo and Worldstack as deliberately different legal stress-test fixtures while keeping project-specific legal conclusions in the consuming projects;
+- [`World / Environment Production Skills`](docs/research-logs/2026-09-08-world-environment-production-skills-new-project-bootstrap-process.md), using Worldstack as a major simulation-driven consumer while also requiring an independent fictional-world proving path so reusable environment production does not become Worldstack-specific.
 
 A mature project targets:
 
