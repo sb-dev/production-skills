@@ -1,6 +1,6 @@
 {
   "name": "@sb-dev/production-skills",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "type": "module",
   "description": "Central design, research, governance and orchestration for the Production Skills family.",

@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.2 - 2026-09-08
+
+- Add the `legal-skills` Production Skills family as a researching project.
+- Add the Legal Skills domain-specific bootstrap specification.
+- Define Kakeibo and Worldstack as canonical Legal Skills stress-test fixtures while keeping project-specific legal conclusions in the consuming projects.
+- Establish jurisdiction and valid-as-of authority as legal execution context rather than ordinary Extension Pack selection.
+- Clarify that pre-repository domain bootstrap specifications may live in the central research-log directory until their owning repositories are scaffolded.
+- Update the README and repository manifest for the expanded project family.
+
 ## 0.1.1 - 2026-09-07
 
 - Remove consuming-project programme material from the central repository.

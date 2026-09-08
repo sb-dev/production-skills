@@ -2,7 +2,7 @@
 
 Central design, research, governance, and project-family repository for the `sb-dev` Production Skills ecosystem.
 
-Production Skills are independent Agent Skills projects that encode reusable production expertise for domains such as narrative, music, video, game development, software engineering, deep research, UI/UX, world/environment production, 3D, characters, animation, sound, and QA/evaluation.
+Production Skills are independent Agent Skills projects that encode reusable production expertise for domains such as narrative, music, video, game development, software engineering, deep research, UI/UX, legal, world/environment production, 3D, characters, animation, sound, and QA/evaluation.
 
 This repository **does not implement those domain workflows and does not own consuming-project specifications**. It defines the family contract, holds genuinely cross-domain research, coordinates creation and maturity of Production Skills projects, and records only abstractions that have earned promotion through evidence from multiple domains.
 
@@ -29,11 +29,14 @@ These repositories provide the strongest current evidence for the family archite
 - `game-development-skills`
 - `software-engineering-skills`
 - `deep-research-skills`
+- `legal-skills`
 - `world-environment-production-skills`
 - `3d-production-skills`
 - `character-performance-skills` (`character-production-skills` + `animation-production-skills`)
 - `audio-production-skills` (`music-production-skills` + `sound-production-skills`)
 - `qa-evaluation-skills`
+
+`legal-skills` is planned as a cross-cutting legal-production family for authoritative legal research, project advice, legal drafting and review, privacy/data protection, consumer terms, intellectual property and trade marks, licensing, project-to-law traceability, legal change impact and specialist escalation. Jurisdiction and valid-as-of authority are part of the legal execution context rather than ordinary Extension Pack selection.
 
 The family independently supports a common production principle:
 
@@ -62,13 +65,15 @@ The exact artefacts, workflows, quality criteria and repair units remain domain-
 
 Individual Production Skills repositories own their skills, commands, workflows, tools, artefacts, Extension Packs, examples, benchmarks, and domain research.
 
-**Consuming projects own their own specifications, research logs, capability maps, roadmaps, Production Skills selection, Extension Pack selection, and integration decisions.** A game, software product, film, or other project may depend on many Production Skills repositories without becoming part of this central repository.
+**Consuming projects own their own specifications, research logs, capability maps, roadmaps, Production Skills selection, Extension Pack selection, and integration decisions.** A game, software product, film, legal matter, or other project may depend on many Production Skills repositories without becoming part of this central repository.
 
 ## Bootstrap a new Production Skills project
 
 Start with [`docs/bootstrap/README.md`](docs/bootstrap/README.md).
 
 The bootstrap directory contains reusable family processes. They are used to generate a custom domain bootstrap under `docs/research-logs/` before the new repository is scaffolded.
+
+Current domain bootstrap specifications include [`Legal Skills`](docs/research-logs/2026-09-08-legal-skills-new-project-bootstrap-process.md), which uses Kakeibo and Worldstack as deliberately different canonical stress-test fixtures while keeping their project-specific legal conclusions in the consuming projects.
 
 A mature project targets:
 
@@ -138,7 +143,8 @@ This repository is not:
 - a replacement for Pactwright;
 - a monorepo containing every Production Skills implementation;
 - a home for consuming-project specifications or research;
-- a central roadmap for any individual consuming project.
+- a central roadmap for any individual consuming project;
+- a central legal knowledge base or compliance platform.
 
 ## Status
 
