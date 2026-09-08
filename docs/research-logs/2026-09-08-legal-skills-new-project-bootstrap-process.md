@@ -1,11 +1,12 @@
 # Legal Skills — New Project Bootstrap Process
 
 **Status:** Bootstrap specification  
+**Version:** 1.1  
 **Date:** 8 September 2026
 
 ## 1. Purpose
 
-This process defines how `legal-skills` moves from a project idea to a **scaffolded, benchmarked, installable open-source Agent Skills repository** for legal production support across Production Skills projects and Pactwright-governed delivery.
+This process defines how `legal-skills` moves from a project idea to a **scaffolded, benchmarked, installable open-source Agent Skills repository** for evidence-backed legal production across Production Skills projects and Pactwright-governed delivery.
 
 The project should help AI agents treat legal work as a production discipline rather than reducing it to template generation, generic disclaimers or unverified legal answers.
 
@@ -48,22 +49,13 @@ Use the current Production Skills bootstrap and family contracts as canonical:
 - `production-skills/docs/specs/03-production-skills-evaluation-and-extension-packs.md`
 - `production-skills/docs/specs/04-cross-domain-orchestration-and-integration.md`
 
-Compare mature family implementations only after the legal domain model has been independently understood:
-
-- `video-production-skills`
-- `narrative-production-skills`
-- `music-production-skills`
-
-Use the 7 September 2026 domain bootstraps as structural depth references, especially:
-
-- `deep-research-skills`
-- `game-development-skills`
-- `software-engineering-skills`
-- `ui-ux-design-skills`
+Use mature Video, Narrative and Music Production Skills as evidence for proven family patterns only after the legal domain model has been independently understood. Use the UI/UX, Deep Research, Software Engineering and Game Development bootstraps as structural depth references.
 
 Newer family requirements take precedence, especially:
 
 ```text
+bootstrap workspace before substantive research
+research logs as durable stage outputs
 six canonical specs
 5 levels × 3 primary examples
 first-class Extension Packs
@@ -77,13 +69,11 @@ cross-domain integration without centralising consuming-project state
 
 ## 3. Initial Domain Evidence
 
-The bootstrap must begin from professional legal practice and authoritative legal sources rather than current LLM behaviour.
-
-Initial evidence already establishes several design constraints.
+The bootstrap begins from professional legal practice and authoritative sources rather than current LLM behaviour.
 
 ### AI-assisted legal work requires verification and supervision
 
-The Solicitors Regulation Authority's 17 August 2026 warning notice on misuse of AI identifies fabricated or inaccurate legal authorities and confidentiality failures as material risks. It emphasises that regulated professionals remain accountable for AI-assisted work and that named legal authorities must be genuine, relevant and verifiable.
+The Solicitors Regulation Authority warning notice on misuse of AI, published 17 August 2026, identifies inaccurate or fabricated legal authorities and confidentiality failures as material risks and emphasises continuing professional accountability.
 
 Design consequence:
 
@@ -93,19 +83,24 @@ LLM output
 ≠ verified legal proposition
 ```
 
-The project therefore needs source verification, authority provenance, confidentiality-aware tool selection and explicit escalation / review semantics.
-
 Reference:
 
 - https://media.sra.org.uk/solicitors/guidance/misuse-ai/
 
 ### Privacy documents must reflect actual processing
 
-ICO guidance on the right to be informed requires privacy information to describe matters such as processing purposes, lawful basis, recipients, retention, rights and, where applicable, automated decision-making. Current ICO guidance also flags areas under review following the Data (Use and Access) Act.
+ICO guidance on the right to be informed requires privacy information to reflect matters such as purposes, lawful basis, recipients, retention and rights. Current ICO guidance also notes changes arising from the Data (Use and Access) Act and that some guidance remains under review.
 
 Design consequence:
 
-A privacy notice cannot be evaluated only as prose. It must be tested against the product's real data flows, retention behaviour, processors and user-facing controls, with temporal validity preserved.
+```text
+privacy notice
+↔ actual data flows
+↔ processors / recipients
+↔ retention
+↔ user controls
+↔ valid-as-of legal guidance
+```
 
 References:
 
@@ -118,20 +113,18 @@ The Competition and Markets Authority updated its unfair contract terms guidance
 
 Design consequence:
 
-Terms and conditions must be derived from the actual commercial model and reviewed for substantive fairness and transparency, not only completeness or grammatical quality.
+Terms must be derived from the actual commercial model and evaluated for substantive fairness and transparency, not only completeness or prose quality.
 
 References:
 
 - https://www.gov.uk/government/publications/unfair-contract-terms-cma37
 - https://www.gov.uk/guidance/writing-a-fair-contract-for-customers
 
-### Trade mark analysis requires marks, goods/services and territory
+### Trade mark analysis requires territory and goods/services
 
-UK IPO guidance requires checking identical or similar marks and considering the goods and services for which protection is sought. Similar marks can require professional advice before filing.
+UK IPO guidance requires applicants to identify relevant goods/services and check identical or similar marks. Similar marks may justify professional advice before filing.
 
 Design consequence:
-
-Trade mark work must preserve:
 
 ```text
 candidate mark
@@ -143,8 +136,6 @@ candidate mark
 + uncertainty / escalation
 ```
 
-A name-only web search is not a trade mark clearance workflow.
-
 References:
 
 - https://www.gov.uk/search-for-trademark
@@ -152,11 +143,11 @@ References:
 
 ### Copyright and AI are temporally sensitive
 
-The UK government published a Copyright and Artificial Intelligence report and impact assessment on 18 March 2026. Policy, legislation, licensing practice and litigation can evolve independently.
+The UK government published its Copyright and Artificial Intelligence report and impact assessment on 18 March 2026. Policy, legislation, licensing practice and litigation can evolve independently.
 
 Design consequence:
 
-The project must resolve **law and authoritative guidance valid as of the matter date** rather than embedding apparently current copyright/AI conclusions into durable core prompts.
+Legal Skills must resolve the law and authoritative guidance **valid for the matter date** rather than embedding apparently current conclusions into durable prompts.
 
 Reference:
 
@@ -164,7 +155,7 @@ Reference:
 
 ### Domain implication
 
-Legal production needs stronger evidence discipline than a generic document-writing family:
+Legal production requires an evidence chain such as:
 
 ```text
 material fact
@@ -177,105 +168,29 @@ material fact
 → implementation / legal artefact
 ```
 
-The legal conclusion must never become more certain than the facts, authority or jurisdictional analysis supporting it.
+The conclusion must never become more certain than the facts, authority, jurisdiction or temporal analysis supporting it.
 
 ---
 
-## 4. Required Bootstrap Outputs
-
-The staged process must produce:
-
-1. a clear Legal Skills goal, scope and professional boundary;
-2. research into real legal practice across advisory, transactional, regulatory, IP and legal-operations work;
-3. a jurisdiction, governing-law and temporal-validity model;
-4. an authority and legal-source hierarchy model;
-5. a matter, fact, issue, proposition, authority, conclusion and action model;
-6. a legal research and verification workflow;
-7. a legal drafting, review and redlining workflow;
-8. a project-to-law traceability model;
-9. a risk, uncertainty, escalation and human-review model;
-10. a confidentiality, privilege and sensitive-data handling model;
-11. current legal AI, research database, registry, filing/search, document and deterministic-tool research;
-12. execution-layer decisions and gap analysis;
-13. a justified core Agent Skills set;
-14. decomposed commands where useful;
-15. a first-class Extension Pack architecture;
-16. a rule separating jurisdiction context from Extension Pack specialisation;
-17. an initial Extension Pack catalogue strategy;
-18. a legal Extension Pack authoring skill or equivalent workflow;
-19. five progressive legal-production example levels;
-20. three complementary primary examples per level selected by capability coverage;
-21. Kakeibo as a canonical consumer-finance/privacy/AI stress-test fixture;
-22. Worldstack as a canonical IP/media/real-world-simulation stress-test fixture;
-23. deterministic and semantic evaluation;
-24. authority/citation, temporal-validity and legal-product consistency benchmarks;
-25. adversarial legal regression fixtures;
-26. six canonical specifications;
-27. a public README following the proven Video Production Skills structure;
-28. an open-source repository scaffold design;
-29. Agent Skills installation and selective-installation contracts;
-30. local validation and clean external installation smoke tests;
-31. optional Pactwright integration kept outside core legal semantics;
-32. cross-domain abstraction candidates only after implementation evidence;
-33. evidence-based maturity and publication gates.
-
----
-
-# 5. Governing Principles
+## 4. Governing Principles
 
 Retain the Production Skills family rules and specialise them for legal work.
 
-## Facts before conclusions
+### Facts before conclusions
 
-Do not start from the desired legal answer and search for support.
+Establish material facts, assumptions, actors, jurisdictions, dates and project behaviour before reaching a legal conclusion.
 
-The workflow must establish material facts, assumptions, actors, jurisdictions, dates and project behaviour before reaching a legal conclusion.
+### Jurisdiction before rule application
 
-## Jurisdiction before rule application
+Resolve applicable territory, governing law, forum, actor and user locations, place of establishment, market offered into, asset/right territory and relevant dates where material. Do not build a universal conflict-of-laws engine during bootstrap.
 
-No legal proposition is globally valid merely because it sounds general.
+### Authority before assertion
 
-Resolve, where applicable:
+Prefer primary and authoritative legal sources where available. Distinguish legislation, case law, regulator rules/guidance, official registries, treaties, government guidance and secondary commentary. Their binding effect varies by jurisdiction and matter.
 
-```text
-territory / jurisdiction
-governing law
-forum
-actor location
-user / customer location
-place of establishment
-market offered into
-data-subject location
-asset / right territory
-transaction location
-relevant dates
-```
+### Currency is part of correctness
 
-Conflict-of-laws analysis is specialist work and must be researched rather than reduced to a universal rule.
-
-## Authority before assertion
-
-Prefer authoritative and primary legal sources where available.
-
-Potential source classes include:
-
-```text
-legislation / regulations
-binding case law
-official court materials
-regulator rules and guidance
-official registries / filing systems
-treaties and international instruments
-formal government guidance
-recognised legal commentary / practitioner texts
-secondary summaries
-```
-
-The hierarchy and binding effect vary by jurisdiction and matter. Do not impose one universal numeric authority score.
-
-## Currency is part of legal correctness
-
-Every material legal conclusion should preserve enough temporal context to distinguish:
+Preserve, where relevant:
 
 ```text
 law made
@@ -288,46 +203,27 @@ retrieved-at date
 analysis valid-as-of date
 ```
 
-A once-authoritative source can be stale.
+### Legal research and judgement remain distinguishable
 
-## Legal research and legal judgement remain distinguishable
+Separate what an authority says, known facts, assumptions, derived propositions, application, uncertainty, risk, recommended action and specialist judgement.
 
-The system should separate:
+### The document must match the product
 
-```text
-what an authority says
-what facts are known
-what facts are assumed
-what rule or principle is derived
-how it may apply
-what remains ambiguous
-what risk follows
-what action is recommended
-what requires specialist judgement
-```
-
-## The document must match the product
-
-Legal artefacts are not independent of implementation.
-
-Examples:
+Legal artefacts are production artefacts, not isolated prose:
 
 ```text
-privacy notice ↔ actual data flows / retention / processors
-terms ↔ actual subscription / cancellation / refund behaviour
-cookie notice ↔ actual tracking technologies
-open-source notice ↔ actual dependency licences
-trade mark statement ↔ actual ownership / registration status
+privacy notice ↔ data flows / retention / processors
+terms ↔ subscriptions / cancellation / refunds
+cookie notice ↔ actual tracking
+open-source notice ↔ dependency licences
+trade mark statement ↔ registry / ownership evidence
 AI disclosure ↔ actual automated behaviour
+UGC terms ↔ actual moderation / enforcement capabilities
 ```
 
-A polished document that contradicts product behaviour is a legal-production defect.
+### Cheapest adequate legal representation
 
-## Cheapest adequate legal representation
-
-Resolve uncertainty using the cheapest representation capable of answering the current question.
-
-Examples:
+Use the cheapest artefact capable of resolving the current uncertainty:
 
 ```text
 matter brief before full memo
@@ -336,92 +232,38 @@ authority table before polished advice
 clause inventory before full redraft
 redline before replacement agreement
 trade mark knockout search before filing strategy
-data-flow inventory before privacy notice drafting
-licence inventory before open-source compliance report
+data-flow inventory before privacy notice
+licence inventory before compliance report
 ```
 
-## Preserve verified work
+### Preserve verified work and repair the smallest responsible unit
 
-If one proposition, clause or authority fails, preserve unaffected verified facts, research, clauses and implementation decisions.
+If one fact, proposition, authority or clause fails, preserve unaffected verified work and update only dependent conclusions, requirements and artefacts.
 
-Do not regenerate an entire legal package because one retention period, clause or trade mark class changed.
+### Risk must remain inspectable
 
-## Correct the smallest responsible unit
+Do not collapse legal quality into one score. Keep dimensions such as authority strength, factual completeness, jurisdiction certainty, temporal currency, interpretive uncertainty, harm/exposure, reversibility and need for specialist review visible.
 
-A legal defect should be repaired at the layer that owns it:
+### Escalation is a production capability
 
-```text
-wrong fact
-→ fact model
+When specialist review is required, produce a useful escalation package containing the question, facts, jurisdiction, authorities, analysis, conflicts/uncertainty, options and precise decision required.
 
-stale authority
-→ proposition / authority link
+### Confidentiality and privilege are design constraints
 
-bad clause
-→ clause
+Tool selection must account for confidential, privileged, personal and commercially sensitive information, including provider retention/training terms, access control, data location and whether local/private execution is required.
 
-product contradiction
-→ implementation or disclosure, depending on authority
+### Professional boundary is explicit
 
-missing legal requirement
-→ requirement + affected implementation / document
-```
-
-## Risk must remain inspectable
-
-Do not collapse legal quality or risk into one opaque score.
-
-Useful dimensions may include:
-
-```text
-authority strength
-factual completeness
-jurisdiction certainty
-temporal currency
-interpretive uncertainty
-financial / operational impact
-consumer / user harm
-enforcement exposure
-reputational impact
-reversibility
-need for specialist review
-```
-
-## Escalation is a production capability
-
-A mature legal workflow knows when not to invent certainty.
-
-Escalation should produce a useful package:
-
-```text
-question
-material facts
-jurisdiction
-relevant authorities
-analysis performed
-conflicts / uncertainty
-options
-specific decision required
-```
-
-rather than a generic "consult a lawyer" message.
-
-## Confidentiality and privilege are design constraints
-
-Tool selection must account for confidential, privileged, personal and commercially sensitive information. Provider terms, retention, training use, access controls and data location may affect whether a tool is suitable.
-
-The project should minimise sensitive disclosure and preserve a route for local/private tooling where the matter requires it.
-
-## Professional boundary is explicit
-
-The system may support legal analysis, drafting and review. It must not present itself as holding professional status it does not possess or silently cross into reserved activities, filing representation or advocacy requiring authorised practitioners.
+Legal Skills may support legal research, analysis, drafting and review. It must not claim regulated professional status or silently cross into reserved activities, filing representation or advocacy requiring authorised practitioners.
 
 ---
 
-# 6. Bootstrap Flow
+# 5. Bootstrap Flow
 
 ```text
 PROJECT IDEA
+    ↓
+0. Create Bootstrap Workspace Repository
     ↓
 1. Define Project Goal, Users and Professional Boundary
     ↓
@@ -461,7 +303,7 @@ PROJECT IDEA
     ↓
 19. Cross-Project Review
     ↓
-20. Scaffold Repository
+20. Scaffold Production Repository
     ↓
 21. Configure Skill Installation
     ↓
@@ -476,84 +318,107 @@ PROJECT IDEA
 READY FOR IMPLEMENTATION / MATURITY PROGRESSION
 ```
 
-Do not scaffold `legal-skills` while generating this bootstrap. Execute the stages later, one at a time.
+The Stage 0 repository is a **bootstrap workspace**, not the production scaffold created at Stage 20.
+
+---
+
+# 6. Stage 0 — Create Bootstrap Workspace Repository
+
+Create `sb-dev/legal-skills` before substantive bootstrap research begins.
+
+Initial structure:
+
+```text
+legal-skills/
+├── README.md
+└── docs/
+    └── research-logs/
+        ├── README.md
+        └── 2026-09-08-legal-skills-new-project-bootstrap-process.md
+```
+
+The root README should state only the project name, provisional purpose and bootstrap status. `docs/research-logs/README.md` should explain that the directory is the durable store for bootstrap research and decisions.
+
+Do not create yet:
+
+```text
+skills/
+examples/
+evals/
+benchmarks/
+extension-packs/
+tools/
+tests/
+integrations/
+.github/
+package metadata
+production CI
+```
+
+unless genuinely required by bootstrap research itself.
+
+### Research-log rule
+
+Every substantive later stage should persist detailed findings before the next stage begins. Conversation should carry summaries, decisions and corrections; the repository should carry the durable evidence, matrices, alternatives and architecture analysis later stages must consume.
+
+Suggested stage-log pattern:
+
+```text
+docs/research-logs/
+├── 2026-09-08-legal-skills-new-project-bootstrap-process.md
+├── YYYY-MM-DD-stage-01-domain-boundary.md
+├── YYYY-MM-DD-stage-02-professional-practice.md
+├── YYYY-MM-DD-stage-03-jurisdiction-authority-temporal-model.md
+└── ...
+```
+
+Creating this repository does **not** make `legal-skills` `scaffolded` in the family registry.
+
+**Exit:** the workspace repository exists and later stages can persist research without relying on long conversation context.
 
 ---
 
 # 7. Stage 1 — Define Project Goal, Users and Professional Boundary
 
-## Purpose
-
-Define reusable legal production before proposing skills or documents.
-
-## Resolve
+Resolve:
 
 ```text
-What legal outcomes does the repository own?
-Who are the intended users?
-Which legal matter classes are in core scope?
-Which jurisdictions are initial proving grounds?
-What is legal advice versus legal information in the product model?
-What requires human review?
-What requires a regulated practitioner?
-What is explicitly out of scope?
-Where does reusable legal knowledge end and project-specific legal knowledge begin?
-How should Legal Skills interact with Pactwright and other Production Skills?
+owned legal outcomes
+intended users
+core matter classes
+initial proving jurisdictions
+human review requirements
+regulated-practitioner handoffs
+explicit non-goals
+boundary between reusable legal production and project-specific legal knowledge
+interfaces with Pactwright and other Production Skills
 ```
 
-Investigate whether core responsibility should include at least:
+Investigate whether core responsibility should include:
 
 ```text
 legal scoping / issue spotting
 authoritative legal research
-legal analysis / option framing
-legal drafting
-legal review / redlining
-legal-product consistency checking
+analysis / option framing
+drafting
+review / redlining
+legal-product consistency
 legal change impact
 risk / uncertainty communication
 specialist escalation packaging
 ```
 
-Do not assume litigation, tax, criminal, family, immigration, employment, corporate transactions, patent prosecution or other specialist practice belongs in core merely because it is "legal".
+Do not assume litigation, tax, criminal, family, immigration, employment, corporate transactions or patent prosecution belongs in core merely because it is legal.
 
-## Intended user classes to research
+Persist the project charter, professional-boundary map, intended-user map, jurisdiction strategy, quality definition, review/escalation points and non-goals.
 
-```text
-software / product teams
-open-source maintainers
-creative-production teams
-founders / small businesses
-project managers / delivery agents
-legal operations / in-house legal collaborators
-regulated legal professionals using AI as support
-```
-
-## Outputs
-
-- project charter;
-- professional-boundary map;
-- intended user / use-case map;
-- initial jurisdiction strategy;
-- quality definition;
-- human review / escalation points;
-- non-goals.
-
-## Exit
-
-A defensible legal-production boundary exists without a fixed skill count or template catalogue.
+**Exit:** a defensible legal-production boundary exists without a fixed skill count or template catalogue.
 
 ---
 
 # 8. Stage 2 — Research Professional Legal Practice
 
-## Purpose
-
-Understand how strong legal work is actually performed before designing AI workflows.
-
-## Research streams
-
-Study complementary legal practices rather than assuming one workflow covers all law:
+Study complementary practices rather than forcing one universal workflow:
 
 ```text
 in-house product / technology counsel
@@ -571,72 +436,32 @@ transactional due diligence
 regulatory compliance / controls
 ```
 
-Use specialist domains such as litigation or employment as comparison points only if they expose reusable production behaviour relevant to the target scope.
+For each stream capture roles, professional duties, matter intake, fact gathering, issue spotting, jurisdiction analysis, source hierarchy, research method, drafting/review, filing/registration boundaries, risk communication, handoffs, change monitoring, failure modes and repair strategies.
 
-## For each stream capture
+Key questions include:
 
-```text
-roles
-professional duties
-matter intake
-fact gathering
-issue spotting
-jurisdiction analysis
-research sources
-research methods
-authority hierarchy
-analysis methods
-working artifacts
-drafting / negotiation
-review / approval
-filing / registration where relevant
-risk communication
-handoffs
-change monitoring
-failure modes
-repair strategies
-```
-
-## Questions
-
-- How do lawyers separate facts from assumptions and legal conclusions?
-- When is a short advice note sufficient versus a formal memo?
+- How are facts separated from assumptions and legal conclusions?
 - How is authority checked for currency and later treatment?
-- How are uncertain or conflicting authorities presented?
-- How are contractual positions compared during redlining?
-- How do legal teams translate law into engineering/product requirements?
-- How are implementation changes detected when they invalidate a legal document?
-- How is proportionality applied to research depth and review effort?
-- When must specialist counsel or regulated professionals take over?
-- How do confidentiality and privilege constrain tool usage?
+- How are conflicting authorities presented?
+- How are law and contracts translated into product/engineering requirements?
+- How are product changes detected when they invalidate legal documents?
+- When must specialist counsel or a regulated professional take over?
+- How do confidentiality and privilege constrain tools?
 
-## Outputs
+Persist professional-practice research, a practice comparison matrix, terminology glossary, failure taxonomy and candidate quality dimensions.
 
-- professional-practice research log;
-- legal-practice comparison matrix;
-- terminology glossary;
-- failure taxonomy draft;
-- candidate legal-quality dimensions;
-- candidate core versus specialist boundaries.
-
-## Exit
-
-The production model is grounded in legal practice rather than LLM chat patterns or document-template websites.
+**Exit:** the production model is grounded in legal practice rather than chat patterns or template websites.
 
 ---
 
 # 9. Stage 3 — Define Jurisdiction, Authority and Temporal-Validity Model
 
-## Purpose
+Model the smallest useful jurisdiction context, authority record and temporal-validity contract.
 
-Make legal applicability and source authority explicit enough to prevent plausible but context-free answers.
-
-## Jurisdiction context
-
-Model the smallest useful context, investigating fields such as:
+Candidate jurisdiction fields:
 
 ```text
-matter jurisdiction / territory
+matter territory
 governing law
 forum / regulator
 actor / entity location
@@ -644,16 +469,12 @@ consumer / user location
 place of establishment / offering
 data-subject location
 asset / right territory
-contractual choice-of-law terms
-relevant dates
+choice-of-law terms
+material dates
 cross-border questions
 ```
 
-Do not implement a universal conflict-of-laws engine at bootstrap.
-
-## Authority record
-
-Candidate fields:
+Candidate authority fields:
 
 ```text
 authority identity
@@ -664,31 +485,16 @@ issuing body / court / regulator
 binding / persuasive / guidance status where knowable
 publication / judgment date
 effective / commencement date
-amendment / repeal status where applicable
-appeal / later treatment where applicable
+amendment / repeal status
+appeal / later treatment where material
 retrieved-at
 valid-as-of
 proposition supported
-source excerpt / pinpoint reference where permitted
+pinpoint reference where permitted
 verification status
 ```
 
-## Source ecology to research
-
-```text
-legislation.gov.uk and equivalent official legislation sources
-judiciary / official court sources
-BAILII / trusted case-law repositories
-regulators such as ICO, CMA, FCA and equivalents
-official IP registries such as UK IPO, EUIPO, WIPO, USPTO
-EUR-Lex and EU regulator sources
-company / corporate registries
-standards / codes with legal relevance
-commercial legal databases where licensed
-reputable legal commentary as secondary support
-```
-
-## Required distinctions
+Research official legislation, judiciary/case-law sources, regulators, UK IPO/EUIPO/WIPO/USPTO and equivalent registries, EUR-Lex, corporate registries and licensed legal databases where available.
 
 Do not collapse:
 
@@ -697,366 +503,185 @@ jurisdiction ≠ governing law ≠ forum
 authority ≠ proposition ≠ interpretation
 publication date ≠ effective date
 regulator guidance ≠ legislation
-registration database result ≠ clearance opinion
+registry search ≠ legal clearance
 current source ≠ current law automatically
 ```
 
-## Outputs
-
-- jurisdiction context contract;
-- legal source taxonomy;
-- authority record;
-- temporal-validity rules;
-- source verification rules;
-- jurisdiction fallback / ambiguity behaviour.
-
-## Exit
-
-A material legal proposition can be tied to a verified authority and a defined jurisdiction/time context.
+**Exit:** a material proposition can be tied to verified authority and a defined jurisdiction/time context.
 
 ---
 
 # 10. Stage 4 — Define Matter, Fact, Issue and Legal-Reasoning Artifacts
 
-## Purpose
-
-Define the intellectual objects that legal production must preserve.
-
-## Matter brief
-
-Candidate fields:
+Define minimal durable artefacts for:
 
 ```text
-request / decision needed
-project / product context
-actors / entities
-jurisdiction context
-material dates
-known facts
-assumptions
-unknowns
-constraints
-risk tolerance where appropriate
-deliverables
-review / escalation requirements
+matter brief
+fact / assumption record
+legal issue
+legal proposition + authority
+legal conclusion / risk item
+legal requirement / project constraint
+legal document / clause state
+escalation package
 ```
 
-## Fact record
+Preserve relationships such as:
 
 ```text
-fact statement
-source / project evidence
-known / assumed / disputed / unknown
-materiality
-owner / system of record
-last verified
+project fact
+→ issue
+→ proposition
+→ authority
+→ analysis
+→ conclusion / risk
+→ project requirement
+→ implementation / document
+→ acceptance evidence
 ```
 
-## Issue
+Avoid a universal legal knowledge graph unless implementation evidence later proves it necessary.
 
-```text
-legal question
-triggering facts
-jurisdiction
-priority
-research status
-dependent decisions
-```
-
-## Legal proposition
-
-```text
-proposition
-supporting authority
-contrary / limiting authority
-jurisdiction
-temporal validity
-interpretive notes
-confidence rationale
-```
-
-## Legal conclusion / risk item
-
-```text
-issue
-applicable facts
-propositions relied on
-analysis
-conclusion
-uncertainty
-risk / consequence
-options
-recommended action
-review requirement
-```
-
-## Legal requirement / project constraint
-
-```text
-requirement
-legal basis
-applicability conditions
-project owner
-affected artifact / component
-acceptance evidence
-valid-as-of
-change triggers
-```
-
-## Legal document / clause
-
-Track, where useful:
-
-```text
-purpose
-parties / audience
-jurisdiction / governing law
-source requirements
-clause identifiers
-legal basis / business basis
-dependencies on product behaviour
-negotiated / approved state
-review owner
-last reviewed
-```
-
-## Escalation package
-
-```text
-specific question
-facts and assumptions
-jurisdiction
-research performed
-material authorities
-analysis
-conflicting evidence / uncertainty
-options
-recommended next step
-professional specialty required
-```
-
-## Outputs
-
-- legal artifact model;
-- traceability relationships;
-- minimum metadata rules;
-- approval / lock semantics where useful;
-- repair ownership rules.
-
-## Exit
-
-Legal work can be audited from project fact to authority to conclusion to action without requiring one universal legal graph.
+**Exit:** legal work can be audited from project fact to authority to conclusion to action.
 
 ---
 
 # 11. Stage 5 — Map Legal Research, Advice, Drafting and Review Workflows
 
-## Purpose
+Validate at least these workflow families.
 
-Derive the smallest credible legal production workflows.
-
-## A. Legal advice workflow
-
-Candidate:
+### Legal advice
 
 ```text
 intake
-→ scope matter
-→ resolve facts / assumptions
-→ resolve jurisdiction
-→ issue spot
-→ prioritise
-→ research authorities
-→ verify currency / applicability
-→ analyse
-→ identify options / risks
-→ recommend action
-→ independent review where required
-→ deliver
-→ record valid-as-of / change triggers
+→ facts / assumptions
+→ jurisdiction
+→ issue spotting
+→ research
+→ authority verification
+→ application
+→ options / risks
+→ recommendation
+→ review / escalation
+→ valid-as-of delivery
 ```
 
-## B. Legal drafting workflow
-
-Candidate:
+### Drafting
 
 ```text
 purpose / parties / audience
-→ product / transaction facts
-→ required rights / obligations
-→ source law / policy constraints
+→ project facts
+→ rights / obligations
+→ authority / policy constraints
 → clause plan
 → draft
-→ clause-level review
+→ clause review
 → cross-document consistency
-→ product / commercial consistency
+→ product consistency
 → redline / revise
 → approval
-→ publish / execute
-→ change monitoring
 ```
 
-## C. Legal review workflow
-
-Candidate:
+### Review / redlining
 
 ```text
 review brief
-→ identify document authority / version
-→ map clauses / obligations
-→ detect omissions / conflicts / unfairness / ambiguity
+→ authoritative document/version
+→ clause / obligation map
+→ omissions / conflicts / ambiguity
 → verify legal assertions
-→ compare against project behaviour
-→ propose smallest sufficient changes
+→ compare with product behaviour
+→ smallest sufficient changes
 → preserve unaffected approved text
 → re-evaluate
 ```
 
-## D. Trade mark / brand workflow
-
-Candidate to validate:
+### Trade mark / brand
 
 ```text
 candidate mark
-→ intended territories
+→ territory
 → goods / services
 → classification
-→ identical / similar mark search
-→ relevant result triage
+→ identical / similar search
+→ result triage
 → similarity / conflict analysis
-→ non-registrability / other issue checks
-→ risk and options
-→ professional escalation where warranted
-→ filing / monitoring handoff
+→ risk / options
+→ professional escalation / filing handoff
 ```
 
-## E. Privacy / data workflow
-
-Candidate to validate:
+### Privacy / data
 
 ```text
-product data-flow inventory
-→ actors / controller-processor roles
+data-flow inventory
+→ roles / actors
 → purposes / data categories
-→ legal basis / special conditions where relevant
+→ legal basis / conditions
 → sharing / transfers
 → retention
-→ user rights / controls
-→ risk assessment / DPIA trigger analysis where relevant
+→ rights / controls
+→ risk / DPIA questions
 → requirements
 → privacy artefacts
-→ implementation consistency check
+→ implementation consistency
 ```
 
-## Outputs
-
-- workflow maps;
-- artifact lifecycle;
-- decision / approval points;
-- smallest repair routes;
-- handoff contracts.
-
-## Exit
-
-The project supports actual legal work loops rather than a flat list of document generators.
+**Exit:** the repository has credible legal work loops rather than a list of document generators.
 
 ---
 
 # 12. Stage 6 — Define Project-to-Law Traceability and Change Impact
 
-## Purpose
-
-Make legal requirements actionable inside production and detectable when project behaviour changes.
-
-## Required traceability direction
+Support both directions:
 
 ```text
-project behaviour / fact
-        ↓
-legal issue
-        ↓
-authority / proposition
-        ↓
-legal requirement or risk
-        ↓
-project implementation / process / document
-        ↓
-acceptance evidence
+project behaviour
+→ legal issue
+→ authority / proposition
+→ legal requirement / risk
+→ implementation / process / document
+→ acceptance evidence
 ```
 
-Also support reverse impact analysis:
+and:
 
 ```text
 project change
-→ affected facts
+→ changed facts
 → affected legal issues / requirements
 → affected implementation
 → affected legal documents
 → targeted re-review
 ```
 
-## Important consistency classes
+Important consistency surfaces include privacy/data, consumer terms/commercial flows, disclosures/UI, licence obligations/dependencies/assets, trade mark claims/registry evidence, AI disclosures/actual AI use, age/child protections and UGC moderation/enforcement.
 
-```text
-privacy notice ↔ architecture / telemetry / processors / retention
-terms ↔ product commercial flows
-consumer disclosures ↔ UI/UX
-licence obligations ↔ repository dependencies / distributed assets
-trade mark claims ↔ registry / ownership evidence
-AI disclosures ↔ actual AI use
-age / child protections ↔ audience and UX controls
-UGC terms ↔ moderation / enforcement capabilities
-```
+When Pactwright is present, Legal Skills should supply legal requirements, constraints, review findings and verification inputs. Pactwright remains owner of lifecycle, Contracts and Evidence semantics.
 
-## Pactwright hypothesis
-
-When Pactwright is present, legal requirements may become inputs to authorised Contracts / acceptance criteria, while Pactwright remains owner of lifecycle and Evidence semantics.
-
-Legal Skills should not create its own competing project graph.
-
-## Outputs
-
-- legal-to-project traceability contract;
-- legal change-impact model;
-- consistency-test catalogue;
-- Pactwright handoff hypothesis;
-- project-knowledge boundary.
-
-## Exit
-
-Legal advice can change implementation, and later implementation changes can identify legal artefacts that need re-review.
+**Exit:** legal analysis can drive production changes and later product changes can trigger bounded legal re-review.
 
 ---
 
 # 13. Stage 7 — Define Risk, Uncertainty, Escalation and Human Review
 
-## Purpose
+Do not use a single numeric legal-risk score by default.
 
-Prevent false certainty while still producing useful project decisions.
-
-## Risk model
-
-Do not default to one numeric legal-risk score.
-
-Evaluate dimensions such as:
+Research dimensions such as:
 
 ```text
-legal authority / clarity
+authority clarity
 factual uncertainty
 jurisdiction uncertainty
-enforcement likelihood / regulator interest where supportable
-financial exposure
-user / consumer harm
-operational impact
+financial / operational exposure
+consumer or user harm
+enforcement exposure
 brand / reputation impact
 irreversibility
-filing / limitation / launch deadlines
+deadlines
 need for specialist judgement
 ```
 
-## Confidence language
-
-Define controlled language that distinguishes:
+Define controlled confidence language, for example:
 
 ```text
 clear requirement
@@ -1069,212 +694,78 @@ jurisdiction unresolved
 professional opinion required
 ```
 
-Avoid invented percentages unless a specific evidence-based method supports them.
+Research escalation triggers including reserved activity/representation, material enforcement or litigation risk, conflicting high-level authority, uncertain cross-border applicability, trade mark conflicts, financial-regulatory perimeter questions and novel AI/IP issues.
 
-## Mandatory escalation triggers to research
-
-Potential triggers include:
-
-```text
-reserved legal activity / representation
-high-value or irreversible transaction
-material litigation / enforcement threat
-conflicting high-level authority
-uncertain cross-border applicability
-trade mark conflict requiring filing strategy
-financial-regulatory perimeter uncertainty
-sensitive employment / criminal / tax / immigration / patent matters
-novel AI / IP issue with unsettled law
-insufficient facts for safe conclusion
-```
-
-These are hypotheses to validate with professional research.
-
-## Human review levels
-
-Investigate a proportionate model such as:
-
-```text
-self-check
-→ independent AI/evaluator check
-→ knowledgeable project-owner review
-→ legal professional review
-→ specialist regulated professional
-```
-
-The relevant level depends on matter risk and activity, not document length.
-
-## Outputs
-
-- risk dimensions;
-- uncertainty vocabulary;
-- escalation rules;
-- human-review matrix;
-- escalation artifact contract.
-
-## Exit
-
-The system can remain useful when the correct answer is uncertain or professionally sensitive.
+**Exit:** the system can remain useful without inventing certainty.
 
 ---
 
 # 14. Stage 8 — Define Confidentiality, Privilege and Sensitive-Data Handling
 
-## Purpose
+Research confidentiality, privilege, personal data, commercial secrets, security-sensitive information, provider retention/training, connector access, logs, prompt/output storage, local/private execution, redaction, minimisation and retention/deletion.
 
-Treat legal information handling as part of production architecture rather than an afterthought.
-
-## Investigate
-
-```text
-client / project confidentiality
-legal professional privilege and its jurisdictional limits
-personal data
-special-category / highly sensitive data
-commercial secrets
-M&A / market-sensitive information
-security-sensitive information
-provider retention and training terms
-connector / MCP access boundaries
-logging / observability leakage
-prompt / output storage
-local or private execution options
-redaction / minimisation
-access control
-retention / deletion
-```
-
-## Tool eligibility record
-
-For tools that may process legal matter data, record where knowable:
+For every material execution provider/tool, record where knowable:
 
 ```text
 data sent
-provider / subprocessors
 storage / retention
 training use
 access controls
 region / transfer implications
-enterprise contractual controls
+enterprise controls
 local / offline option
-matter classes permitted
-matter classes prohibited
+permitted matter classes
+prohibited matter classes
 ```
 
-## Required behaviour
+The workflow must be able to select public research, redaction, approved private provider, local execution or non-disclosure of sensitive material.
 
-The workflow should be able to say:
-
-```text
-this task can use public web research
-this task requires redaction
-this task requires an approved private provider
-this task should remain local
-this material should not be provided to the selected AI tool
-```
-
-## Outputs
-
-- legal-data classification;
-- tool eligibility policy;
-- minimisation / redaction rules;
-- local/private execution strategy;
-- logging and retention requirements.
-
-## Exit
-
-The project can route legal work without casually exposing confidential or privileged material.
+**Exit:** legal work can be routed without casually exposing confidential or privileged information.
 
 ---
 
 # 15. Stage 9 — Research Legal AI Skills, Databases, Registries and Tools
 
-## Purpose
-
-Find reusable execution capability before implementing native legal infrastructure.
-
-## Search categories
+Research existing capability before implementing native infrastructure:
 
 ```text
-Agent Skills for legal research / drafting / contract review
-legal research databases and APIs
-case-law sources and citators
+legal research / drafting / contract-review Agent Skills
+legal databases and APIs
+case-law sources / citators
 legislation sources
-regulator databases / guidance
-trade mark / patent / design registries
-company / corporate registries
-contract drafting / redlining tools
-open-source licence scanners
-SBOM / dependency tooling
+regulator sources
+trade mark / design / patent registries
+company registries
+contract diff / redlining tools
+open-source licence scanners / SBOM tooling
 privacy / data-mapping tools
-policy-as-code / compliance tooling
-document parsing / diffing / clause extraction
-citation / authority verification tools
+policy / compliance tools
+document parsing / clause extraction
+authority verification tools
 legal AI providers
 MCPs / connectors
-benchmark / eval frameworks for legal AI
+legal-AI evaluation frameworks
 ```
 
-## Provider / tool evaluation record
+Evaluate jurisdiction coverage, authority coverage, currency, citation behaviour, confidentiality controls, cost, composability, maintenance and whether each capability should be `USE`, `ADAPT`, `REFERENCE` or `REJECT`.
 
-| Field | Meaning |
-|---|---|
-| Capability | What it actually does |
-| Source | Provider / repository / authority |
-| Licence / terms | Reuse and data constraints |
-| Jurisdictions | Real coverage |
-| Authority coverage | Cases, legislation, regulation, registry data, commentary |
-| Currency | Update behaviour |
-| Access | Skill, CLI, API, web, MCP, subscription |
-| Legal role | Research, drafting, review, search, filing, evaluation |
-| Citation behaviour | Authority provenance / pinpoint support |
-| Confidentiality controls | Data handling suitability |
-| Deterministic vs generative | Execution character |
-| Cost / latency | Operational implications |
-| Composability | Fit beneath Production Skills |
-| Maintenance | Current state |
-| Gaps | Missing behaviour |
-| Decision | USE / ADAPT / REFERENCE / REJECT |
-
-## Important separation
-
-A legal database or AI assistant may provide excellent retrieval or drafting execution without owning this project's reusable legal-production semantics.
-
-Production Skills should orchestrate specialist tools rather than replicate licensed legal databases or official registries.
-
-## Outputs
-
-- current legal-tool landscape;
-- authoritative-source map;
-- shortlist;
-- capability matrix;
-- data/confidentiality matrix;
-- integration decisions;
-- explicit gaps.
-
-## Exit
-
-The project knows what it should orchestrate rather than rebuild.
+**Exit:** the project knows what it should orchestrate rather than rebuild.
 
 ---
 
 # 16. Stage 10 — Choose the Execution Layer
 
-## Purpose
-
-Separate legal-production intelligence from retrieval, registry and document-processing execution.
-
-## The repository should own
+Legal Skills should own:
 
 ```text
 matter scoping
 fact / assumption discipline
 issue spotting
-jurisdiction-resolution workflow
-authority and currency requirements
-legal reasoning artifacts
+jurisdiction workflow
+authority / currency requirements
+legal reasoning artefacts
 risk / uncertainty communication
-drafting / review production grammar
+drafting / review grammar
 project-to-law traceability
 change impact
 smallest-sufficient repair
@@ -1282,47 +773,17 @@ legal quality evaluation
 escalation semantics
 ```
 
-## Existing tools should execute where suitable
+Existing tools should execute, where suitable, search/retrieval, citator checks, official registry queries, document parsing/diffing, licence/SBOM scans, private document retrieval and authorised filing systems.
 
-```text
-web / database search
-legislation retrieval
-case-law retrieval
-citator / later-treatment checks
-official registry search
-trade mark image / text search
-company lookup
-document parsing
-redline / diff
-licence scanning / SBOM
-structured data analysis
-private document retrieval
-provider legal-research runs
-filing systems under authorised human control
-```
+Do not build a universal legal database, registry mirror or provider framework.
 
-## Outputs
-
-- execution architecture;
-- authority-source selection policy;
-- provider/tool boundary;
-- fallback behaviour;
-- private/local execution path;
-- deterministic tooling opportunities.
-
-## Exit
-
-Legal Skills remains provider-independent at the production layer without trying to become a universal legal database or filing platform.
+**Exit:** execution tools can change without redesigning legal-production semantics.
 
 ---
 
 # 17. Stage 11 — Gap Analysis and Over-Engineering Guardrails
 
-## Purpose
-
-Compare required legal production with available execution capabilities and identify only the gaps the repository should own.
-
-## Classify
+Classify required capabilities as:
 
 ```text
 covered
@@ -1330,74 +791,34 @@ partially covered
 missing
 ```
 
-Pay particular attention to gaps in:
+Pay particular attention to jurisdiction resolution, authority verification, effective-date checks, later-treatment checks, fact/assumption separation, claim-to-authority traceability, product/document consistency, trade mark search interpretation, licence/provenance reasoning, legal change impact, uncertainty/escalation, confidentiality-aware routing and bounded repair.
 
-```text
-jurisdiction resolution
-authority verification
-effective-date / currency checks
-case later-treatment checks
-fact-assumption separation
-claim-to-authority traceability
-product-to-document consistency
-cross-document consistency
-trade mark search interpretation
-licence / provenance reasoning
-legal change impact
-uncertainty / escalation
-confidentiality-aware provider routing
-smallest-sufficient legal repair
-```
-
-## Defer unless evidence proves necessary
-
-Flag as likely early over-engineering:
+Defer unless proven necessary:
 
 ```text
 universal legal knowledge graph
 custom case-law database
 custom legislation mirror
-custom trade mark search engine
+custom trade mark engine
 universal citator
-universal jurisdiction / conflict-of-laws engine
+universal jurisdiction engine
 universal compliance ontology
-universal regulatory change monitoring service
-one numeric legal-risk score
-fully autonomous legal sign-off
+regulatory-change SaaS
+one legal-risk score
+autonomous legal sign-off
 filing automation by default
 persistent cross-project matter database
 universal legal workflow DSL
 multi-agent law-firm simulation
-provider registry owned by Legal Skills
 ```
 
-These may become valid later only if examples and benchmarks demonstrate a concrete need.
-
-## Outputs
-
-- gap matrix;
-- native capability shortlist;
-- reuse decisions;
-- deferred-improvement register;
-- proof required before expensive architecture.
-
-## Exit
-
-The project owns legal-production intelligence rather than rebuilding the legal information industry.
+**Exit:** native skills are justified by production gaps rather than platform ambition.
 
 ---
 
 # 18. Stage 12 — Design Core Skills and Commands
 
-## Purpose
-
-Derive the smallest installable skill set capable of the workflow.
-
-Do not begin with a fixed number of legal skills.
-
-## Lean starting hypothesis
-
-Investigate whether the initial system can be expressed as:
+Lean hypothesis to validate:
 
 ```text
 legal-production
@@ -1405,9 +826,7 @@ legal-evaluate
 legal-extension-pack-creator
 ```
 
-This is provisional until Stages 1–11 validate it.
-
-### Possible `legal-production` commands
+Possible `legal-production` commands:
 
 ```text
 scope-matter
@@ -1432,7 +851,7 @@ refresh-analysis
 prepare-escalation
 ```
 
-### Possible `legal-evaluate` commands
+Possible `legal-evaluate` commands:
 
 ```text
 audit-facts
@@ -1452,51 +871,19 @@ audit-confidentiality-route
 diagnose-legal-failure
 ```
 
-Commands should exist only where isolated execution, reuse or evaluation improves the system.
+Retain a command only when it improves isolated evaluation, reuse, composition, diagnosis, targeted repair or benchmark precision.
 
-## Split questions
+Do not create one skill per area of law by default. Split only when a capability has coherent independent installation value and its own benchmark surface.
 
-Research whether any responsibility deserves an independent installable skill, for example:
-
-```text
-legal-research
-legal-drafting
-legal-review
-legal-ip
-privacy-legal
-```
-
-A split is justified only if the capability has a coherent independent user need, installation value, context boundary and benchmark surface.
-
-Do not create one skill per area of law by default; Extension Packs may be the better specialisation mechanism.
-
-## Independent evaluation
-
-Legal evaluation should be separable from production where practical so the same agent is not the only reviewer of its own authority use, reasoning and drafting.
-
-## Outputs
-
-- skill responsibility map;
-- command contracts;
-- self-containment rules;
-- skill dependency rules;
-- initial SKILL.md outlines.
-
-## Exit
-
-Every installable skill owns a coherent legal-production responsibility and every command has a reason to exist.
+**Exit:** every installable skill and command has a defensible production responsibility.
 
 ---
 
 # 19. Stage 13 — Design Extension Packs and Pack Authoring
 
-## Purpose
+## Jurisdiction is context, not a normal Extension Pack
 
-Make reusable specialist legal-production modes first-class without embedding every area of law in core.
-
-## Critical rule: jurisdiction is context, not a normal Extension Pack
-
-Do not default to:
+Do not model ordinary operation as:
 
 ```text
 legal-skills + uk-law-pack
@@ -1504,17 +891,9 @@ legal-skills + eu-law-pack
 legal-skills + us-law-pack
 ```
 
-as though jurisdiction were stylistic specialisation.
+Every run must resolve jurisdiction and current authority as matter context. Jurisdiction-specific references/source profiles may exist internally, but a pack should represent a reusable **matter specialisation that materially changes production behaviour**.
 
-Every legal run must resolve jurisdiction as part of the matter context. Authorities must be current for that context.
-
-A repository may use jurisdiction-specific references, adapters or source profiles internally, but the Extension Pack concept should be reserved for reusable **matter specialisations that materially change legal production behaviour**.
-
-This distinction must be validated during implementation rather than treated as permission to build a universal jurisdiction engine.
-
-## Candidate pack families
-
-Research and narrow an initial catalogue from candidates such as:
+Candidate pack families to research:
 
 ```text
 privacy-data-protection
@@ -1528,91 +907,39 @@ ai-and-automated-systems
 commercial-contracts
 ```
 
-These are hypotheses, not committed catalogue entries.
+A valid pack may alter issue spotting, specialist source ecology, required facts, artefacts, research questions, drafting grammar, review/escalation thresholds, product-consistency tests and evaluation criteria.
 
-## A valid legal pack may alter
-
-```text
-issue-spotting checklist
-specialist source ecology
-required project facts
-legal artifacts
-research questions
-review / escalation thresholds
-specialist drafting grammar
-product-consistency tests
-quality criteria
-benchmark cases
-```
-
-## Pack precedence
-
-Retain the family expectation while adding legal context:
+Precedence must respect applicable authority:
 
 ```text
 verified applicable law / authority
-+ explicit project instructions that are legally permissible
-→ approved / locked legal and product decisions
++ legally permissible explicit project instructions
+→ approved legal / product decisions
 → selected Extension Pack
 → core Legal Skills defaults
 ```
 
-A project instruction cannot make an applicable legal requirement disappear. The final precedence semantics must be researched carefully because legal authority is not simply another user preference.
-
-## Pack authoring workflow
-
-The repository should eventually provide `legal-extension-pack-creator` or equivalent:
+Pack authoring should follow:
 
 ```text
 inspect catalogue
-→ determine whether reusable specialisation is justified
-→ research professional specialist practice
-→ define source ecology and jurisdiction interactions
+→ justify reusable specialisation
+→ research specialist practice
+→ define source ecology + jurisdiction interaction
 → define required facts / artifacts
 → define changed core behaviour
 → define escalation boundaries
-→ define pack-aware evaluation
-→ implement
-→ create showcase
-→ include exact generation prompt
+→ define pack-aware evals
+→ create showcase + exact prompt
 → compare core vs core+pack
-→ validate
-→ catalogue
+→ validate / catalogue
 ```
 
-## Required differential evaluation
-
-Every catalogue pack must demonstrate:
-
-```text
-core
-vs
-core + pack
-```
-
-The comparison must show improved specialist issue spotting, source selection, analysis, artifacts or evaluation rather than merely injecting legal vocabulary.
-
-## Outputs
-
-- legal-pack semantics;
-- jurisdiction-vs-pack rule;
-- pack format / packaging;
-- initial catalogue strategy;
-- pack authoring contract;
-- showcase contract;
-- pack evaluation plan.
-
-## Exit
-
-The project can explain why a legal pack exists and prove that it materially specialises legal production.
+**Exit:** a legal pack is demonstrably different from a jurisdiction label, project brief or generic legal prompt.
 
 ---
 
-# 20. Stage 14 — Design Five Progressive Example Levels
-
-## Purpose
-
-Teach and benchmark progressively broader legal-production responsibility.
+# 20. Stage 14 — Design Progressive Examples
 
 Target:
 
@@ -1620,329 +947,93 @@ Target:
 5 levels × 3 primary examples = 15 primary examples
 ```
 
-Do not lock examples by intuition. For each level:
+Select examples through capability coverage, not intuition.
 
-1. derive required capabilities;
-2. research a broad candidate pool;
-3. map candidates to a capability-coverage matrix;
-4. remove redundant examples;
-5. select the strongest complementary three;
-6. verify coverage across all 15 examples.
-
-Every primary example must contain the complete copyable generation prompt.
-
-## Proposed level semantics
+Proposed levels:
 
 ### Level 1 — Verify one bounded legal question
 
-Demonstrate:
+Examples may include one privacy disclosure question, one open-source licence obligation and one bounded trade mark screening task.
 
-```text
-fact scoping
-jurisdiction
-primary / authoritative source recovery
-currency
-bounded conclusion
-citation
-uncertainty / escalation where necessary
-```
+### Level 2 — Review one bounded artefact or decision
 
-Candidate example classes:
+Examples may include consumer terms, cookie/analytics UX consistency and product-name screening.
 
-```text
-verify whether a privacy notice needs a specific disclosure for a stated processing fact
-check one open-source licence obligation for a defined distribution model
-run a bounded UK trade mark knockout search for a candidate mark / class
-```
+### Level 3 — Produce a focused end-to-end legal package
 
-### Level 2 — Review a bounded artifact or decision
+Examples should span substantially different legal ecologies such as a small web-service privacy/terms package, open-source project licensing/brand review and creator/asset licensing workflow.
 
-Demonstrate:
+### Level 4 — Handle cross-functional complexity and change impact
 
-```text
-multiple legal issues
-artifact review
-source-backed findings
-smallest sufficient edits
-preservation
-project consistency
-```
-
-Candidate classes:
-
-```text
-review a short consumer-terms section for fairness / transparency
-review a cookie / analytics UX against stated tracking behaviour
-review a product name shortlist for trade mark screening and escalation
-```
-
-### Level 3 — Produce an end-to-end legal package for a focused project
-
-Demonstrate complete responsibility for a contained matter.
-
-Candidate classes should span different legal ecologies, for example:
-
-```text
-small web service privacy + terms package derived from product behaviour
-open-source project licence / notices / trade mark boundary review
-creator / asset licensing workflow for a small production
-```
-
-### Level 4 — Handle cross-functional complexity and legal change impact
-
-Demonstrate:
-
-```text
-multiple artifacts
-multiple legal issues
-project specs / implementation evidence
-conflicts and missing facts
-legal-to-product requirements
-change impact
-repair
-specialist escalation
-```
-
-Candidate classes:
-
-```text
-consumer fintech-style application
-UGC / AI-enabled digital product
-multi-provider product with international data flows
-```
+Examples may include a consumer fintech-style application, UGC/AI digital product and multi-provider product with international data flows.
 
 ### Level 5 — Govern legal production across a complex cross-domain project
 
-Demonstrate the complete thesis:
+Examples may include real-world open-world simulation, multi-market consumer launch and a complex Production Skills programme with generated/licensed assets.
 
-```text
-multi-domain issue spotting
-cross-jurisdiction questions
-IP / privacy / consumer / AI interactions
-legal requirements feeding production
-Pactwright-compatible handoffs
-adversarial stress testing
-change-driven re-review
-human specialist escalation
-```
+Across all 15 cover authority types, changing vs stable law, jurisdiction ambiguity, fact incompleteness, privacy, consumer, IP, licensing, AI, trade marks, open source, fintech boundaries, drafting/review, product consistency, change impact, confidentiality, packs, escalation, cross-domain handoffs and Pactwright-compatible evidence.
 
-Candidate classes:
+Every primary example must contain its complete copyable prompt.
 
-```text
-real-world open-world simulation / game
-multi-market consumer product launch
-complex Production Skills programme with generated and licensed assets
-```
-
-## Coverage matrix dimensions
-
-Across the 15 examples cover:
-
-```text
-core skills and commands
-stable vs changing law
-legislation / cases / regulator guidance / registries
-fact incompleteness
-jurisdiction ambiguity
-authority verification
-privacy / consumer / IP / licensing / AI matters
-trade marks
-open-source
-financial-regulatory boundary questions
-drafting / review / redlining
-project consistency
-change impact
-confidentiality-aware tooling
-Extension Packs
-professional escalation
-cross-domain handoffs
-Pactwright-compatible evidence
-```
-
-## Outputs
-
-- five domain-native levels;
-- candidate pool per level;
-- capability matrix;
-- selected 15 primary examples;
-- exact prompts;
-- expected artifacts;
-- benchmark mappings.
-
-## Exit
-
-The examples demonstrate legal production rather than fifteen variants of document drafting.
+**Exit:** the example set teaches legal production, not fifteen variants of document drafting.
 
 ---
 
 # 21. Stage 15 — Design Kakeibo and Worldstack Canonical Stress Tests
 
-## Purpose
+These are deliberately different consuming-project fixtures. Their project-specific conclusions remain in those projects.
 
-Use two substantially different consuming projects to test whether `legal-skills` is genuinely reusable across product, software, AI and creative production.
+## Kakeibo
 
-These are **benchmark/stress-test fixtures**, not central-repository ownership of those projects. Their project-specific legal conclusions and requirements remain in the consuming projects.
-
-## Stress Test A — Kakeibo
-
-Kakeibo is an open-source personal-finance product with a consumer-facing service, financial activity data, the Kei assistant, mobile/web surfaces, operator-owned provider accounts and an explicit separation between Apache-2.0 software licensing and project trade marks.
-
-Reference project:
-
-- https://github.com/sb-dev/kakeibo
-
-### Legal capability areas to exercise
+Exercise:
 
 ```text
-privacy / UK GDPR-style transparency
-data roles and processors
-data retention and deletion
-international transfers where applicable
-cookies / analytics / telemetry
-security and privacy representations
+privacy / data protection
+data roles / processors / retention / transfers
+cookies / telemetry
 consumer terms
-subscription / payment / cancellation / refund behaviour
-unfair terms / commercial practices
+subscription / cancellation / refund behaviour
 financial-regulatory perimeter issue spotting
-boundaries of Kei explanations / recommendations
-AI disclosures and automated behaviour
+Kei assistant boundaries and AI disclosures
 open-source licensing
 third-party dependency / asset licensing
-Kakeibo / Kei trade mark and brand protection
+Kakeibo / Kei brand and trade marks
 marketing claims
-accessibility / vulnerable consumer implications where legally relevant
+vulnerable-consumer implications where relevant
 ```
 
-### Required stress-test behaviour
+Adversarial examples should include legal text contradicting retention, refunds, processor sharing or assistant behaviour; missing open-source obligations; exact-match-only trade mark analysis; and stale privacy guidance.
 
-Given the actual Kakeibo specs and repository evidence, Legal Skills should be able to:
+Success means Legal Skills connects law, actual product behaviour, architecture, UX, commercial terms, AI, open source and brand concerns without becoming Kakeibo-specific infrastructure.
 
-```text
-1. derive a legal matter map from project behaviour;
-2. distinguish facts, assumptions and missing facts;
-3. identify jurisdictions requiring analysis;
-4. research current authoritative sources;
-5. identify legal requirements / risks / options;
-6. generate project changes and legal artifacts where justified;
-7. trace material clauses and requirements to evidence;
-8. detect contradictions between legal text and implementation/specs;
-9. identify what can be corrected automatically;
-10. prepare precise specialist-escalation questions for unresolved matters;
-11. rerun only affected legal analysis when project behaviour changes.
-```
+## Worldstack
 
-### Adversarial fixtures
-
-Include cases such as:
-
-```text
-privacy notice says 12-month retention while architecture retains indefinitely
-terms claim no refunds while product flow / law creates cancellation or refund rights
-Kei is described as non-advisory while behavioural fixtures become materially personalised
-open-source licence inventory omits a dependency with notice obligations
-marketing says data is never shared while a processor receives it
-trade mark recommendation ignores goods/services and only searches exact text
-outdated privacy guidance is cited after newer authoritative guidance exists
-```
-
-### Success
-
-Kakeibo proves that Legal Skills can connect law, product behaviour, data architecture, UX, commercial terms, AI behaviour, open-source and brand concerns without becoming the Kakeibo legal database.
-
-## Stress Test B — Worldstack
-
-Worldstack is a real-world systems modelling and experimentation platform whose development model composes multidisciplinary research into executable simulations and games. It is a strong legal stress case because realistic world reconstruction can combine maps, photographs, architecture, brands, people, public bodies, cultural references, generated assets, social systems and experiments.
-
-Reference project:
-
-- https://github.com/sb-dev/worldstack
-
-### Legal capability areas to exercise
+Exercise:
 
 ```text
 map / geographic-data licences and database rights
 photography / reference-image copyright
 architecture / public-space representation
-trade marks, logos, signage and trade dress
-copyright in creative references
-real-person likeness / privacy / publicity questions
-defamation / false factual implication
-news / social-media / government-body representation
-music / sound / broadcast references
-UGC and moderation
-AI-generated assets and provenance
+trade marks / signage / trade dress
+creative-reference copyright
+real-person likeness / privacy / publicity
+defamation / false implication
+news / social / public-body representation
+music / broadcast references
+UGC / moderation
+AI-generated asset provenance
 training / reference dataset permissions
-open-source and engine / asset licences
+open-source / engine / asset licences
 platform terms
-children / age-related concerns where applicable
-virtual economy / monetisation issues where introduced
-jurisdiction differences for worldwide distribution
+age-related concerns where applicable
+worldwide distribution / jurisdiction differences
 ```
 
-### Required stress-test behaviour
+The stress test should verify provenance, ownership/licence/exception distinctions, brand/person/public-body issues, cross-domain legal constraints, lowest-cost safe alternatives, specialist escalation, Pactwright-compatible requirements and bounded re-review when source provenance or distribution changes.
 
-Given a Worldstack production plan such as reconstructing a recognisable part of London from mixed real-world sources, Legal Skills should:
+Adversarial examples should challenge assumptions such as "publicly visible means reusable", "public data means unrestricted", "generated means rights-free", or "UK analysis automatically covers worldwide distribution".
 
-```text
-1. inventory source and asset classes;
-2. distinguish ownership, licence, exception and uncertainty;
-3. identify real-person / brand / public-body concerns;
-4. map legal constraints to production domains;
-5. propose lowest-cost safe alternatives where appropriate;
-6. preserve provenance requirements for downstream asset production;
-7. identify specialist issues requiring counsel;
-8. produce testable legal constraints for Pactwright / production workflows;
-9. re-evaluate only affected assets / systems when source provenance or distribution changes.
-```
-
-### Cross-domain handoff examples to test
-
-```text
-Deep Research
-→ source evidence and provenance
-
-Legal Skills
-→ permissible-use constraints / uncertainties
-
-World / Environment Production
-→ geometry / signage / location production constraints
-
-Character / Narrative
-→ real-person / fictionalisation / defamation constraints
-
-3D / Video / Audio
-→ asset licensing and provenance constraints
-
-Game Development / Software Engineering
-→ UGC, consent, controls, logging, enforcement capabilities
-
-UI/UX
-→ disclosures, consent and user-control requirements
-
-Pactwright
-→ authorised implementation / verification lifecycle
-```
-
-### Adversarial fixtures
-
-Include cases such as:
-
-```text
-"publicly visible" photograph assumed free to reuse
-"public data" map assumed free of database/licence restrictions
-brand signage copied without analysing context or distribution
-fictional allegation remains obviously linked to an identifiable real person
-AI-generated asset loses its training/reference provenance trail
-third-party asset licence permits editorial but not game distribution
-source licence changes after an asset has been approved
-UK-only legal analysis is incorrectly applied to worldwide distribution
-```
-
-### Success
-
-Worldstack proves that Legal Skills can translate complex, mixed-source real-world production into actionable legal constraints and provenance without taking ownership of creative or game-production decisions.
-
-## Combined stress-test value
+Combined value:
 
 ```text
 Kakeibo
@@ -1952,262 +1043,70 @@ Worldstack
 → IP + licensing + real-world representation + media + UGC + generated assets + cross-domain production
 ```
 
-Passing both is stronger evidence of reusable legal-production architecture than a large set of privacy-policy generation tests.
-
-## Outputs
-
-- Kakeibo benchmark plan;
-- Worldstack benchmark plan;
-- fixture inventory;
-- legal-capability coverage matrix;
-- cross-domain handoff tests;
-- expected escalation points;
-- regression seeds.
-
-## Exit
-
-The architecture survives two deliberately different real consuming projects without adding project-specific logic to core Legal Skills.
+**Exit:** the architecture survives two substantially different consuming projects without embedding either project's legal conclusions into core.
 
 ---
 
 # 22. Stage 16 — Design Evals, Benchmarks and Regression Fixtures
 
-## Purpose
+Separate evaluation layers.
 
-Define legal quality evidence before large implementation.
+### Deterministic repository / artefact validation
 
-## Evaluation layers
-
-### Deterministic repository / artifact validation
-
-Test where practical:
-
-```text
-required matter metadata
-jurisdiction present where required
-authority identities / URLs / citations
-retrieved-at / valid-as-of metadata
-fact-source references
-proposition-to-authority references
-requirement-to-project references
-missing clause identifiers
-invalid artifact structure
-duplicate identifiers
-selective-installation integrity
-skill self-containment
-```
+Check required matter metadata, jurisdictions, authority identities, retrieved-at/valid-as-of data, fact/proposition/requirement references, document identifiers, self-containment and installation integrity.
 
 ### Authority verification
 
-Evaluate:
-
-```text
-authority exists
-citation / URL resolves
-source is what the analysis says it is
-jurisdiction matches
-quoted/pinpoint material supports the proposition
-primary / official source preferred where appropriate
-later updates / amendments / treatment are checked where material
-fabricated authorities are rejected
-```
+Test that authorities exist, match the stated jurisdiction/type, support the proposition, prefer primary/official sources where appropriate and are checked for updates/later treatment when material.
 
 ### Temporal validity
 
-Create cases where:
+Include fixtures involving updated regulator guidance, legislation not yet commenced, changed rules, appealed/limited cases and analysis valid for one launch date but not another.
 
-```text
-old regulator guidance conflicts with newer guidance
-legislation exists but is not yet commenced
-rule changed after a document was drafted
-case was appealed or limited
-project analysis is valid for one launch date but not another
-```
+### Legal reasoning
 
-### Legal reasoning quality
+Keep fact completeness, issue spotting, jurisdiction correctness, rule selection, authority strength, application, counterarguments/exceptions, uncertainty calibration and scope discipline separate.
 
-Evaluate separately:
+### Drafting / review
 
-```text
-fact completeness
-fact / assumption separation
-issue spotting
-jurisdiction correctness
-rule selection
-authority strength
-application of facts to rule
-counterarguments / exceptions
-uncertainty calibration
-scope discipline
-option / recommendation usefulness
-```
-
-### Drafting / review quality
-
-Evaluate:
-
-```text
-purpose and audience fit
-required subject coverage
-internal consistency
-cross-document consistency
-fairness / transparency where relevant
-plain-language quality where required
-preservation of negotiated / approved positions
-absence of invented facts
-absence of unsupported legal claims
-```
+Evaluate purpose/audience fit, subject coverage, internal/cross-document consistency, fairness/transparency where relevant, preservation of approved positions, and absence of invented facts or unsupported legal claims.
 
 ### Legal-product consistency
 
-This should be a first-class suite.
-
-Fixtures should compare legal artifacts against product evidence, for example:
+First-class fixtures should compare:
 
 ```text
-privacy notice vs data-flow fixture
-terms vs cancellation-flow fixture
-licence notices vs dependency manifest
-trade mark claim vs registry evidence
-AI disclosure vs assistant behaviour fixture
-UGC terms vs actual moderation capabilities
+privacy notice ↔ data-flow fixture
+terms ↔ cancellation/refund fixture
+licence notices ↔ dependency manifest
+trade mark claim ↔ registry evidence
+AI disclosure ↔ assistant behaviour
+UGC terms ↔ moderation capability
 ```
 
-### Trade mark evaluation
+### Trade mark, licence and provenance
 
-Test:
-
-```text
-territory captured
-goods / services captured
-classification considered
-identical and similar search performed
-relevant results not discarded because spelling differs
-result evidence preserved
-search distinguished from final legal clearance
-professional escalation when conflicts are material
-```
-
-### Licence / provenance evaluation
-
-Test:
-
-```text
-source identity
-licence identity / version
-permissions / restrictions / obligations
-distribution model relevance
-notice / attribution duties
-provenance continuity
-incompatible assumptions
-```
+Test territory, goods/services, classification, similar-mark searching, search-vs-clearance distinction, licence version, permissions/restrictions/obligations, distribution-model relevance and provenance continuity.
 
 ### Confidentiality routing
 
-Test that sensitive fixtures cause correct routing, redaction, local/private execution or refusal to send material to an unsuitable provider.
+Sensitive fixtures should trigger correct redaction, approved private/local execution or prohibition on unsuitable provider use.
 
-### Preservation, diagnosis and repair
+### Preservation and repair
 
-Test that the system can:
+Test that one wrong fact, stale authority, defective clause or inconsistent implementation can be repaired without regenerating unaffected verified legal work.
 
-```text
-identify the wrong fact / stale authority / defective clause / inconsistent implementation
-preserve verified unaffected work
-rerun only necessary research
-update dependent conclusions
-update affected clauses / requirements
-avoid full legal-package regeneration when unnecessary
-```
+### Extension Packs
 
-### Extension Pack evaluation
+Test activation, non-activation, precedence, specialist issue spotting/source selection, jurisdiction interaction, changed review criteria and core-vs-pack differential behaviour.
 
-Test:
+### End to end
 
-```text
-activation
-non-activation
-precedence
-specialist issue spotting
-specialist source selection
-changed artifacts / review criteria
-jurisdiction interaction
-core-vs-pack differential behaviour
-pack-aware quality evaluation
-```
+Use progressive examples plus Kakeibo and Worldstack stress-test slices.
 
-### End-to-end evaluation
+Priority adversarial regressions include fabricated authority, wrong-proposition citation, stale guidance, law-before-commencement, wrong jurisdiction, template assumptions, exact-match-only trade mark search, wrong licence version, confidential material routed through unsuitable tools, false certainty and generic escalation.
 
-Use progressive examples plus Kakeibo and Worldstack stress tests.
-
-### External installation evaluation
-
-Run from clean consumer projects with no source-checkout assumptions.
-
-## Adversarial regression fixtures to prioritise
-
-```text
-fabricated case citation
-real case cited for the wrong proposition
-outdated regulator guidance
-law cited before commencement
-jurisdiction omitted
-US rule applied to UK facts or vice versa
-privacy notice generated from assumptions instead of actual product evidence
-terms copied from another product with incompatible business behaviour
-unfair / impossible exclusion clause accepted because common online
-exact-match-only trade mark search misses a highly similar mark
-"publicly available" confused with licensed for reuse
-open-source licence family identified but wrong version analysed
-commercial-use restriction missed
-confidential document routed through an unsuitable public AI tool
-legal conclusion stated as certain despite missing material fact
-specialist escalation replaced by generic disclaimer
-one defective clause causes unnecessary complete rewrite
-```
-
-## External legal-AI benchmark research
-
-During Stage 16 investigate current legal-AI benchmark families, academic evaluations and practitioner studies covering areas such as:
-
-```text
-legal research accuracy
-case / authority hallucination
-retrieval and citation
-contract review
-legal reasoning
-multi-jurisdiction performance
-professional benchmark tasks
-```
-
-Do not optimise the repository narrowly to bar-exam-style question answering. Legal Production Skills must test production behaviour and project consequences.
-
-## Regression rule
-
-```text
-escaped legal defect
-→ diagnose owning layer
-→ create smallest reproducible fixture
-→ add deterministic or semantic eval
-→ preserve as regression protection
-```
-
-## Outputs
-
-- benchmark architecture;
-- test taxonomy;
-- legal quality dimensions;
-- case format;
-- authority/currency suite;
-- product-consistency suite;
-- progressive-example coverage map;
-- Kakeibo/Worldstack suites;
-- pack differential suite;
-- regression policy;
-- release gates.
-
-## Exit
-
-The project can detect authority, legal-reasoning, drafting and implementation-consistency failures independently.
+**Exit:** authority, reasoning, drafting and implementation-consistency failures can fail independently.
 
 ---
 
@@ -2225,259 +1124,83 @@ docs/
 └── 06-legal-skills-extension-pack-catalogue.md
 ```
 
-## 01 — System
+Responsibilities:
 
-Owns:
+1. **System:** mission, boundaries, principles, core skills, authority/jurisdiction strategy, execution, confidentiality, human review, build order.
+2. **Workflows and Artifacts:** matter intake, facts, issues, authorities, research, advice, drafting/review, requirements, traceability, change impact, uncertainty, escalation and repair.
+3. **Repository and Contracts:** structure, SKILL.md/command contracts, self-containment, references/scripts/evals, installation, CI and confidentiality-sensitive execution notes.
+4. **Testing and Benchmark:** authority/citation validation, temporal validity, reasoning, drafting/review, product consistency, trade mark/licence evaluation, progressive examples, stress tests, packs and regressions.
+5. **Customisation / Extension Packs:** pack model, jurisdiction-vs-pack distinction, activation/precedence, specialist sources/artifacts, core effects, evaluation, packaging and authoring.
+6. **Catalogue:** curated packs, production profiles, jurisdiction interactions, showcases, exact prompts, pack-specific evals and maturity.
 
-```text
-mission
-scope and professional boundary
-principles
-core skills
-jurisdiction / authority strategy
-execution architecture
-confidentiality / provider policy
-human review / escalation
-build order
-system acceptance
-```
+Generate these specs from persisted research logs rather than reconstructing decisions from conversation history.
 
-## 02 — Workflows and Artifacts
-
-Owns:
-
-```text
-matter intake
-fact / assumption model
-jurisdiction context
-authority / proposition model
-legal research
-advice workflow
-drafting / redlining / review
-legal requirements
-project traceability
-change impact
-risk / uncertainty
-escalation
-failure taxonomy
-repair routes
-cross-domain handoffs
-```
-
-## 03 — Repository and Contracts
-
-Owns:
-
-```text
-repository structure
-SKILL.md contracts
-command contracts
-references / scripts / evals
-self-containment
-installation
-selective installation
-tooling
-CI
-confidentiality-sensitive execution notes
-technical acceptance
-```
-
-## 04 — Testing and Benchmark
-
-Owns:
-
-```text
-evaluation layers
-benchmark suites
-case contracts
-authority / citation validation
-temporal-validity evaluation
-legal reasoning dimensions
-drafting / review evaluation
-legal-product consistency
-trade mark / licence evaluation
-Kakeibo / Worldstack stress tests
-progressive-example coverage
-pack evaluation
-regression policy
-release gates
-measured evidence
-```
-
-## 05 — Customisation / Extension Packs
-
-Owns:
-
-```text
-legal-pack model
-jurisdiction-vs-pack distinction
-pack dimensions
-activation and precedence
-specialist source ecology
-specialist artifacts / workflows
-core-skill effects
-pack packaging
-pack-aware evaluation
-pack-authoring workflow
-professional boundaries
-```
-
-## 06 — Extension Pack Catalogue
-
-Owns:
-
-```text
-curated initial packs
-specialist legal-production profiles
-selection rationale
-jurisdiction interactions
-showcases
-exact generation prompts
-pack-specific evaluation
-maturity / implementation state
-```
-
-## Exit
-
-Implementation can proceed without inventing legal architecture in code.
+**Exit:** implementation can proceed without inventing legal architecture in code.
 
 ---
 
-# 24. Stage 18 — Design the Public README
+# 24. Stage 18 — Design Public README
 
-Follow the proven public structure of `video-production-skills`, adapted to legal production.
-
-Target structure:
+Follow the proven family README structure, adapted to legal production:
 
 ```text
 # Legal Skills
-
 positioning
 legal-production capabilities
 jurisdiction / authority / verification model
 professional boundary
 installation
-quick start — strong Level 1 example
-
-## Learn by doing legal production
-### Level 1 — 3 examples
-### Level 2 — 3 examples
-### Level 3 — 3 examples
-### Level 4 — 3 examples
-### Level 5 — 3 examples
-
-## Project structure grows with the work
-## Skills
-## Extension Packs
-## Execution and authoritative sources
-## Evaluation / benchmarks
-## Kakeibo and Worldstack stress tests
-## Documentation
-## Project boundary
-## Contributing
-## Licence
+quick start
+5 × 3 Learn by Doing Legal Production
+project structure grows with the work
+core skills
+Extension Packs
+execution / authoritative sources
+evaluation / benchmarks
+Kakeibo + Worldstack stress tests
+documentation
+boundary
+contributing
+licence
 ```
-
-## Positioning requirement
-
-The README must make clear that the project coordinates **evidence-backed legal production**, not autonomous legal representation or legal template generation.
 
 A positioning direction to test:
 
 > Turn project reality into traceable legal requirements, advice and documents.
 
-Do not finalise public wording until examples prove the implemented capability.
+Do not claim autonomous legal representation or generic compliance certification.
 
-## Quick-start requirement
-
-Choose a bounded task that visibly demonstrates:
-
-```text
-scope
-→ resolve jurisdiction
-→ verify authority
-→ apply to project facts
-→ produce a bounded result
-→ cite / state valid-as-of
-```
-
-without requiring paid legal databases.
-
-## Exit
-
-The intended public product surface is clear before scaffolding.
+**Exit:** a public user can understand the product and its professional boundary before implementation scaffolding.
 
 ---
 
 # 25. Stage 19 — Cross-Project Review
 
-Only now compare the independently derived Legal Skills model with:
+Compare the independently derived legal model with Deep Research, Software Engineering, UI/UX, Game Development and mature creative Production Skills.
 
-```text
-deep-research-skills
-software-engineering-skills
-ui-ux-design-skills
-game-development-skills
-video-production-skills
-narrative-production-skills
-music-production-skills
-world-environment-production-skills when available
-qa-evaluation-skills when available
-```
-
-Look for proven family patterns such as:
-
-```text
-cheap representation before expensive work
-selection / approval semantics
-artifact preservation
-smallest-sufficient repair
-skill-local commands
-Extension Pack packaging
-progressive examples
-evaluation layering
-clean installation
-```
-
-Pay special attention to interfaces with Deep Research.
-
-A likely boundary hypothesis is:
+Pay particular attention to the likely boundary:
 
 ```text
 Deep Research
-→ reusable evidence acquisition / synthesis production
+→ general evidence acquisition / synthesis
 
 Legal Skills
-→ legal source authority, legal applicability, legal reasoning and legal artifacts
+→ legal authority, applicability, legal reasoning and legal artefacts
 ```
 
-Legal Skills may invoke Deep Research capability, but legal authority and legal judgement remain domain-owned.
+Record but do not prematurely promote candidates such as valid-as-of metadata, evidence/provenance handoff, requirement-to-implementation traceability, change-impact handoff and confidentiality-aware execution metadata.
 
-Record, but do not prematurely promote, candidates such as:
+Apply the family extraction rule: share only after multiple independent domains demonstrate substantially the same need.
 
-```text
-valid-as-of metadata
-evidence / provenance handoff
-requirement-to-implementation traceability
-change-impact handoff
-confidentiality-aware tool-routing semantics
-```
-
-Apply the family extraction rule:
-
-> Share abstractions only after at least two independent production domains need substantially the same concept.
-
-## Exit
-
-Useful family patterns are reused without turning Production Skills central into a compliance platform.
+**Exit:** shared evidence is captured without turning the central Production Skills repo into a compliance platform.
 
 ---
 
-# 26. Stage 20 — Scaffold the Repository
+# 26. Stage 20 — Scaffold Production Repository
 
-Create only useful surfaces justified by the specs.
+Only now expand the Stage 0 workspace into the production scaffold justified by the six specs.
 
-A likely baseline:
+Likely baseline:
 
 ```text
 legal-skills/
@@ -2497,25 +1220,25 @@ legal-skills/
 ├── examples/
 ├── benchmarks/
 ├── tests/
-├── tools/                    # only when justified
-├── extension-packs/          # once packs are implemented
-├── integrations/             # optional
+├── tools/                 # only when justified
+├── extension-packs/       # once implemented
+├── integrations/          # optional
 └── .github/
 ```
 
-Do not create a jurisdiction directory tree, legal database, persistent matter store or empty pack catalogue merely to appear comprehensive.
+Do not create a jurisdiction directory tree, legal database, persistent matter store or empty pack catalogue for symmetry.
 
-## Exit
+This is the point at which `scaffolded` maturity may become appropriate if the family evidence requirements are met.
 
-A contributor can understand where legal production logic, references, examples, packs and evaluation belong.
+**Exit:** every committed production directory has an immediate purpose.
 
 ---
 
-# 27. Stage 21 — Configure Skill Installation
+# 27. Stages 21–23 — Installation and Validation
 
-The project must be usable through the Agent Skills installation model.
+## Stage 21 — Configure Skill Installation
 
-Validate canonical installation such as:
+Validate Agent Skills installation and selective installation. The provisional names remain:
 
 ```bash
 npx skills add sb-dev/legal-skills \
@@ -2524,77 +1247,21 @@ npx skills add sb-dev/legal-skills \
   --agent claude-code
 ```
 
-The exact skill names remain provisional until Stage 12.
+Installation success must not imply that the selected AI/provider is suitable for every legal matter; preserve the confidentiality/tool-eligibility model.
 
-Also test:
+## Stage 22 — Local Validation
 
-```text
-selective installation
-multiple supported agents where intended
-skill-local references
-skill-local commands
-no undocumented repository-relative dependencies
-pack installation where implemented
-```
+Validate repository contracts, skill/command discovery, references, authority/artifact validators, benchmark fixtures, Extension Packs when implemented, prompt completeness, stress-test integrity and README claims.
 
-## Confidentiality caveat
+## Stage 23 — Clean External Install Smoke Test
 
-Installation success does not imply a selected AI/provider is appropriate for every legal matter. The README and skills must preserve the tool-eligibility model from Stage 8.
+From a clean consumer project, install from GitHub, run a bounded Level 1 task, verify matter/authority/output artifacts, run independent evaluation, test selective install, verify jurisdiction/valid-as-of metadata and confirm there are no source-checkout-relative dependencies.
 
-## Exit
-
-The intended installation contract is documented and testable.
+**Exit:** Legal Skills behaves as an installable Agent Skills product rather than a source-repository-only workflow.
 
 ---
 
-# 28. Stage 22 — Local Validation
-
-Before publication validate:
-
-```text
-repository structure
-SKILL.md frontmatter / contracts
-command discovery
-required references
-authority / artifact validators
-benchmark fixtures
-Extension Pack structure when implemented
-example prompt completeness
-Kakeibo / Worldstack fixture integrity
-README claims
-selective installation from local checkout / package
-```
-
-Keep this gate distinct from external installation.
-
-## Exit
-
-The source repository is internally coherent.
-
----
-
-# 29. Stage 23 — Publish and Clean External Install Smoke Test
-
-From a clean consumer project:
-
-1. install Legal Skills from GitHub using the documented command;
-2. verify selected skills are discoverable;
-3. run the Level 1 quick-start task;
-4. verify matter, authority and output artifacts are produced as documented;
-5. run independent evaluation;
-6. confirm no source-checkout-relative dependencies exist;
-7. test selective installation;
-8. test at least one Extension Pack when packs are implemented;
-9. verify jurisdiction and valid-as-of metadata survive installation;
-10. verify no confidential test data is required for the public smoke test.
-
-## Exit
-
-The repository works as an external Agent Skills product.
-
----
-
-# 30. Stage 24 — Optional Pactwright Integration and Registry Promotion
+# 28. Stage 24 — Optional Pactwright Integration and Registry Promotion
 
 If useful, add:
 
@@ -2604,12 +1271,10 @@ integrations/pactwright.yml
 
 It may describe compatibility and capability bindings only.
 
-It must not move Legal Skills workflow semantics into Pactwright or move Pactwright lifecycle semantics into Legal Skills.
-
-## Integration hypothesis
+Integration hypothesis:
 
 ```text
-Pactwright Contract / project change
+Pactwright project change / Contract
 → Legal Skills scope / research / analysis
 → legal requirements / constraints / review points
 → authorised implementation work
@@ -2618,11 +1283,9 @@ Pactwright Contract / project change
 → Pactwright lifecycle gate
 ```
 
-The exact Pactwright contract remains Pactwright-owned.
+Pactwright owns lifecycle/governance; Legal Skills owns legal-production semantics.
 
-## Maturity progression
-
-Promote only with evidence:
+Maturity remains evidence-based:
 
 ```text
 proposed
@@ -2634,19 +1297,15 @@ proposed
 → mature
 ```
 
-`working` requires at least one installed end-to-end legal-production example with verified authoritative sources.
-
-`benchmarked` requires meaningful authority, reasoning, drafting and project-consistency regressions to be detectable, including at least one canonical stress-test slice.
-
-`mature` requires the family contract, including six spec responsibilities, progressive examples, Extension Packs, pack authoring, benchmark coverage, both canonical stress-test programmes and clean external installation.
+Repository creation alone does not promote maturity. `working` requires an installed end-to-end legal-production example using verified authority. `benchmarked` requires meaningful authority/reasoning/drafting/product-consistency regressions. `mature` requires the family contract, progressive examples, packs, pack authoring, benchmark coverage, Kakeibo and Worldstack stress-test programmes and clean external installation.
 
 ---
 
-# 31. Stage 25 — Review Shared-Abstraction Candidates
+# 29. Stage 25 — Review Shared-Abstraction Candidates
 
 After implementation evidence exists, apply `shared-abstraction-process.md`.
 
-Potential future candidates may include:
+Potential candidates include:
 
 ```text
 valid-as-of metadata
@@ -2656,115 +1315,93 @@ change-impact handoff
 confidentiality-aware execution metadata
 ```
 
-Do not promote them merely because Legal Skills is cross-cutting.
-
-In particular, avoid centrally shared:
-
-```text
-legal runtime
-legal knowledge database
-universal jurisdiction engine
-universal compliance graph
-universal risk score
-universal regulatory monitor
-universal legal pack interpreter
-```
-
-without repeated independent domain evidence.
+Do not centrally promote a legal runtime, legal knowledge database, universal jurisdiction engine, universal compliance graph, universal risk score, universal regulatory monitor or universal legal pack interpreter without repeated independent domain evidence.
 
 ---
 
-# 32. Legal-Specific Acceptance Gates
+# 30. Legal-Specific Acceptance Gates
 
-Before `legal-skills` can be considered mature, evidence should demonstrate all of the following.
+Before `legal-skills` can be considered mature, demonstrate:
 
-## Legal research and analysis
+### Research and analysis
 
-- material facts and assumptions are distinguished;
-- jurisdiction is resolved or explicitly left unresolved;
+- facts and assumptions are distinguished;
+- jurisdiction is resolved or explicitly unresolved;
 - authoritative sources are preferred where appropriate;
-- material authorities are verified rather than invented;
-- legal propositions are traceable to authority;
+- authorities are verified rather than invented;
+- propositions trace to authority;
 - temporal validity is explicit;
-- conflicting or limiting authority is represented when material;
-- conclusions do not exceed factual or legal certainty;
-- legal requirements are actionable by consuming projects;
-- specialist escalation is specific and useful.
+- conflicting/limiting authority is represented when material;
+- conclusions do not exceed factual/legal certainty;
+- requirements are actionable by consuming projects;
+- escalation is specific and useful.
 
-## Drafting and review
+### Drafting and review
 
-- legal documents derive from actual product / transaction behaviour;
-- documents do not invent project facts to complete a template;
-- clause-level repair preserves unaffected approved work;
-- legal and commercial purpose remain distinguishable;
+- documents derive from actual product/transaction behaviour;
+- project facts are not invented to fill templates;
+- clause repair preserves unaffected approved work;
 - cross-document contradictions are detectable;
 - legal-product inconsistencies are detectable;
-- consumer-facing documents are evaluated for required transparency / fairness dimensions where applicable.
+- consumer documents are evaluated for transparency/fairness where applicable.
 
-## IP / licence behaviour
+### IP and licensing
 
-- trade mark analysis includes territory and goods/services rather than exact-name search only;
-- source / asset provenance can survive production handoffs;
-- licence permissions, restrictions and obligations are applied to the actual use / distribution model;
-- availability on the internet is never treated as sufficient permission by itself;
+- trade mark analysis includes territory and goods/services;
+- source/asset provenance survives production handoffs;
+- licence obligations are applied to actual use/distribution;
+- public availability is never treated as sufficient permission;
 - uncertain conflicts escalate appropriately.
 
-## Confidentiality
+### Confidentiality
 
-- tool routing accounts for matter sensitivity;
-- public-provider use is not assumed safe for confidential legal material;
-- minimisation / redaction or private execution can be selected;
-- public benchmarks use synthetic or public data.
+- tool routing accounts for sensitivity;
+- public-provider use is not assumed safe;
+- minimisation/redaction/private/local execution can be selected;
+- public benchmarks use public or synthetic data.
 
-## Evaluation
+### Evaluation and product behaviour
 
 - fabricated authority, stale authority, wrong jurisdiction and unsupported reasoning can fail independently;
 - drafting quality is separate from legal correctness;
 - legal-product consistency is independently tested;
 - verified unaffected work is preserved during repair;
-- known failures become regression fixtures;
-- Extension Packs materially change legal-production behaviour and are differentially evaluated;
-- Kakeibo and Worldstack stress tests exercise distinct legal capability surfaces.
-
-## Product behaviour
-
-- core skills work without Extension Packs;
-- jurisdiction resolution does not depend on selecting a jurisdiction pack;
-- 15 primary progressive examples exist with exact prompts;
-- six canonical specification responsibilities exist;
-- the README represents implemented capability accurately;
+- known defects become regression fixtures;
+- packs materially change legal behaviour and are differentially evaluated;
+- Kakeibo and Worldstack exercise distinct legal surfaces;
+- core works without packs;
+- jurisdiction does not depend on a jurisdiction pack;
+- 15 primary examples exist with exact prompts;
+- six canonical specs exist;
 - professional boundaries are explicit;
-- skills are self-contained;
-- local validation passes;
-- clean external installation passes;
-- quality claims are backed by measured evidence or explicitly marked unmeasured.
+- local and clean external installation pass.
 
 ---
 
-# 33. Initial Non-Goals
+# 31. Initial Non-Goals
 
-Until domain evidence proves otherwise, `legal-skills` should not become:
+Until evidence proves otherwise, `legal-skills` is not:
 
 - a law firm or substitute for regulated professional representation;
-- an autonomous court filing or litigation-advocacy system;
-- a tax, immigration, criminal, family, employment, patent or corporate-law omnibus merely because these are legal fields;
+- an autonomous court-filing or litigation-advocacy system;
+- a tax, immigration, criminal, family, employment, patent or corporate-law omnibus;
 - a universal legal research database;
-- a copy of Westlaw, Lexis, vLex or another legal information provider;
+- a replacement for commercial legal information providers;
 - a central store of consuming-project legal matters;
 - a regulatory-change SaaS platform;
 - a universal policy-as-code engine;
 - a jurisdiction ontology project;
 - a compliance certification authority;
-- a system that claims a document is "legally compliant" without scope, jurisdiction, facts, evidence and valid-as-of context;
+- a system that claims a product or document is "legally compliant" without scoped jurisdiction, facts, authority and valid-as-of context;
 - a generic legal disclaimer generator.
 
 ---
 
-# 34. Success Criterion
+# 32. Success Criterion
 
-This bootstrap succeeds if a later session can execute each stage without redesigning the project from first principles.
+This bootstrap succeeds if later sessions can execute each stage from persisted research logs without redesigning `legal-skills` from first principles.
 
-The resulting `legal-skills` repository should make AI-assisted legal production:
+The resulting project should make AI-assisted legal production:
 
 ```text
 more fact-aware
@@ -2779,4 +1416,4 @@ more efficient to review and repair
 more precise about when specialist counsel is required
 ```
 
-while remaining a lean Agent Skills project rather than growing into a universal legal platform before the need is proven.
+while remaining a lean Agent Skills project rather than becoming a universal legal platform before the need is proven.
