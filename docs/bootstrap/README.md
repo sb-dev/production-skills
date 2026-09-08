@@ -4,7 +4,19 @@ This directory contains the reusable processes used to create a **custom bootstr
 
 The files here are not themselves the final bootstrap for a production domain. They are source recipes that must be researched, interpreted and specialised for the new discipline.
 
-A generated bootstrap should look like:
+A new domain now begins by creating a **minimal target repository** that acts as the durable bootstrap workspace. The bootstrap specification and later stage outputs are saved directly into that repository as research logs.
+
+Initial repository shape:
+
+```text
+<domain>-production-skills/
+├── README.md
+└── docs/
+    └── research-logs/
+        └── README.md
+```
+
+The first substantive bootstrap output should look like:
 
 ```text
 docs/research-logs/YYYY-MM-DD-<domain>-new-project-bootstrap-process.md
@@ -17,6 +29,8 @@ docs/research-logs/2026-09-07-ui-ux-design-skills-new-project-bootstrap-process.
 ```
 
 The custom bootstrap then becomes the staged design process used to research, specify, scaffold, implement, evaluate and publish that domain repository.
+
+The minimal repository is **not** the production scaffold. Its purpose is to keep bootstrap research durable, reduce dependence on long conversation context and give later stages a canonical source to read.
 
 ---
 
@@ -31,6 +45,40 @@ Use all relevant files in this directory when generating a bootstrap:
 Also read the current family specifications under [`../specs/`](../specs/) and the most recent relevant research logs under [`../research-logs/`](../research-logs/).
 
 Within research logs, prefer newer relevant findings over older ones when they conflict. Do not silently carry superseded assumptions into a new bootstrap.
+
+---
+
+## Bootstrap workspace principle
+
+Conversation is an interaction surface, not the authoritative bootstrap record.
+
+Persist substantive outputs as research logs while the bootstrap progresses. This includes, where useful:
+
+```text
+domain-boundary analysis
+production-practice research
+AI/tool/provider landscape
+workflow and artefact model
+skill and command decomposition
+Extension Pack analysis
+example candidate pools and coverage matrices
+benchmark design
+cross-domain comparisons
+material architectural decisions
+```
+
+Later stages should read these files rather than depending on the entire conversation history.
+
+This improves:
+
+- context efficiency;
+- traceability;
+- recovery across sessions;
+- consistency between stages;
+- final specification quality;
+- separation between research evidence and conversational discussion.
+
+Do not create production surfaces early merely because the repository already exists. `skills/`, `examples/`, `evals/`, `benchmarks/`, CI and similar structures are added only when the bootstrap has designed them.
 
 ---
 
@@ -56,6 +104,33 @@ It is an example, not a canonical template. Later family decisions and evidence 
 
 # Bootstrap generation process
 
+## 0. Create the minimal target repository
+
+Create the future domain repository before substantial bootstrap research begins.
+
+Keep it deliberately small:
+
+```text
+README.md
+docs/research-logs/README.md
+```
+
+The root README should contain only:
+
+```text
+project name
+provisional one-line purpose
+bootstrap / research status
+```
+
+The research-log README should explain that this directory is the durable store for bootstrap research and staged design outputs.
+
+Do not add the production scaffold yet.
+
+The repository's existence does not imply `scaffolded` maturity.
+
+---
+
 ## 1. Define the new production discipline
 
 Start from the project idea, not a proposed skill list.
@@ -76,6 +151,8 @@ non-goals
 ```
 
 The bootstrap must state clearly what the repository owns and what it deliberately leaves to other Production Skills, provider skills, deterministic tools or consuming projects.
+
+Persist the detailed boundary analysis as a research log.
 
 ---
 
@@ -104,6 +181,8 @@ handoffs
 Do not infer the production workflow from current AI model capabilities.
 
 The resulting custom bootstrap should contain domain-specific research stages whenever the discipline requires them. UI/UX, for example, needs explicit human-problem and evidence modelling; another production discipline may need different specialist research stages.
+
+Persist the detailed production research and synthesis before proceeding.
 
 ---
 
@@ -145,6 +224,8 @@ USE / ADAPT / REFERENCE / REJECT
 
 The Production Skills repository should own production intelligence. Existing tools should execute specialist operations whenever they already solve the execution problem well.
 
+Persist the capability landscape and gap analysis.
+
 ---
 
 ## 4. Derive the domain workflow and artefact model
@@ -170,6 +251,8 @@ The exact stages, terminology and artefacts must remain domain-native.
 
 Do not import story beats into music, shot terminology into UI/UX, or any other domain-specific structure merely to make repositories look symmetrical.
 
+Persist the workflow model and the reasoning behind it.
+
 ---
 
 ## 5. Design the core Agent Skills and commands
@@ -193,6 +276,8 @@ skills/<skill>/
 Only create optional surfaces when the skill genuinely needs them.
 
 Commands are decomposed production operations, not a generic workflow engine.
+
+Persist the skill/command architecture and rejected alternatives.
 
 ---
 
@@ -245,6 +330,8 @@ core + pack
 ```
 
 A pack must materially specialise production behaviour rather than merely add a label.
+
+Persist the pack architecture, candidate catalogue and selection reasoning.
 
 ---
 
@@ -310,6 +397,8 @@ Additional useful examples may exist as supplementary demonstrations, regression
 
 Every primary example must include its complete generation prompt.
 
+Persist the candidate pool, coverage matrix and final selection rationale.
+
 ---
 
 ## 8. Design evaluation and benchmarks before implementation is considered complete
@@ -346,6 +435,8 @@ defect
 ```
 
 The bootstrap should define the benchmark architecture and acceptance gates before a large implementation is produced.
+
+Persist the benchmark architecture and coverage mapping.
 
 ---
 
@@ -465,6 +556,8 @@ implementation / maturity status
 
 Specifications 05 and 06 are separate because the **pack contract** and the **actual curated catalogue** evolve for different reasons.
 
+Generate the six specs from the persisted research logs rather than reconstructing earlier decisions from conversation context.
+
 ---
 
 ## 10. Define the target README
@@ -498,6 +591,8 @@ licence
 
 The README is a product surface: it should explain what can be produced, demonstrate progression through real examples, and provide direct installation and execution paths.
 
+The minimal bootstrap README should not be expanded into this public product surface until the specifications make the content defensible.
+
 ---
 
 ## 11. Cross-project review only after the domain architecture exists
@@ -527,6 +622,8 @@ centralised domain knowledge
 
 unless repeated production evidence later proves that sharing is simpler than independent implementations.
 
+Persist material comparison and extraction findings as research logs.
+
 ---
 
 ## 12. Turn the findings into a staged custom bootstrap
@@ -547,13 +644,14 @@ expected outputs
 decisions made
 what remains provisional
 exit criteria
+research-log output
 ```
 
 Add domain-specific stages when necessary. Merge generic stages when the discipline does not need them separately.
 
 The bootstrap should be detailed enough that a later session can execute one stage at a time without redesigning the overall process.
 
-Do not scaffold the repository while generating the bootstrap specification unless explicitly requested. The bootstrap defines how the repository will be created.
+The minimal repository already exists at this point. Do **not** build its production scaffold while generating the bootstrap specification unless explicitly requested. The bootstrap defines how that repository will evolve.
 
 ---
 
@@ -561,28 +659,30 @@ Do not scaffold the repository while generating the bootstrap specification unle
 
 Before a custom bootstrap is considered complete, it must define how the project will produce:
 
-1. a clear domain goal, scope and boundary;
-2. production-domain research;
-3. domain-native workflow and artefact architecture;
-4. fidelity / cost / commitment strategy;
-5. AI skill, tool and provider research;
-6. execution-layer decisions and gap analysis;
-7. justified core Agent Skills;
-8. decomposed commands where useful;
-9. Extension Pack architecture;
-10. initial Extension Pack catalogue strategy;
-11. a pack-authoring capability;
-12. five progressive example levels;
-13. three primary examples per level selected through capability coverage;
-14. deterministic and semantic evaluation;
-15. benchmark and regression architecture;
-16. six canonical specifications;
-17. a Video-style public README structure;
-18. open-source repository scaffold design;
-19. Agent Skills installation and selective-installation contract;
-20. local validation and clean external installation smoke tests;
-21. cross-domain review and extraction candidates;
-22. maturity and publication acceptance gates.
+1. a minimal bootstrap workspace repository with `docs/research-logs/`;
+2. a clear domain goal, scope and boundary;
+3. production-domain research;
+4. domain-native workflow and artefact architecture;
+5. fidelity / cost / commitment strategy;
+6. AI skill, tool and provider research;
+7. execution-layer decisions and gap analysis;
+8. justified core Agent Skills;
+9. decomposed commands where useful;
+10. Extension Pack architecture;
+11. initial Extension Pack catalogue strategy;
+12. a pack-authoring capability;
+13. five progressive example levels;
+14. three primary examples per level selected through capability coverage;
+15. deterministic and semantic evaluation;
+16. benchmark and regression architecture;
+17. six canonical specifications;
+18. a Video-style public README structure;
+19. open-source production repository scaffold design;
+20. Agent Skills installation and selective-installation contract;
+21. local validation and clean external installation smoke tests;
+22. cross-domain review and extraction candidates;
+23. maturity and publication acceptance gates;
+24. a research-log plan that persists substantive stage outputs as the bootstrap progresses.
 
 ---
 
@@ -593,11 +693,15 @@ Use a request in this form when creating a new domain bootstrap:
 ```text
 Create a custom bootstrap specification for <domain>-production-skills.
 
+First create or use the minimal target repository as the bootstrap workspace. It should initially contain only a minimal README and docs/research-logs/README.md. Do not create the production scaffold yet.
+
 Use production-skills/docs/bootstrap as the governing bootstrap source and read the current Production Skills family specifications and relevant recent research logs.
 
 Research the real production discipline first. Then research existing AI skills, tools, providers and open-source implementations. Compare with Video, Narrative and Music Production Skills only after the domain model is independently understood.
 
 Generate a domain-specific staged bootstrap comparable in depth to the UI/UX Design Skills bootstrap. Do not merely copy the generic stages.
+
+Persist the bootstrap specification and substantive later stage outputs under docs/research-logs/ so subsequent stages can read canonical files instead of relying on the full conversation history.
 
 The bootstrap must target:
 - six canonical project specifications;
@@ -611,10 +715,10 @@ The bootstrap must target:
 - local and clean external Skills CLI smoke tests;
 - cross-domain review without premature shared abstractions.
 
-Save the result as:
+Save the bootstrap specification as:
 docs/research-logs/YYYY-MM-DD-<domain>-production-skills-new-project-bootstrap-process.md
 
-Do not scaffold the new repository yet. The output of this task is the bootstrap specification used to drive the later staged work.
+Do not scaffold the production repository yet. The minimal repository already exists only as a durable bootstrap workspace.
 ```
 
 Add domain-specific source material, constraints and existing repositories to that request when available.
@@ -625,4 +729,6 @@ Add domain-specific source material, constraints and existing repositories to th
 
 A successful custom bootstrap is not a generic checklist with the domain name substituted into it.
 
-It should encode enough domain knowledge, research questions, architectural decisions, example strategy, Extension Pack strategy and acceptance gates that the new Production Skills repository can be built stage by stage while preserving the family principles without prematurely standardising the discipline.
+It should encode enough domain knowledge, research questions, architectural decisions, example strategy, Extension Pack strategy and acceptance gates that the repository can be built stage by stage while preserving the family principles without prematurely standardising the discipline.
+
+The process is also successful when a later stage can continue primarily from repository research logs instead of requiring the entire original bootstrap conversation.
