@@ -1,0 +1,25 @@
+{
+  "id": "graphic-novel-production-skills",
+  "repository": "https://github.com/sb-dev/graphic-novel-production-skills",
+  "domain": "graphic-novel-production",
+  "status": "proposed",
+  "capabilities": [
+    "sequential-art-adaptation",
+    "page-panel-scripting",
+    "page-layout",
+    "reading-order",
+    "page-turn-design",
+    "visual-continuity",
+    "character-reference-continuity",
+    "lettering",
+    "sound-effects-lettering",
+    "colour-value-hierarchy",
+    "cover-interior-coordination",
+    "print-packaging",
+    "fixed-layout-digital",
+    "vertical-scroll-adaptation",
+    "localisation",
+    "sequential-art-evaluation"
+  ],
+  "pactwright": "planned"
+}
