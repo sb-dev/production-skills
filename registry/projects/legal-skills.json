@@ -1,0 +1,21 @@
+{
+  "id": "legal-skills",
+  "repository": "https://github.com/sb-dev/legal-skills",
+  "domain": "legal",
+  "status": "researching",
+  "capabilities": [
+    "legal-research",
+    "legal-advice",
+    "legal-drafting",
+    "legal-review",
+    "privacy-data-protection",
+    "consumer-law",
+    "intellectual-property",
+    "trademark-law",
+    "licensing",
+    "legal-product-traceability",
+    "legal-change-impact",
+    "specialist-escalation"
+  ],
+  "pactwright": "planned"
+}
