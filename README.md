@@ -76,7 +76,8 @@ The bootstrap directory contains reusable family processes. They are used to gen
 Current domain bootstrap specifications include:
 
 - [`Legal Skills`](docs/research-logs/2026-09-08-legal-skills-new-project-bootstrap-process.md), using Kakeibo and Worldstack as deliberately different legal stress-test fixtures while keeping project-specific legal conclusions in the consuming projects;
-- [`World / Environment Production Skills`](docs/research-logs/2026-09-08-world-environment-production-skills-new-project-bootstrap-process.md), using Worldstack as a major simulation-driven consumer while also requiring an independent fictional-world proving path so reusable environment production does not become Worldstack-specific.
+- [`World / Environment Production Skills`](docs/research-logs/2026-09-08-world-environment-production-skills-new-project-bootstrap-process.md), using Worldstack as a major simulation-driven consumer while also requiring an independent fictional-world proving path so reusable environment production does not become Worldstack-specific;
+- [`3D Production Skills`](docs/research-logs/2026-09-08-3d-production-skills-new-project-bootstrap-process.md), treating 3D asset production as a contract-driven pipeline from proxy and editable source through surfaces, runtime representation, interchange and technical/visual validation, with Worldstack as one consumer rather than the owning architecture.
 
 A mature project targets:
 
