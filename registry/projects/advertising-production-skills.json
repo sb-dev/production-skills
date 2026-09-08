@@ -1,0 +1,24 @@
+{
+  "id": "advertising-production-skills",
+  "repository": "https://github.com/sb-dev/advertising-production-skills",
+  "domain": "advertising-production",
+  "status": "proposed",
+  "capabilities": [
+    "campaign-briefing",
+    "creative-strategy",
+    "message-architecture",
+    "claim-proof-traceability",
+    "ad-concept-design",
+    "creative-variants",
+    "cross-format-adaptation",
+    "media-planning",
+    "audience-hypotheses",
+    "campaign-experimentation",
+    "campaign-measurement",
+    "creative-fatigue-management",
+    "campaign-optimisation",
+    "platform-policy-context",
+    "campaign-learning"
+  ],
+  "pactwright": "planned"
+}
