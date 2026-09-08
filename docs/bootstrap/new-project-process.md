@@ -1,17 +1,20 @@
 # New Production Skills Project Bootstrap Process
 
 **Status:** Canonical process  
-**Version:** 1.1  
-**Date:** 7 September 2026
+**Version:** 1.2  
+**Date:** 8 September 2026
 
 This process creates a new Production Skills project without prematurely forcing it into abstractions derived from other domains.
 
-It is the family-level source process. Before starting a new domain repository, use [`README.md`](README.md) to turn this process and the other bootstrap recipes into a **domain-specific bootstrap specification** under `docs/research-logs/`.
+It is the family-level source process. Start by creating a minimal target repository that acts as the durable bootstrap workspace. Then use [`README.md`](README.md) to turn this process and the other bootstrap recipes into a **domain-specific bootstrap specification** under that repository's `docs/research-logs/`.
 
-The domain-specific bootstrap is then executed stage by stage.
+The domain-specific bootstrap is then executed stage by stage, with substantive stage outputs persisted as research logs rather than left only in conversation context.
 
 ## Governing rules
 
+- Create the durable bootstrap workspace before substantial research begins.
+- Persist substantive bootstrap findings in `docs/research-logs/` as the work progresses.
+- Treat conversation as an interaction surface, not the authoritative store of bootstrap research.
 - Understand the production discipline before designing Agent Skills.
 - Reuse existing execution capabilities before rebuilding them.
 - Prove vertical production behaviour before extracting shared abstractions.
@@ -23,7 +26,79 @@ The domain-specific bootstrap is then executed stage by stage.
 
 ---
 
-## Stage 0 — Define the domain boundary
+## Stage 0 — Create the bootstrap workspace repository
+
+Create the target Production Skills repository before running the substantive bootstrap stages.
+
+The repository exists initially to provide durable storage for bootstrap research and decisions. It is **not yet the production repository scaffold**.
+
+Keep the initial repository deliberately small:
+
+```text
+<domain>-production-skills/
+├── README.md
+└── docs/
+    └── research-logs/
+        └── README.md
+```
+
+The root README should state only the project name, provisional purpose and current bootstrap status. `docs/research-logs/README.md` should explain that the directory contains bootstrap research, decisions and staged design outputs.
+
+Do not create at this stage:
+
+```text
+skills/
+examples/
+evals/
+benchmarks/
+extension-packs/
+tools/
+tests/
+integrations/
+.github/
+package metadata
+production CI
+```
+
+unless one of those files is genuinely required to conduct the bootstrap itself.
+
+### Persist bootstrap work as research logs
+
+The first substantive file should be the domain-specific bootstrap specification:
+
+```text
+docs/research-logs/YYYY-MM-DD-<domain>-new-project-bootstrap-process.md
+```
+
+As later bootstrap stages are executed, write their detailed findings and decisions into research logs before proceeding.
+
+Use concise conversation updates for:
+
+- decisions;
+- unresolved questions;
+- stage summaries;
+- corrections.
+
+Use repository research logs for:
+
+- detailed research;
+- source comparisons;
+- capability matrices;
+- candidate lists;
+- architecture analysis;
+- example selection evidence;
+- benchmark design;
+- decisions that later stages must consume.
+
+Later stages should read the relevant research logs rather than relying on the full conversation history.
+
+This reduces context growth, prevents decisions from being lost between sessions and makes the final repository architecture traceable to the research that produced it.
+
+Creating this repository does **not** make the project `scaffolded`. The production scaffold is created only after the bootstrap has designed the repository architecture.
+
+**Exit:** the target repository exists, the research-log surface is writable, and the custom bootstrap specification can be persisted there.
+
+## Stage 1 — Define the domain boundary
 
 Write a short project charter answering:
 
@@ -35,9 +110,11 @@ Write a short project charter answering:
 - Where are the important human approval or commitment points?
 - What quality means in this discipline?
 
+Persist the detailed domain-boundary findings as a research log.
+
 **Exit:** a defensible production boundary exists.
 
-## Stage 1 — Research real production practice
+## Stage 2 — Research real production practice
 
 Apply [`domain-research-process.md`](domain-research-process.md).
 
@@ -58,9 +135,11 @@ Capture:
 
 Add domain-specific research stages when the discipline requires them.
 
+Persist the detailed research and synthesis before moving on.
+
 **Exit:** the production model is grounded in the discipline rather than current model APIs.
 
-## Stage 2 — Research AI skills, tools and providers
+## Stage 3 — Research AI skills, tools and providers
 
 Find existing Agent Skills, repositories, CLIs, APIs, MCPs, engines, provider capabilities and deterministic tools that can implement parts of the production workflow.
 
@@ -86,9 +165,11 @@ REFERENCE
 REJECT
 ```
 
+Persist the capability landscape, comparisons and gap analysis.
+
 **Exit:** a tool/skill landscape and gap analysis exist.
 
-## Stage 3 — Model the domain workflow and artefacts
+## Stage 4 — Model the domain workflow and artefacts
 
 Define the smallest credible end-to-end workflow that preserves the discipline's real decision structure.
 
@@ -106,9 +187,11 @@ Identify:
 
 Do not copy another Production Skills project's stage names or artefacts unless the domain independently requires them.
 
+Persist the workflow and artefact reasoning so later specification work does not have to reconstruct it from conversation context.
+
 **Exit:** a domain-owned workflow and artefact model exists.
 
-## Stage 4 — Design core skills and commands
+## Stage 5 — Design core skills and commands
 
 Derive the smallest installable skill set capable of performing the domain workflow.
 
@@ -125,9 +208,11 @@ Decompose bounded skill-local commands only when this improves:
 
 Commands are production operations, not a universal workflow runtime.
 
+Persist the skill/command responsibility model and rejected alternatives.
+
 **Exit:** core skill responsibilities and useful command boundaries are justified.
 
-## Stage 5 — Design Extension Pack architecture and catalogue strategy
+## Stage 6 — Design Extension Pack architecture and catalogue strategy
 
 Extension Packs are a first-class target capability of a mature Production Skills repository.
 
@@ -148,9 +233,11 @@ The core must remain useful without a pack.
 
 Do not implement a universal pack runtime. Each domain owns its own pack semantics.
 
+Persist the pack model, catalogue candidates and the evidence for selecting coherent reusable profiles.
+
 **Exit:** the project can explain what a valid pack is, how it differs from project-specific prompting, how it will be demonstrated, and how new packs will be authored.
 
-## Stage 6 — Design progressive examples
+## Stage 7 — Design progressive examples
 
 Define five domain-native levels of increasing production responsibility.
 
@@ -189,9 +276,11 @@ Every primary example must contain its complete copyable generation prompt.
 
 Additional examples may exist as supplementary showcases, benchmark fixtures or regressions.
 
+Persist the candidate pool, coverage matrix, selection rationale and final 5×3 set.
+
 **Exit:** the planned example set demonstrates the breadth and progression of the production system rather than one repeated house pattern.
 
-## Stage 7 — Design evaluation and benchmarks
+## Stage 8 — Design evaluation and benchmarks
 
 Define evaluation before large-scale implementation.
 
@@ -222,9 +311,11 @@ escaped defect
 → permanent regression protection
 ```
 
+Persist the benchmark architecture, capability-to-case mapping and acceptance gates.
+
 **Exit:** meaningful regressions can be detected and the project knows what evidence will support quality claims.
 
-## Stage 8 — Generate six canonical specifications
+## Stage 9 — Generate six canonical specifications
 
 Every mature Production Skills project targets six specification responsibilities:
 
@@ -249,9 +340,11 @@ The six responsibilities are:
 5. Extension Pack semantics and authoring;
 6. curated Extension Pack catalogue and showcases.
 
+Generate these specifications from the persisted research logs, not by reconstructing earlier bootstrap decisions from memory.
+
 **Exit:** implementation can proceed without inventing production architecture in code.
 
-## Stage 9 — Design the public README
+## Stage 10 — Design the public README
 
 Use the proven `video-production-skills` README structure as the family reference while adapting the content to the domain.
 
@@ -271,11 +364,15 @@ The README should make visible:
 - project boundary;
 - contribution and licence information.
 
-**Exit:** the repository has a clear public product surface rather than only internal specifications.
+The minimal bootstrap README is replaced or expanded only now, once the product surface is designed from canonical specifications.
 
-## Stage 10 — Scaffold the repository
+**Exit:** the repository has a clear public product surface rather than only a bootstrap status page.
+
+## Stage 11 — Scaffold the production repository
 
 Create only directories that are immediately useful.
+
+This is the point where the minimal bootstrap workspace becomes the actual Production Skills repository scaffold.
 
 Establish at least the surfaces required by the designed architecture, such as:
 
@@ -290,11 +387,13 @@ tools/ and tests/ where useful
 .github/
 ```
 
+Preserve `docs/research-logs/` as the historical design record.
+
 Do not create empty structure solely for visual symmetry.
 
-**Exit:** a contributor can navigate the intended project structure.
+**Exit:** a contributor can navigate the intended production project structure.
 
-## Stage 11 — Implement and prove the core vertical
+## Stage 12 — Implement and prove the core vertical
 
 Implement the minimum core skills and supporting commands needed to complete one meaningful end-to-end domain workflow.
 
@@ -302,7 +401,7 @@ Use one representative progressive example to prove the vertical path before bro
 
 **Exit:** installed core skills can produce and evaluate one realistic production end to end.
 
-## Stage 12 — Implement progressive coverage and Extension Packs
+## Stage 13 — Implement progressive coverage and Extension Packs
 
 Expand from the proven vertical to the planned progressive examples and representative Extension Packs.
 
@@ -320,7 +419,7 @@ Every implemented catalogue pack must include a realistic showcase with the exac
 
 **Exit:** the project's main production capabilities and specialisation mechanism are demonstrated rather than merely specified.
 
-## Stage 13 — Validate installation and repository integrity
+## Stage 14 — Validate installation and repository integrity
 
 Validate:
 
@@ -337,7 +436,7 @@ Keep local validation and clean external installation as separate gates.
 
 **Exit:** the repository works as an installable Agent Skills product, not only inside its source checkout.
 
-## Stage 14 — Add optional Pactwright integration
+## Stage 15 — Add optional Pactwright integration
 
 If useful, add `integrations/pactwright.yml` for compatibility and capability bindings only.
 
@@ -345,7 +444,7 @@ The project must continue to work independently.
 
 **Exit:** Pactwright compatibility does not leak into the domain workflow or skill contracts.
 
-## Stage 15 — Register and promote maturity
+## Stage 16 — Register and promote maturity
 
 Add or update the Production Skills project entry in the central registry.
 
@@ -355,9 +454,11 @@ Promotion is evidence-based:
 proposed → researching → specified → scaffolded → working → benchmarked → mature
 ```
 
+Repository creation alone does not change maturity. A bootstrap workspace may remain `proposed`; `researching` requires substantive research evidence, and `scaffolded` requires the production scaffold from Stage 11.
+
 A maturity label must describe demonstrated repository behaviour, not planned architecture.
 
-## Stage 16 — Review shared abstraction candidates
+## Stage 17 — Review shared abstraction candidates
 
 After implementation evidence exists, apply [`shared-abstraction-process.md`](shared-abstraction-process.md).
 
