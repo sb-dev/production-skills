@@ -1,8 +1,8 @@
 # New Production Skills Project Bootstrap Process
 
 **Status:** Canonical process  
-**Version:** 1.2  
-**Date:** 8 September 2026
+**Version:** 1.3  
+**Date:** 10 September 2026
 
 This process creates a new Production Skills project without prematurely forcing it into abstractions derived from other domains.
 
@@ -16,6 +16,9 @@ The domain-specific bootstrap is then executed stage by stage, with substantive 
 - Persist substantive bootstrap findings in `docs/research-logs/` as the work progresses.
 - Treat conversation as an interaction surface, not the authoritative store of bootstrap research.
 - Understand the production discipline before designing Agent Skills.
+- Establish a complementary five-book foundation through Seed → Five → Challenge; books supplement rather than replace broader research.
+- Require explicit permission before removing or replacing any user-provided book.
+- Distinguish source availability, direct examination, qualified findings and implemented capabilities.
 - Reuse existing execution capabilities before rebuilding them.
 - Prove vertical production behaviour before extracting shared abstractions.
 - Use the cheapest representation capable of resolving the current uncertainty.
@@ -23,6 +26,16 @@ The domain-specific bootstrap is then executed stage by stage, with substantive 
 - Treat examples, evaluation, Extension Packs and installability as product behaviour.
 - Keep Production Skills independently usable without Pactwright.
 - Share abstractions only after at least two independent production domains demonstrate substantially the same need.
+
+## Stage execution and compatibility
+
+The detailed research contract is owned by [`domain-research-process.md`](domain-research-process.md). Keep corpus selection, book extraction and broader challenge as distinct stages with separate completion gates.
+
+Execute every stage as a standalone task. Read its required inputs and prior decisions, complete the substantive work, verify its exit criteria, and commit its detailed outputs and completion evidence before starting the next stage. A stage summary or bibliography is not a substitute for its research. Record blockers and ask for required decisions; never interpret unanswered permission requests as approval.
+
+Generating a domain-specific bootstrap defines the stages; it does not mark them complete. Review and reuse existing persisted evidence where it satisfies a stage, without claiming unperformed work or repeating adequate research unnecessarily.
+
+This sequence applies to newly generated bootstraps. Existing domain projects require explicit migration decisions that preserve their corpus, completed work and stage identifiers. This family revision does not automatically renumber active bootstraps or alter project maturity.
 
 ---
 
@@ -114,13 +127,39 @@ Persist the detailed domain-boundary findings as a research log.
 
 **Exit:** a defensible production boundary exists.
 
-## Stage 2 — Research real production practice
+## Stage 2 — Select the complementary five-book corpus
 
-Apply [`domain-research-process.md`](domain-research-process.md).
+**Inputs:** domain charter, provided book titles/files and any persisted source-selection evidence.
 
-Study how strong practitioners perform the work before focusing on AI tooling.
+Apply the selection and source-access rules in [`domain-research-process.md`](domain-research-process.md).
 
-Capture:
+Conduct bounded reconnaissance and derive the domain knowledge-coverage map. Assess provided books, research a broader candidate pool and select the combination that best covers the owned outcomes. Fill empty slots without an extra approval request unless the user requires one. Any removal, replacement or demotion of a supplied book requires explicit permission; unresolved requests block completion.
+
+Record bibliographic identity, edition, source access and intended contribution for each selected book. Exactly five books form the foundational corpus; wider research is not limited to five sources. Keep candidate assessments provisional where direct access is still missing.
+
+**Research-log output:** coverage map, candidate comparison, five-book corpus, source-access register and substitution decisions with rationale, gains, losses and approval evidence.
+
+**Exit:** exactly five books are selected; required permissions are resolved; remaining coverage gaps and source-access needs are explicit. Missing access must be resolved before extraction can be completed.
+
+## Stage 3 — Extract and reconcile the five-book corpus
+
+**Inputs:** completed corpus-selection log, the five selected sources and their access/reading records.
+
+Apply the extraction and publication rules in [`domain-research-process.md`](domain-research-process.md). Examine each book sufficiently for its intended contribution and record the material actually read. Secondary summaries or model memory are not direct-source examination.
+
+Extract independently expressed methods, assumptions, workflow implications, metrics, failure conditions and repair strategies. Map material findings to provisional capabilities with source locations. Reconcile overlap and investigate tensions without creating one skill per book or forcing every source to contribute a core rule.
+
+**Research-log output:** per-book findings, reading coverage, source-to-capability matrix, overlap/conflict analysis and provisional capability model.
+
+**Exit:** all five books have been meaningfully examined for their contributions; material findings are traceable; gaps, limitations and unresolved claims remain explicit. Inadequate access blocks completion rather than justifying invented extraction.
+
+## Stage 4 — Challenge and extend through broader production research
+
+**Inputs:** domain charter and original coverage map, corpus synthesis, conflicts and unresolved claims.
+
+Apply the challenge rules in [`domain-research-process.md`](domain-research-process.md). Test the book-derived model against independent professional and empirical evidence where applicable, and research important responsibilities absent from the books. Include current authoritative sources for change-sensitive practices; investigate criticism and failure conditions, not just supporting material.
+
+Study how strong practitioners perform the work before focusing on AI tooling. Preserve the complete production-practice scope:
 
 - specialist roles and terminology;
 - real workflow stages;
@@ -133,13 +172,15 @@ Capture:
 - quality criteria;
 - cross-discipline handoffs.
 
-Add domain-specific research stages when the discipline requires them.
+Distinguish deterministic, generative, judgement-heavy and tool-dependent work. Separate durable production knowledge from provider-specific behaviour. Keep evidential standing separate from whether a method is retained, adapted, qualified or rejected.
 
-Persist the detailed research and synthesis before moving on.
+Add domain-specific research stages when the discipline requires them. Do not collapse the three research gates into one summary task.
 
-**Exit:** the production model is grounded in the discipline rather than current model APIs.
+**Research-log output:** broader professional-practice map, supporting and contrary evidence, gap analysis, claim dispositions and evidence-qualified domain model.
 
-## Stage 3 — Research AI skills, tools and providers
+**Exit:** material findings are assessed, important gaps are addressed or explicitly bounded, and unresolved claims are not promoted to unconditional core rules. The production model is grounded in the discipline rather than the books or current model APIs alone.
+
+## Stage 5 — Research AI skills, tools and providers
 
 Find existing Agent Skills, repositories, CLIs, APIs, MCPs, engines, provider capabilities and deterministic tools that can implement parts of the production workflow.
 
@@ -169,7 +210,7 @@ Persist the capability landscape, comparisons and gap analysis.
 
 **Exit:** a tool/skill landscape and gap analysis exist.
 
-## Stage 4 — Model the domain workflow and artefacts
+## Stage 6 — Model the domain workflow and artefacts
 
 Define the smallest credible end-to-end workflow that preserves the discipline's real decision structure.
 
@@ -191,7 +232,7 @@ Persist the workflow and artefact reasoning so later specification work does not
 
 **Exit:** a domain-owned workflow and artefact model exists.
 
-## Stage 5 — Design core skills and commands
+## Stage 7 — Design core skills and commands
 
 Derive the smallest installable skill set capable of performing the domain workflow.
 
@@ -212,7 +253,7 @@ Persist the skill/command responsibility model and rejected alternatives.
 
 **Exit:** core skill responsibilities and useful command boundaries are justified.
 
-## Stage 6 — Design Extension Pack architecture and catalogue strategy
+## Stage 8 — Design Extension Pack architecture and catalogue strategy
 
 Extension Packs are a first-class target capability of a mature Production Skills repository.
 
@@ -237,7 +278,7 @@ Persist the pack model, catalogue candidates and the evidence for selecting cohe
 
 **Exit:** the project can explain what a valid pack is, how it differs from project-specific prompting, how it will be demonstrated, and how new packs will be authored.
 
-## Stage 7 — Design progressive examples
+## Stage 9 — Design progressive examples
 
 Define five domain-native levels of increasing production responsibility.
 
@@ -280,7 +321,7 @@ Persist the candidate pool, coverage matrix, selection rationale and final 5×3 
 
 **Exit:** the planned example set demonstrates the breadth and progression of the production system rather than one repeated house pattern.
 
-## Stage 8 — Design evaluation and benchmarks
+## Stage 10 — Design evaluation and benchmarks
 
 Define evaluation before large-scale implementation.
 
@@ -315,7 +356,7 @@ Persist the benchmark architecture, capability-to-case mapping and acceptance ga
 
 **Exit:** meaningful regressions can be detected and the project knows what evidence will support quality claims.
 
-## Stage 9 — Generate six canonical specifications
+## Stage 11 — Generate six canonical specifications
 
 Every mature Production Skills project targets six specification responsibilities:
 
@@ -344,7 +385,7 @@ Generate these specifications from the persisted research logs, not by reconstru
 
 **Exit:** implementation can proceed without inventing production architecture in code.
 
-## Stage 10 — Design the public README
+## Stage 12 — Design the public README
 
 Use the proven `video-production-skills` README structure as the family reference while adapting the content to the domain.
 
@@ -368,7 +409,7 @@ The minimal bootstrap README is replaced or expanded only now, once the product 
 
 **Exit:** the repository has a clear public product surface rather than only a bootstrap status page.
 
-## Stage 11 — Scaffold the production repository
+## Stage 13 — Scaffold the production repository
 
 Create only directories that are immediately useful.
 
@@ -393,7 +434,7 @@ Do not create empty structure solely for visual symmetry.
 
 **Exit:** a contributor can navigate the intended production project structure.
 
-## Stage 12 — Implement and prove the core vertical
+## Stage 14 — Implement and prove the core vertical
 
 Implement the minimum core skills and supporting commands needed to complete one meaningful end-to-end domain workflow.
 
@@ -401,7 +442,7 @@ Use one representative progressive example to prove the vertical path before bro
 
 **Exit:** installed core skills can produce and evaluate one realistic production end to end.
 
-## Stage 13 — Implement progressive coverage and Extension Packs
+## Stage 15 — Implement progressive coverage and Extension Packs
 
 Expand from the proven vertical to the planned progressive examples and representative Extension Packs.
 
@@ -419,7 +460,7 @@ Every implemented catalogue pack must include a realistic showcase with the exac
 
 **Exit:** the project's main production capabilities and specialisation mechanism are demonstrated rather than merely specified.
 
-## Stage 14 — Validate installation and repository integrity
+## Stage 16 — Validate installation and repository integrity
 
 Validate:
 
@@ -436,7 +477,7 @@ Keep local validation and clean external installation as separate gates.
 
 **Exit:** the repository works as an installable Agent Skills product, not only inside its source checkout.
 
-## Stage 15 — Add optional Pactwright integration
+## Stage 17 — Add optional Pactwright integration
 
 If useful, add `integrations/pactwright.yml` for compatibility and capability bindings only.
 
@@ -444,7 +485,7 @@ The project must continue to work independently.
 
 **Exit:** Pactwright compatibility does not leak into the domain workflow or skill contracts.
 
-## Stage 16 — Register and promote maturity
+## Stage 18 — Register and promote maturity
 
 Add or update the Production Skills project entry in the central registry.
 
@@ -454,11 +495,11 @@ Promotion is evidence-based:
 proposed → researching → specified → scaffolded → working → benchmarked → mature
 ```
 
-Repository creation alone does not change maturity. A bootstrap workspace may remain `proposed`; `researching` requires substantive research evidence, and `scaffolded` requires the production scaffold from Stage 11.
+Repository creation alone does not change maturity. A bootstrap workspace may remain `proposed`; `researching` requires substantive research evidence, and `scaffolded` requires the production scaffold from Stage 13.
 
 A maturity label must describe demonstrated repository behaviour, not planned architecture.
 
-## Stage 17 — Review shared abstraction candidates
+## Stage 19 — Review shared abstraction candidates
 
 After implementation evidence exists, apply [`shared-abstraction-process.md`](shared-abstraction-process.md).
 

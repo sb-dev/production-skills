@@ -11,7 +11,7 @@
 
 - `bootstrap/README.md` — how to generate a custom domain bootstrap specification
 - `bootstrap/new-project-process.md` — canonical family-level project progression
-- `bootstrap/domain-research-process.md` — domain-first production research
+- [`bootstrap/domain-research-process.md`](bootstrap/domain-research-process.md) — Seed → Five → Challenge, corpus permissions, source access, extraction and broader research
 - `bootstrap/shared-abstraction-process.md` — evidence threshold for shared family abstractions
 
 ## Project templates
@@ -33,6 +33,7 @@ Under `../templates/`:
 
 ## Research
 
+- [`research-logs/2026-09-10-five-book-bootstrap-research-foundation.md`](research-logs/2026-09-10-five-book-bootstrap-research-foundation.md) — five-book bootstrap decision and explicit migration boundary
 - `research-logs/2026-09-07-ui-ux-design-skills-new-project-bootstrap-process.md`
 - `research-logs/2026-09-07-production-skills-central-repository-design-specification.md`
 - `research-logs/2026-09-07-production-skills-and-extension-packs-project-family-brief.md`

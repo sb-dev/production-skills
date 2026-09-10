@@ -80,7 +80,11 @@ Individual Production Skills repositories own their skills, commands, workflows,
 
 Start with [`docs/bootstrap/README.md`](docs/bootstrap/README.md).
 
-The bootstrap directory contains reusable family processes. They are used to generate a custom domain bootstrap under `docs/research-logs/` before the new repository is scaffolded.
+The bootstrap directory contains reusable family processes. Create the minimal target repository first, then generate its custom domain bootstrap under that repository's `docs/research-logs/`. The production scaffold comes later.
+
+New bootstraps use [Seed → Five → Challenge](docs/bootstrap/domain-research-process.md): map domain coverage, select five complementary foundational books, directly extract and reconcile their knowledge, then challenge and extend it through broader research. Removing or replacing a user-provided book requires explicit permission. Five books are a foundation, not a limit on wider evidence or a substitute for professional research.
+
+Selection, extraction and challenge have separate completion gates and committed research outputs. Generating a bootstrap does not imply those stages have run. Existing domain bootstraps retain their books, stage history and maturity unless their owning projects explicitly adopt a migration.
 
 Current domain bootstrap specifications include:
 
