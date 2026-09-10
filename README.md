@@ -26,18 +26,18 @@ These repositories provide the strongest current evidence for the family archite
 
 ### Planned / researching
 
-- `game-development-skills`
-- `software-engineering-skills`
-- `deep-research-skills`
-- `legal-skills`
-- `business-building-skills`
-- `advertising-production-skills`
-- `graphic-novel-production-skills`
-- `world-environment-production-skills`
-- `3d-production-skills`
-- `character-performance-skills` (`character-production-skills` + `animation-production-skills`)
-- `audio-production-skills` (`music-production-skills` + `sound-production-skills`)
-- `qa-evaluation-skills`
+- [`game-development-skills`](https://github.com/sb-dev/game-development-skills)
+- [`software-engineering-skills`](https://github.com/sb-dev/software-engineering-skills)
+- [`deep-research-skills`](https://github.com/sb-dev/deep-research-skills)
+- [`legal-skills`](https://github.com/sb-dev/legal-skills)
+- [`business-building-skills`](https://github.com/sb-dev/business-building-skills)
+- [`advertising-production-skills`](https://github.com/sb-dev/advertising-production-skills)
+- [`graphic-novel-production-skills`](https://github.com/sb-dev/graphic-novel-production-skills)
+- [`world-environment-production-skills`](https://github.com/sb-dev/world-environment-production-skills)
+- [`3d-production-skills`](https://github.com/sb-dev/3d-production-skills)
+- [`character-performance-skills`](https://github.com/sb-dev/character-performance-skills) (`character-production-skills` + `animation-production-skills`)
+- [`audio-production-skills`](https://github.com/sb-dev/audio-production-skills) (`music-production-skills` + `sound-production-skills`)
+- [`qa-evaluation-skills`](https://github.com/sb-dev/qa-evaluation-skills)
 
 `legal-skills` is planned as a cross-cutting legal-production family for authoritative legal research, project advice, legal drafting and review, privacy/data protection, consumer terms, intellectual property and trade marks, licensing, project-to-law traceability, legal change impact and specialist escalation. Jurisdiction and valid-as-of authority are part of the legal execution context rather than ordinary Extension Pack selection.
 
