@@ -1,7 +1,7 @@
 # New Production Skills Project Bootstrap Process
 
 **Status:** Canonical process  
-**Version:** 1.3  
+**Version:** 1.4  
 **Date:** 10 September 2026
 
 This process creates a new Production Skills project without prematurely forcing it into abstractions derived from other domains.
@@ -257,6 +257,10 @@ Persist the skill/command responsibility model and rejected alternatives.
 
 Extension Packs are a first-class target capability of a mature Production Skills repository.
 
+Apply [`extension-pack-process.md`](extension-pack-process.md) at two levels: curate complementary catalogue coverage, then research and specify each selected pack. Catalogue size is not fixed by the five-book requirement.
+
+Schedule its P1–P5 stages explicitly in the custom bootstrap. Each pack selects five justified complementary books, with reviewed evidence reuse allowed from the domain or other packs; it does not require five new books. Selection, extraction and challenge retain separate substantive outputs, permission/access gates and commits. Do not hide the per-pack research inside this architecture-stage summary. Record further catalogue candidates as planned rather than researched.
+
 Define:
 
 - reusable specialisation dimensions;
@@ -274,9 +278,9 @@ The core must remain useful without a pack.
 
 Do not implement a universal pack runtime. Each domain owns its own pack semantics.
 
-Persist the pack model, catalogue candidates and the evidence for selecting coherent reusable profiles.
+Persist the pack model, candidate pool, combined coverage matrix, per-pack research and source-to-behaviour-to-test mapping. Specification 05 owns semantics; specification 06 records the curated entries, five-book contributions and separate research, implementation, evaluation and readiness status. Extend the existing domain authoring capability rather than creating a competing system.
 
-**Exit:** the project can explain what a valid pack is, how it differs from project-specific prompting, how it will be demonstrated, and how new packs will be authored.
+**Exit:** the project can explain what a valid pack is, how it differs from project-specific prompting, how it will be demonstrated, and how new packs will be authored. Selected packs have traceable research and testable profiles; unresolved work is explicitly planned. Actual demonstration and comparative evaluation follow the implemented core vertical at Stage 15.
 
 ## Stage 9 — Design progressive examples
 
@@ -446,6 +450,8 @@ Use one representative progressive example to prove the vertical path before bro
 
 Expand from the proven vertical to the planned progressive examples and representative Extension Packs.
 
+Complete P6–P7 of [`extension-pack-process.md`](extension-pack-process.md) for implemented packs using the evidence-qualified profiles from Stage 8. Run actual showcases and a distinct additional reuse brief/fixture, then compare core-only and packed production on the same substantive brief under comparable conditions. Record failures, regressions and limitations rather than treating a prompt or package as proof. Later additions use the same research gates without rerunning unrelated core bootstrap work.
+
 Implement enough pack capability to prove:
 
 ```text
@@ -456,7 +462,7 @@ pack-aware evaluation recognises intentional specialisation
 pack authoring can create or revise a valid pack
 ```
 
-Every implemented catalogue pack must include a realistic showcase with the exact generation prompt and behavioural evaluation coverage.
+Every implemented catalogue pack must include a realistic showcase with the exact generation prompt and behavioural evaluation coverage. Catalogue readiness also requires clean consumer-project installation/use evidence; keep local checks, research completion, implementation and measured evaluation distinct.
 
 **Exit:** the project's main production capabilities and specialisation mechanism are demonstrated rather than merely specified.
 

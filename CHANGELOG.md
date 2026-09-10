@@ -6,6 +6,9 @@
 - Require explicit permission before removing, replacing or demoting user-provided books; record access, examined material, coverage and decisions.
 - Require distinct research gates and substantive stage outputs committed before progression, without confusing specification generation with execution.
 - Align bootstrap guidance, the project-contract lifecycle, navigation and research-log ownership; record the family decision and preserve existing domain bootstraps unless explicitly migrated.
+- Add a focused Extension Pack bootstrap process for complementary catalogue curation and five justified foundational books per pack, with reviewed evidence reuse rather than five new books per pack.
+- Require traceable specialised behaviour, fair core-versus-pack comparisons, an additional reuse brief/fixture, actual showcase outputs and separate research, implementation, evaluation and readiness status.
+- Align pack semantics, bootstrap stages and authoring/catalogue/showcase templates while preserving domain-owned commands, self-contained installation and explicit migration of existing catalogues.
 
 ## 0.1.2 - 2026-09-08
 
