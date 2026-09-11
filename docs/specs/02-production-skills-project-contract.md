@@ -1,8 +1,8 @@
 # Production Skills Project Contract
 
 **Status:** Canonical  
-**Version:** 1.3  
-**Date:** 10 September 2026
+**Version:** 1.4  
+**Date:** 11 September 2026
 
 ## 1. Purpose
 
@@ -166,20 +166,31 @@ Preserve `docs/research-logs/` as the design record that led to the production s
 
 ## 6. Public README contract
 
-The README is a product surface, not only a repository description.
+The root README is a **public product surface**. Apply the canonical [`public-readme-process.md`](../bootstrap/public-readme-process.md) and adapt [`public-readme-template.md`](../bootstrap/public-readme-template.md) to the domain.
 
-Mature repositories should follow the proven public structure established by Video Production Skills while adapting it to the domain.
+Keep the product surface and bootstrap state separate:
 
-It should make visible, where relevant:
+```text
+README.md
+→ public product positioning, onboarding and navigation
+
+
+docs/research-logs/
+→ bootstrap stages, maturity evidence, verification and implementation gaps
+```
+
+The target README designed during bootstrap represents the intended finished Production Skills product. It does **not** need to mirror each intermediate bootstrap stage or maturity label. Do not contaminate it with stage-number caveats, branch names, completion SHAs, validator counts, `not-run` bookkeeping or statements such as “implemented in Stage N”.
+
+The target README should make visible, where relevant:
 
 - project positioning and production capabilities;
-- approval, cost, fidelity or commitment control;
+- the domain-native approval, cost, fidelity, evidence or commitment control model;
 - canonical installation;
-- a strong Level 1 quick start;
+- a strong Level 1 quick start with the complete copyable prompt inline;
 - five progressive example levels;
-- three primary examples per level;
+- exactly three primary examples per level;
 - project structure that grows with the work;
-- core skills;
+- substantive sections for every core skill;
 - Extension Packs;
 - execution layer;
 - testing and benchmark entry points;
@@ -187,7 +198,21 @@ It should make visible, where relevant:
 - project boundary;
 - contributing and licence information.
 
-The README must not claim examples, packs, benchmark results or provider support that are only planned.
+Public example navigation should resolve to public example surfaces rather than requiring users to understand bootstrap research logs.
+
+The README-design stage must produce:
+
+1. the complete target public README;
+2. a domain README contract describing required sections and justified domain-specific adaptations;
+3. an internal public-claims ledger mapping material public claims to the implementation/evidence gates required before final publication.
+
+The production-scaffold stage adopts the accepted README design. It may perform mechanical publication changes such as link rebasing, repository-name substitution, licence linking or switching to newly created public example paths. It must not independently redesign positioning, quick start, progression, skill explanations or product limitations around current bootstrap status.
+
+If an active historical bootstrap has already completed its README/scaffold stages before adopting this family rule, append an explicit conformance or migration stage. Do not rewrite or renumber completed stages.
+
+During bootstrap, the target README may describe intended product capabilities whose proof belongs to later implementation stages. Before final publication, reconcile the internal public-claims ledger against actual implementation and evaluation evidence. Unsupported release claims must then be completed, narrowed, removed or allowed to block publication. Do not use bootstrap-stage leakage as a substitute for that final reconciliation.
+
+Projects should add deterministic README conformance checks once the production scaffold exists. Structural checks should verify the canonical/domain-approved section order, inline Level 1 prompt, 5 × 3 progression, substantive skill sections, public example links and absence of internal bootstrap-process leakage. Deterministic checks do not replace evidence validation for the claims ledger.
 
 ## 7. Progressive example contract
 
@@ -342,7 +367,7 @@ It must not define:
 
 ## 15. New-project bootstrap lifecycle
 
-Every new family project first creates a minimal target repository and then generates a domain-specific bootstrap specification using [`docs/bootstrap/README.md`](../bootstrap/README.md) and the source recipes under `docs/bootstrap/`.
+Every new family project first creates a minimal target repository and then generates a domain-specific bootstrap specification using [`docs/bootstrap/README.md`](../bootstrap/README.md), [`public-readme-process.md`](../bootstrap/public-readme-process.md) and the source recipes under `docs/bootstrap/`.
 
 The family-level progression is:
 
@@ -360,8 +385,8 @@ minimal bootstrap workspace repository
 → 5×3 progressive examples
 → benchmarks/evals
 → six canonical specs
-→ public README design
-→ production repository scaffold
+→ target public README + domain README contract + claims ledger
+→ production repository scaffold preserving accepted README design
 → core vertical
 → progressive + pack implementation
 → local and clean external validation
@@ -401,7 +426,7 @@ A project may move to `mature` when evidence demonstrates that:
 
 - the core workflow works end to end;
 - the six specification responsibilities are represented;
-- the public README accurately exposes the product;
+- the public README accurately exposes the product after final public-claims reconciliation;
 - five progressive levels and three primary examples per level are represented or an explicit temporary migration note exists for an older mature repository;
 - primary examples contain copyable prompts;
 - domain evaluation and regression protection are operational;
@@ -434,6 +459,11 @@ The central repository may audit structural family requirements. It must not gra
 Examples of valid conformance checks:
 
 - README exists;
+- public README follows the canonical/domain-approved product structure;
+- public README does not leak internal bootstrap-stage or branch bookkeeping after the target README replaces the minimal bootstrap README;
+- the Level 1 quick-start prompt is complete and inline;
+- public example links resolve to public example surfaces where those surfaces exist;
+- core skills receive substantive README sections;
 - six specification responsibilities are represented;
 - skills are independently packageable;
 - progressive example structure is represented;
