@@ -1,8 +1,8 @@
 # Production Skills Project Contract
 
 **Status:** Canonical  
-**Version:** 1.2  
-**Date:** 8 September 2026
+**Version:** 1.3  
+**Date:** 10 September 2026
 
 ## 1. Purpose
 
@@ -342,14 +342,17 @@ It must not define:
 
 ## 15. New-project bootstrap lifecycle
 
-Every new family project first creates a minimal target repository and then generates a domain-specific bootstrap specification using `docs/bootstrap/README.md` and the source recipes under `docs/bootstrap/`.
+Every new family project first creates a minimal target repository and then generates a domain-specific bootstrap specification using [`docs/bootstrap/README.md`](../bootstrap/README.md) and the source recipes under `docs/bootstrap/`.
 
 The family-level progression is:
 
 ```text
 minimal bootstrap workspace repository
 → boundary
-→ domain research
+→ bounded reconnaissance + complementary five-book selection
+→ direct book extraction + reconciliation
+→ broader challenge + gap research
+→ evidence-qualified domain model
 → AI/tool research
 → workflow + artefacts
 → core skills + commands
@@ -367,9 +370,13 @@ minimal bootstrap workspace repository
 → shared-abstraction review
 ```
 
-Substantive stage outputs should be persisted under `docs/research-logs/` so later stages can consume canonical files rather than depend on full conversation history.
+The detailed [Seed → Five → Challenge contract](../bootstrap/domain-research-process.md) governs corpus selection, explicit permission for supplied-book substitutions, source access, direct examination, reconciliation and broader research. Five foundational books supplement rather than replace other evidence and do not determine skill or pack counts.
 
-The exact domain-specific stages may differ.
+Selection, extraction and challenge are distinct stages. Execute each bootstrap stage as a standalone task, committing substantive outputs and completion evidence under `docs/research-logs/` before proceeding. Generating a bootstrap specification is not proof of stage execution; assess existing evidence before reusing it.
+
+The exact domain-specific stages may differ while preserving these research gates. Existing bootstraps require explicit migration decisions that preserve completed work, corpus decisions and stage identifiers. This requirement does not automatically change existing projects' maturity.
+
+The [family research decision](../research-logs/2026-09-10-five-book-bootstrap-research-foundation.md) records the evidence basis, affected projects and migration boundary.
 
 ## 16. Working-project minimum
 

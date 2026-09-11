@@ -1,8 +1,8 @@
 # Production Skills Evaluation and Extension Packs Specification
 
 **Status:** Canonical  
-**Version:** 1.1  
-**Date:** 7 September 2026
+**Version:** 1.2  
+**Date:** 10 September 2026
 
 ## 1. Purpose
 
@@ -151,6 +151,8 @@ Create a pack only when all of the following are true:
 
 A project-specific brief or style note is not sufficient.
 
+For newly authored packs, apply the [Extension Pack bootstrap process](../bootstrap/extension-pack-process.md): curate complementary catalogue coverage, then select, extract and challenge a five-book foundation for each pack. Books and adequate examined findings may be reused after pack-specific applicability review; five does not mean five new books or five packs. The general [research contract](../bootstrap/domain-research-process.md) continues to govern supplied-book permission, access, direct examination and publication safeguards.
+
 ## 12. Pack precedence
 
 Domain repositories must define precedence explicitly.
@@ -180,6 +182,8 @@ The pack should survive only if it produces a useful and intended specialised im
 
 The comparison should test production behaviour, not merely whether pack metadata appears in output.
 
+For pack readiness under the bootstrap process, use the same substantive brief and comparable execution conditions in core-only and packed runs. Define acceptance criteria before execution; record revisions, exact prompts, tool/model settings where relevant, resource constraints, deviations, outputs, failures and evaluator limitations. Do not give the packed run a richer task brief. A core-plus-project-instructions baseline may additionally test whether a reusable pack is justified. Preserve inconclusive and negative results; one favourable sample is not evidence of general superiority.
+
 ## 14. Pack showcase contract
 
 Every implemented catalogue pack should include at least one realistic showcase that makes the specialisation observable.
@@ -192,7 +196,9 @@ The showcase must include:
 - expected specialised behaviour;
 - relevant evaluation priorities.
 
-A pack that cannot produce a convincing showcase is not ready for the catalogue.
+A pack that cannot produce a convincing showcase is not ready for publication as a ready-to-use catalogue pack. Planned entries may remain explicitly labelled.
+
+Keep expected behaviour separate from actual outputs and observed evaluation. Include a distinct additional brief or fixture to test reuse beyond the showcase premise; a prompt alone does not prove execution or reusable specialisation.
 
 ## 15. Pack behavioural evaluation
 
@@ -216,19 +222,21 @@ Each mature Production Skills family should provide a domain-owned pack creation
 The common authoring logic is:
 
 ```text
-inspect existing catalogue
-→ identify reusable specialisation
-→ decide whether a new pack is justified
-→ research the production grammar
-→ define dimensions and boundaries
-→ define core-skill effects
-→ define pack-aware evaluation
-→ implement the pack
-→ create showcase + exact prompt
-→ create behavioural evals
-→ compare against core baseline
-→ validate and catalogue
+inspect existing catalogue and complementary coverage
+→ justify reusable specialisation and core baseline
+→ select five complementary books
+→ extract and reconcile specialised knowledge
+→ challenge claims and research gaps
+→ define dimensions, boundaries and core-skill effects
+→ define pack-aware evaluation and acceptance cases
+→ implement the pack and behavioural fixtures
+→ run showcase with exact prompt and preserve outputs
+→ compare against core baseline and test independent reuse
+→ validate local and clean external installation
+→ catalogue with accurate evidence status
 ```
+
+The [Extension Pack process](../bootstrap/extension-pack-process.md) owns the detailed stages and gates. Selection, extraction and challenge remain distinct standalone stages with substantive committed evidence. Extend an existing domain authoring skill rather than creating a competing system. Permit direct entry after reviewing adequate prerequisite evidence; a bounded revision does not require a full project bootstrap or repeated unrelated research.
 
 The authoring capability should avoid creating a new pack when an existing pack plus project-specific instructions is sufficient.
 
@@ -238,17 +246,23 @@ The central repository does not provide one universal pack runtime until multipl
 
 A domain catalogue should record enough information to answer:
 
-- what the pack specialises;
-- when it should be used;
-- what production grammar it defines;
-- what core skills it affects;
-- what remains stable;
-- representative example prompts;
-- representative outputs/examples;
-- evaluation status;
-- maturity.
+- what the pack specialises and when it should or should not be used;
+- why it complements the catalogue rather than duplicating core or neighbouring packs;
+- which five books contribute to its foundation and where examined/challenged evidence is recorded;
+- what production grammar, hard constraints, defaults and qualified methods it defines;
+- what core skills it affects and what must remain stable;
+- which exact prompts, acceptance cases and actual outputs demonstrate its behaviour;
+- what comparative, behavioural and installation evidence exists;
+- what its research, implementation, evaluation and readiness status mean;
+- which limitations, conflicts or migration requirements remain.
 
-The catalogue is a curated product surface, not merely an inventory of labels.
+The catalogue is a curated product surface, not merely an inventory of labels. Specification 05 owns pack semantics; specification 06 owns the actual curated entries. Keep detailed research in the domain's research logs, not in repeated catalogue summaries or runtime dependencies. Pack count is coverage-driven rather than fixed at five or inherited without review.
+
+A planned or partially researched entry must not imply completed extraction, implemented behaviour or passed evaluation. Readiness requires the actual proof gates; it does not automatically promote the owning project's maturity.
+
+### Adoption and migration
+
+This is a normative process update for new pack authoring, not measured evidence that the method improves production quality. The [family decision log](../research-logs/2026-09-10-extension-pack-bootstrap-research-foundation.md) records its basis and affected surfaces. Existing catalogues and packs require explicit adoption decisions preserving approved identities, examples, installed interfaces, corpus decisions and stage history. Do not silently retire or recertify them. Detailed domain adoption and catalogue regeneration remain in their owning repositories.
 
 ## 18. Pack composition
 
@@ -282,6 +296,8 @@ clean consumer-project installation smoke test
 ```
 
 The external smoke test should detect missing skill-local references, undocumented repository-relative dependencies and selective-installation failures.
+
+Research reuse does not permit runtime coupling: each installed pack must carry necessary guidance locally rather than depend on central documents, another pack's files, research logs or access to the source books.
 
 ## 20. Avoid universal scoring
 

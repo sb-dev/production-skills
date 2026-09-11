@@ -1,6 +1,10 @@
 # Production Skills Bootstrap
 
-This directory contains the reusable processes used to create a **custom bootstrap specification for each new Production Skills repository**.
+**Status:** Canonical generation guide  
+**Version:** 1.1  
+**Date:** 10 September 2026
+
+This directory contains the reusable processes used to create a **custom bootstrap specification for each new Production Skills repository** and to research, create or revise Extension Packs in new or established domain repositories.
 
 The files here are not themselves the final bootstrap for a production domain. They are source recipes that must be researched, interpreted and specialised for the new discipline.
 
@@ -39,12 +43,39 @@ The minimal repository is **not** the production scaffold. Its purpose is to kee
 Use all relevant files in this directory when generating a bootstrap:
 
 - [`new-project-process.md`](new-project-process.md) — family-level project progression and maturity model;
-- [`domain-research-process.md`](domain-research-process.md) — how to understand the production discipline before designing Agent Skills;
+- [`domain-research-process.md`](domain-research-process.md) — the authoritative Seed → Five → Challenge method, including book selection, permission, source access, extraction and broader research;
+- [`extension-pack-process.md`](extension-pack-process.md) — complementary catalogue curation and per-pack five-book research, implementation, evaluation and installation gates;
 - [`shared-abstraction-process.md`](shared-abstraction-process.md) — how to prevent premature cross-domain abstractions.
 
 Also read the current family specifications under [`../specs/`](../specs/) and the most recent relevant research logs under [`../research-logs/`](../research-logs/).
 
-Within research logs, prefer newer relevant findings over older ones when they conflict. Do not silently carry superseded assumptions into a new bootstrap.
+Within research logs, prefer newer relevant findings over older ones when they conflict. Do not silently carry superseded assumptions into a new bootstrap. Existing domain bootstraps are not automatically migrated: preserve their stage identifiers and completed work until their owning projects explicitly adopt an update.
+
+## Research foundation: Seed → Five → Challenge
+
+Every newly generated bootstrap must define three distinct research stages after domain definition:
+
+```text
+bounded reconnaissance + select five complementary books
+→ directly examine, extract and reconcile the five-book corpus
+→ challenge claims and extend coverage through broader research
+```
+
+The detailed rules live in [`domain-research-process.md`](domain-research-process.md); do not duplicate or weaken that contract in a custom bootstrap. Provided books are retained unless the user explicitly approves substitution. The five-book foundation is not a five-source limit, a fixed skill count or a replacement for professional research.
+
+### Specification generation is not stage execution
+
+Research enough to specialise the bootstrap to the domain and define credible tasks, inputs and exit criteria. Identify provided books, candidate sources, access needs and any completed evidence, but mark unperformed selection, extraction and challenge work as planned. A bibliography inside the specification is not evidence of book analysis.
+
+Unless execution is also requested, generate the specification rather than claiming to have completed its stages. When useful research already exists, link and assess it for reuse. Detailed stage outputs remain in the target repository and must be reviewed before a later stage relies on them.
+
+### Extension Packs in new and established projects
+
+Use [`extension-pack-process.md`](extension-pack-process.md) to curate catalogue coverage and bootstrap each selected specialisation. Each pack has five justified complementary books, allowing reviewed reuse of relevant domain or other-pack sources; neither five new books per pack nor five packs per catalogue is required.
+
+Keep per-pack selection, extraction and challenge as distinct committed stages. Specify observable changes from the core baseline and test them through actual showcases, fair core-versus-pack comparisons and clean installation. Catalogue research, implementation, evaluation and readiness must be reported separately. Extend the existing domain authoring skill rather than introduce a competing system.
+
+A pack-only request starts from the existing domain repository and core contracts, not Stage 0 of a new project bootstrap. Catalogue specification generation may describe planned entries but does not itself perform their research or certify their behaviour. Existing catalogues adopt the method through explicit migration decisions.
 
 ---
 
@@ -56,6 +87,10 @@ Persist substantive outputs as research logs while the bootstrap progresses. Thi
 
 ```text
 domain-boundary analysis
+book selection, coverage and permission decisions
+source access and examined material
+book extraction, conflicts and capability synthesis
+broader challenge evidence and unresolved claims
 production-practice research
 AI/tool/provider landscape
 workflow and artefact model
@@ -99,6 +134,8 @@ The UI/UX bootstrap is a useful example of the expected **depth and domain speci
 - [`2026-09-07-ui-ux-design-skills-new-project-bootstrap-process.md`](../research-logs/2026-09-07-ui-ux-design-skills-new-project-bootstrap-process.md)
 
 It is an example, not a canonical template. Later family decisions and evidence from mature repositories take precedence over older assumptions inside an example bootstrap.
+
+The [Business Building Skills bootstrap](https://github.com/sb-dev/business-building-skills/blob/main/docs/research-logs/2026-09-08-business-building-skills-new-project-bootstrap-process.md) demonstrates capability extraction from books followed by broader professional research. Use that separation as a reference, not its specific books or stage numbering as a universal template. A bootstrap specification describes intended work, not proof of completed execution.
 
 ---
 
@@ -156,11 +193,29 @@ Persist the detailed boundary analysis as a research log.
 
 ---
 
-## 2. Research real production practice
+## 2. Define corpus selection and source access
 
-Apply [`domain-research-process.md`](domain-research-process.md) before designing the Agent Skills architecture.
+Use bounded domain reconnaissance to define a knowledge-coverage map. Require the execution stage to assess provided books, compare a broader candidate pool and select exactly five complementary foundational books.
 
-Research strong professional practice, including:
+The custom stage must preserve the permission and access gates from [`domain-research-process.md`](domain-research-process.md), including explicit approval for supplied-book substitutions or demotion, handling more than five supplied books, pending decisions, and inadequate access. Selecting books for empty slots needs no extra approval unless the user requires it.
+
+**Required stage output:** coverage map, candidate comparison, selected corpus, source-access register and substitution decision log. During generation, distinguish proposed books and unresolved access from a completed selection.
+
+---
+
+## 3. Define direct book extraction and reconciliation
+
+Require meaningful examination of all five selected books for their intended contributions. Record the actual material examined, source locations, assumptions, methods, workflow implications, evaluation criteria, failure conditions, overlaps and contradictions.
+
+**Required stage output:** per-book findings, source-to-capability matrix, overlap/conflict analysis and provisional capability model. The stage must not pass on secondary summaries, model memory or a bibliography alone. Publish independently expressed synthesis, not the source books.
+
+---
+
+## 4. Define broader challenge and production-practice research
+
+Apply [`domain-research-process.md`](domain-research-process.md) before designing the Agent Skills architecture. Require both challenge of book-derived claims and independent investigation of gaps against the original domain boundary.
+
+Preserve research into strong professional practice, including:
 
 ```text
 roles
@@ -178,15 +233,15 @@ specialist terminology
 handoffs
 ```
 
-Do not infer the production workflow from current AI model capabilities.
+Research supporting and contrary evidence, relevant empirical findings and current authoritative practice. Keep retained heuristics, qualified methods, supported findings and unresolved claims distinguishable. Do not infer the production workflow from current AI model capabilities.
 
 The resulting custom bootstrap should contain domain-specific research stages whenever the discipline requires them. UI/UX, for example, needs explicit human-problem and evidence modelling; another production discipline may need different specialist research stages.
 
-Persist the detailed production research and synthesis before proceeding.
+**Required stage output:** professional-practice map, claim dispositions, gap analysis and evidence-qualified domain model. Require substantive research to be persisted and committed before dependent design work proceeds.
 
 ---
 
-## 3. Research existing AI capabilities
+## 5. Research existing AI capabilities
 
 Find and assess existing:
 
@@ -228,7 +283,7 @@ Persist the capability landscape and gap analysis.
 
 ---
 
-## 4. Derive the domain workflow and artefact model
+## 6. Derive the domain workflow and artefact model
 
 Translate the research into the smallest credible end-to-end production workflow.
 
@@ -255,7 +310,7 @@ Persist the workflow model and the reasoning behind it.
 
 ---
 
-## 5. Design the core Agent Skills and commands
+## 7. Design the core Agent Skills and commands
 
 Derive the smallest installable skill set capable of performing the domain workflow.
 
@@ -281,9 +336,11 @@ Persist the skill/command architecture and rejected alternatives.
 
 ---
 
-## 6. Design Extension Packs as a first-class capability
+## 8. Design Extension Packs as a first-class capability
 
 Every new Production Skills bootstrap must investigate reusable domain specialisations and design the Extension Pack architecture.
+
+Use [`extension-pack-process.md`](extension-pack-process.md) for catalogue curation and per-pack development. Derive a complementary candidate set from domain coverage, then define explicit per-pack selection, extraction and challenge stages before specifying specialised behaviour. Five relevant books may reuse reviewed source evidence from core-domain or other-pack research; do not require five newly acquired books or silently inherit one bibliography across all packs.
 
 The mature family model is:
 
@@ -317,9 +374,9 @@ showcase requirements
 pack-authoring workflow
 ```
 
-Every mature domain should provide a domain-native pack-authoring skill or equivalent capability.
+Every mature domain should provide a domain-native pack-authoring skill or equivalent capability. Extend an existing authoring capability rather than create a competing one; preserve domain command names and direct entry after adequate prerequisite evidence review.
 
-Every catalogue pack must have at least one realistic showcase with the **exact copyable generation prompt** and behavioural evaluation coverage.
+Every implemented catalogue pack must have at least one realistic showcase with the **exact copyable generation prompt**, actual outputs and behavioural evaluation coverage. Add a distinct reuse brief/fixture; a planned entry or prompt alone is not a successful demonstration.
 
 The bootstrap must include differential evaluation proving:
 
@@ -329,13 +386,13 @@ vs
 core + pack
 ```
 
-A pack must materially specialise production behaviour rather than merely add a label.
+Use the same substantive brief and comparable execution conditions. Define acceptance before implementation, record regressions and inconclusive results, and require clean consumer-project installation/use before ready-to-use claims. A pack must materially specialise production behaviour rather than merely add a label.
 
-Persist the pack architecture, candidate catalogue and selection reasoning.
+Persist the pack architecture, candidate coverage and selection reasoning, per-pack research, source-to-behaviour-to-test mapping and evidence status. Schedule pack research/design before implementation; actual demonstration and comparison follow an available core vertical. Keep specification 05 as the contract and 06 as the actual catalogue, with research, implementation, evaluation and readiness reported separately. Additional planned entries must not be presented as researched or ready.
 
 ---
 
-## 7. Design five progressive example levels
+## 9. Design five progressive example levels
 
 Examples are part of the Production Skills product and must demonstrate progressively broader production responsibility.
 
@@ -401,7 +458,7 @@ Persist the candidate pool, coverage matrix and final selection rationale.
 
 ---
 
-## 8. Design evaluation and benchmarks before implementation is considered complete
+## 10. Design evaluation and benchmarks before implementation is considered complete
 
 The custom bootstrap must define how the project will test both repository correctness and domain quality.
 
@@ -440,7 +497,7 @@ Persist the benchmark architecture and coverage mapping.
 
 ---
 
-## 9. Generate six canonical project specifications
+## 11. Generate six canonical project specifications
 
 Every mature Production Skills project targets six specification responsibilities:
 
@@ -560,7 +617,7 @@ Generate the six specs from the persisted research logs rather than reconstructi
 
 ---
 
-## 10. Define the target README
+## 12. Define the target README
 
 The bootstrap must include a README design based on the proven public structure of `video-production-skills`.
 
@@ -595,7 +652,7 @@ The minimal bootstrap README should not be expanded into this public product sur
 
 ---
 
-## 11. Cross-project review only after the domain architecture exists
+## 13. Cross-project review only after the domain architecture exists
 
 Once the domain workflow, skills, artefacts, examples, evals and packs are understood, compare them with existing Production Skills.
 
@@ -626,7 +683,7 @@ Persist material comparison and extraction findings as research logs.
 
 ---
 
-## 12. Turn the findings into a staged custom bootstrap
+## 14. Turn the findings into a staged custom bootstrap
 
 The final research-log bootstrap should not merely repeat the generic stages from [`new-project-process.md`](new-project-process.md).
 
@@ -647,7 +704,9 @@ exit criteria
 research-log output
 ```
 
-Add domain-specific stages when necessary. Merge generic stages when the discipline does not need them separately.
+Add domain-specific stages when necessary. Other generic stages may be combined when the discipline does not need them separately, but corpus selection, extraction and broader challenge must retain separate stages, outputs and completion gates, including when applied to each selected Extension Pack.
+
+Each execution stage must be treated as a standalone task, with its required inputs read, substantive work completed, exit criteria checked, and detailed research log and completion evidence committed before the next stage begins. A pending required permission request or inadequate book access must not be hidden by progressing to dependent stages.
 
 The bootstrap should be detailed enough that a later session can execute one stage at a time without redesigning the overall process.
 
@@ -661,28 +720,31 @@ Before a custom bootstrap is considered complete, it must define how the project
 
 1. a minimal bootstrap workspace repository with `docs/research-logs/`;
 2. a clear domain goal, scope and boundary;
-3. production-domain research;
-4. domain-native workflow and artefact architecture;
-5. fidelity / cost / commitment strategy;
-6. AI skill, tool and provider research;
-7. execution-layer decisions and gap analysis;
-8. justified core Agent Skills;
-9. decomposed commands where useful;
-10. Extension Pack architecture;
-11. initial Extension Pack catalogue strategy;
-12. a pack-authoring capability;
-13. five progressive example levels;
-14. three primary examples per level selected through capability coverage;
-15. deterministic and semantic evaluation;
-16. benchmark and regression architecture;
-17. six canonical specifications;
-18. a Video-style public README structure;
-19. open-source production repository scaffold design;
-20. Agent Skills installation and selective-installation contract;
-21. local validation and clean external installation smoke tests;
-22. cross-domain review and extraction candidates;
-23. maturity and publication acceptance gates;
-24. a research-log plan that persists substantive stage outputs as the bootstrap progresses.
+3. a complementary five-book corpus selected against domain coverage, with required substitution permissions resolved;
+4. source-access and reading-coverage records, including explicit handling of inaccessible books;
+5. traceable direct-source extraction, cross-book reconciliation and a provisional capability model;
+6. broader challenge and gap research producing an evidence-qualified domain model;
+7. domain-native workflow and artefact architecture;
+8. fidelity / cost / commitment strategy;
+9. AI skill, tool and provider research;
+10. execution-layer decisions and gap analysis;
+11. justified core Agent Skills;
+12. decomposed commands where useful;
+13. Extension Pack architecture with explicit per-pack five-book research and reviewed evidence reuse;
+14. complementary catalogue selection with separate research, implementation, evaluation and readiness status;
+15. a domain-owned pack-authoring capability applying the focused Extension Pack process;
+16. five progressive example levels;
+17. three primary examples per level selected through capability coverage;
+18. deterministic and semantic evaluation;
+19. benchmark and regression architecture;
+20. six canonical specifications;
+21. a Video-style public README structure;
+22. open-source production repository scaffold design;
+23. Agent Skills installation and selective-installation contract;
+24. local validation and clean external installation smoke tests;
+25. cross-domain review and extraction candidates;
+26. maturity and publication acceptance gates;
+27. a research-log plan that persists substantive stage outputs as the bootstrap progresses.
 
 ---
 
@@ -697,20 +759,28 @@ First create or use the minimal target repository as the bootstrap workspace. It
 
 Use production-skills/docs/bootstrap as the governing bootstrap source and read the current Production Skills family specifications and relevant recent research logs.
 
-Research the real production discipline first. Then research existing AI skills, tools, providers and open-source implementations. Compare with Video, Narrative and Music Production Skills only after the domain model is independently understood.
+Research enough of the real production discipline to specialise the bootstrap. Define Seed → Five → Challenge as separate execution stages: select five complementary books using bounded reconnaissance, directly extract and reconcile their knowledge, then challenge and extend it through broader professional research. Preserve all permission, source-access and completion gates in domain-research-process.md.
+
+Provided books: <titles / editions / files, or none>. Select complementary books for empty slots. Ask before removing, replacing or demoting any supplied book. Mark candidate selection, inaccessible sources and unperformed analysis as provisional or planned; do not claim stage completion from a reading list.
+
+Keep AI skills, tools, providers and open-source research as a subsequent stage. Compare with Video, Narrative and Music Production Skills only after the domain model is independently understood.
 
 Generate a domain-specific staged bootstrap comparable in depth to the UI/UX Design Skills bootstrap. Do not merely copy the generic stages.
 
 Persist the bootstrap specification and substantive later stage outputs under docs/research-logs/ so subsequent stages can read canonical files instead of relying on the full conversation history.
 
 The bootstrap must target:
+- a complementary five-book foundation with authorised substitutions and traceable direct-source analysis;
+- broader challenge and gap research yielding an evidence-qualified domain model;
+- standalone stage execution with substantive outputs and completion evidence committed before progression;
 - six canonical project specifications;
 - a README following the Video Production Skills public structure;
 - five progressive example levels with three carefully selected complementary examples per level;
-- a first-class Extension Pack architecture and catalogue;
-- a domain-native Extension Pack authoring skill or equivalent workflow;
-- pack showcases with exact generation prompts;
-- core-vs-pack differential evaluation;
+- a first-class Extension Pack architecture and complementary catalogue following extension-pack-process.md;
+- five justified books per pack, with reviewed evidence reuse and separate selection/extraction/challenge stages;
+- a domain-native Extension Pack authoring skill or equivalent workflow, extending an existing capability where available;
+- pack showcases with exact generation prompts, actual outputs and an independent reuse brief/fixture;
+- fair core-vs-pack differential evaluation and separate research/implementation/evaluation/readiness status;
 - deterministic, semantic, regression and installation testing;
 - local and clean external Skills CLI smoke tests;
 - cross-domain review without premature shared abstractions.
@@ -722,6 +792,8 @@ Do not scaffold the production repository yet. The minimal repository already ex
 ```
 
 Add domain-specific source material, constraints and existing repositories to that request when available.
+
+For a pack-only or catalogue-regeneration request, start from [`extension-pack-process.md`](extension-pack-process.md), identify the owning repository and its current core/pack contracts, and state whether the task is specification generation or stage execution. Do not rerun the full project bootstrap or imply completed research from generated entries.
 
 ---
 
