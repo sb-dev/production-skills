@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Add central `/bootstrap-setup <repository> <branch>` and a canonical, self-contained target `/bootstrap` payload with three internal support skills.
+- Define main-based feature branches, safe/idempotent installation, explicit replacement approvals, one-stage commits and recovery without repeated execution prompts.
+- Support private local PDFs and accessible task attachments; retain supplied-book permissions and direct-reading evidence requirements.
+- Document preinstalled Firecrawl CLI cloud setup separately from bootstrap execution; keep native web retrieval first and credentials out of repositories.
+- Add dependency-free installer fixture tests covering scope, branch/origin checks, stale writes, source privacy and name/path consistency.
 - Adopt Seed → Five → Challenge for newly generated domain bootstraps: complementary five-book selection, direct-source extraction and broader challenge research.
 - Require explicit permission before removing, replacing or demoting user-provided books; record access, examined material, coverage and decisions.
 - Require distinct research gates and substantive stage outputs committed before progression, without confusing specification generation with execution.

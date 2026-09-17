@@ -1,8 +1,8 @@
 # Production Skills Bootstrap
 
-**Status:** Canonical generation guide  
-**Version:** 1.1  
-**Date:** 10 September 2026
+**Status:** Canonical generation and bootstrap-support guide  
+**Version:** 1.2  
+**Date:** 17 September 2026
 
 This directory contains the reusable processes used to create a **custom bootstrap specification for each new Production Skills repository** and to research, create or revise Extension Packs in new or established domain repositories.
 
@@ -38,6 +38,28 @@ The minimal repository is **not** the production scaffold. Its purpose is to kee
 
 ---
 
+## Install and run bootstrap support
+
+Once the target's governing bootstrap specification exists, run this command from the central `production-skills` checkout:
+
+```text
+/bootstrap-setup sb-dev/<repository> feat/<branch>
+```
+
+The [setup skill](../../.claude/skills/bootstrap-setup/SKILL.md) inspects the target and installs the canonical [runtime payload](runtime/). New feature branches start from `main`; existing requested branches are inspected and never silently reset, rebased or replaced. The command configures only the named repository; it does not execute domain stages or migrate other repositories automatically.
+
+The target operator then uses `/bootstrap` to resume from verified repository state. The stage executor performs substantive work, verifies and repairs it, commits and pushes one stage, and continues without repeated prompts. Required source permissions and domain acceptance gates remain intact.
+
+Bootstrap support under `.claude/skills/` is development tooling, not the domain's production scaffold or proof of maturity. It has no central-checkout runtime dependency and does not introduce a shared domain-production engine. Domain evidence rules remain in the governing specification; execution contracts and progress remain under `docs/research-logs/`. There is no `.claude/bootstrap/` profile layer.
+
+Use these companion processes without weakening the generation requirements below:
+
+- [Setup, execution, branch safety and migration](execution-process.md).
+- [Native-first research, supplied PDFs/attachments and evidence handling](research-tooling-process.md).
+- [Cloud Firecrawl preinstallation](claude-code-web-firecrawl-setup.md), separate from running the bootstrap.
+
+The canonical payload contains `bootstrap`, `bootstrap-stage-execution`, `bootstrap-research`, `direct-source-extraction`, the operator guide and the execution-contract template. The installer keeps generic skills identical across domains, preserves local changes, and treats repeat installations as no-ops. See [implementation evidence and limitations](../research-logs/2026-09-17-bootstrap-runtime-and-setup.md).
+
 ## Source processes
 
 Use all relevant files in this directory when generating a bootstrap:
@@ -45,7 +67,9 @@ Use all relevant files in this directory when generating a bootstrap:
 - [`new-project-process.md`](new-project-process.md) — family-level project progression and maturity model;
 - [`domain-research-process.md`](domain-research-process.md) — the authoritative Seed → Five → Challenge method, including book selection, permission, source access, extraction and broader research;
 - [`extension-pack-process.md`](extension-pack-process.md) — complementary catalogue curation and per-pack five-book research, implementation, evaluation and installation gates;
-- [`shared-abstraction-process.md`](shared-abstraction-process.md) — how to prevent premature cross-domain abstractions.
+- [`shared-abstraction-process.md`](shared-abstraction-process.md) — how to prevent premature cross-domain abstractions;
+- [`execution-process.md`](execution-process.md) — installation, stage execution, recovery and safe repository changes;
+- [`research-tooling-process.md`](research-tooling-process.md) — native-first retrieval and supplied-source handling.
 
 Also read the current family specifications under [`../specs/`](../specs/) and the most recent relevant research logs under [`../research-logs/`](../research-logs/).
 

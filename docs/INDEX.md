@@ -9,7 +9,12 @@
 
 ## Bootstrap
 
-- `bootstrap/README.md` — how to generate a custom domain bootstrap specification
+- `bootstrap/README.md` — custom domain bootstrap generation and canonical setup/execution support
+- [`bootstrap/execution-process.md`](bootstrap/execution-process.md) — central `/bootstrap-setup`, target `/bootstrap`, safe branches, migration and recovery
+- [`bootstrap/research-tooling-process.md`](bootstrap/research-tooling-process.md) — native-first research, Firecrawl escalation, PDFs and accessible task attachments
+- [`bootstrap/claude-code-web-firecrawl-setup.md`](bootstrap/claude-code-web-firecrawl-setup.md) — cloud environment setup and verification only
+- [`bootstrap/runtime/`](bootstrap/runtime/) — canonical target skills, guide and execution-contract template
+- [`bootstrap-setup` skill](../.claude/skills/bootstrap-setup/SKILL.md) — runs from the central checkout; installs only explicitly named targets
 - `bootstrap/new-project-process.md` — canonical family-level project progression
 - [`bootstrap/domain-research-process.md`](bootstrap/domain-research-process.md) — Seed → Five → Challenge, corpus permissions, source access, extraction and broader research
 - [`bootstrap/extension-pack-process.md`](bootstrap/extension-pack-process.md) — complementary catalogue curation, five books per pack with evidence reuse, implementation and proof gates
@@ -34,6 +39,7 @@ Under `../templates/`:
 
 ## Research
 
+- [`research-logs/2026-09-17-bootstrap-runtime-and-setup.md`](research-logs/2026-09-17-bootstrap-runtime-and-setup.md) — pilot provenance, canonicalisation, fixture validation and live-test boundary
 - [`research-logs/2026-09-10-extension-pack-bootstrap-research-foundation.md`](research-logs/2026-09-10-extension-pack-bootstrap-research-foundation.md) — pack research decision, review scenarios and domain-adoption boundary
 - [`research-logs/2026-09-10-five-book-bootstrap-research-foundation.md`](research-logs/2026-09-10-five-book-bootstrap-research-foundation.md) — five-book bootstrap decision and explicit migration boundary
 - `research-logs/2026-09-07-ui-ux-design-skills-new-project-bootstrap-process.md`
@@ -47,6 +53,7 @@ Under `../templates/`:
 ## Decisions
 
 - `decisions/0001-no-shared-production-runtime.md`
+- [`decisions/0002-canonical-bootstrap-support.md`](decisions/0002-canonical-bootstrap-support.md)
 
 ## Schemas and conformance
 
@@ -54,3 +61,4 @@ Under `../templates/`:
 - `../schemas/family-conformance.schema.json`
 - `../tooling/audit-project.mjs`
 - `../tooling/validate-registry.mjs`
+- [`bootstrap setup fixture tests`](../tests/bootstrap-setup.test.mjs)
