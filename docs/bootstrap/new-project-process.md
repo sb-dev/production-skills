@@ -1,8 +1,8 @@
 # New Production Skills Project Bootstrap Process
 
 **Status:** Canonical process  
-**Version:** 1.4  
-**Date:** 10 September 2026
+**Version:** 1.5  
+**Date:** 11 September 2026
 
 This process creates a new Production Skills project without prematurely forcing it into abstractions derived from other domains.
 
@@ -25,6 +25,7 @@ The domain-specific bootstrap is then executed stage by stage, with substantive 
 - Preserve approved work and correct the smallest sufficient scope.
 - Treat examples, evaluation, Extension Packs and installability as product behaviour.
 - Keep Production Skills independently usable without Pactwright.
+- Treat the target root README as a public product surface; keep bootstrap stage/maturity bookkeeping in `docs/research-logs/` and apply [`public-readme-process.md`](public-readme-process.md).
 - Share abstractions only after at least two independent production domains demonstrate substantially the same need.
 
 ## Stage execution and compatibility
@@ -35,7 +36,7 @@ Execute every stage as a standalone task. Read its required inputs and prior dec
 
 Generating a domain-specific bootstrap defines the stages; it does not mark them complete. Review and reuse existing persisted evidence where it satisfies a stage, without claiming unperformed work or repeating adequate research unnecessarily.
 
-This sequence applies to newly generated bootstraps. Existing domain projects require explicit migration decisions that preserve their corpus, completed work and stage identifiers. This family revision does not automatically renumber active bootstraps or alter project maturity.
+This sequence applies to newly generated bootstraps. Existing domain projects require explicit migration decisions that preserve their corpus, completed work and stage identifiers. This family revision does not automatically renumber active bootstraps or alter project maturity. If an active bootstrap has already completed its public-README or scaffold stage, append a conformance/migration stage rather than rewriting completed history.
 
 ---
 
@@ -391,17 +392,25 @@ Generate these specifications from the persisted research logs, not by reconstru
 
 ## Stage 12 — Design the public README
 
-Use the proven `video-production-skills` README structure as the family reference while adapting the content to the domain.
+Apply [`public-readme-process.md`](public-readme-process.md) and adapt [`public-readme-template.md`](public-readme-template.md) to the domain. Video and Narrative Production Skills remain useful reference implementations, but the template/process are the canonical family contract for new bootstraps.
 
-The README should make visible:
+Produce three separate outputs:
+
+1. **Complete target public README** — the exact intended root README for the finished Production Skills product.
+2. **Domain README contract** — domain-specific section names, control model, skill sections, example progression and justified deviations from the family template.
+3. **Public claims ledger** — material public claims and the implementation/evidence gate required before final publication.
+
+The target README must expose the public product rather than the current intermediate bootstrap state. Keep stage status, maturity bookkeeping, completion SHAs, verification counts and implementation gaps in `docs/research-logs/`.
+
+The README must include, where applicable:
 
 - positioning and production capabilities;
-- approval / cost / fidelity control;
+- the domain-native approval / cost / fidelity / evidence / commitment control model;
 - installation;
-- a strong Level 1 quick start;
+- a strong Level 1 quick start with the complete copyable prompt inline;
 - five progressive levels with three primary examples each;
 - project structure that grows with the work;
-- core skills;
+- substantive sections for every core skill;
 - Extension Packs;
 - execution layer;
 - testing / benchmark entry points;
@@ -409,9 +418,9 @@ The README should make visible:
 - project boundary;
 - contribution and licence information.
 
-The minimal bootstrap README is replaced or expanded only now, once the product surface is designed from canonical specifications.
+Public example navigation should target public `examples/` surfaces rather than making bootstrap research logs part of normal onboarding.
 
-**Exit:** the repository has a clear public product surface rather than only a bootstrap status page.
+**Exit:** the complete target README, domain README contract and internal claims ledger exist and conform to the public README process.
 
 ## Stage 13 — Scaffold the production repository
 
@@ -434,15 +443,25 @@ tools/ and tests/ where useful
 
 Preserve `docs/research-logs/` as the historical design record.
 
+Adopt the accepted Stage 12 target README. Scaffold-time README changes are mechanical publication changes only: link rebasing, intentional repository-name substitution, licence linking, switching to newly created public example paths, or correction of a factual repository path.
+
+Do **not** independently rewrite positioning, quick start, 5 × 3 progression, skill explanations or product limitations around current bootstrap status. Do not insert internal stage/maturity narration into the public product surface.
+
+If substantive README content must change, return to the README-design responsibility. For an active historical bootstrap whose earlier stages are already complete, append a new README conformance/migration stage instead of rewriting completed history.
+
+Add deterministic README conformance checks with the scaffold. They should verify required sections, the inline Level 1 prompt, 5 × 3 progression, substantive skill sections, public example paths, local links and absence of bootstrap-stage leakage.
+
 Do not create empty structure solely for visual symmetry.
 
-**Exit:** a contributor can navigate the intended production project structure.
+**Exit:** a contributor can navigate the intended production project structure, and the accepted public README design is preserved mechanically rather than redesigned by the scaffold stage.
 
 ## Stage 14 — Implement and prove the core vertical
 
 Implement the minimum core skills and supporting commands needed to complete one meaningful end-to-end domain workflow.
 
 Use one representative progressive example to prove the vertical path before broad implementation.
+
+Update the internal public claims ledger with the evidence produced by this stage. Do not inject stage-status prose into the public README.
 
 **Exit:** installed core skills can produce and evaluate one realistic production end to end.
 
@@ -464,6 +483,8 @@ pack authoring can create or revise a valid pack
 
 Every implemented catalogue pack must include a realistic showcase with the exact generation prompt and behavioural evaluation coverage. Catalogue readiness also requires clean consumer-project installation/use evidence; keep local checks, research completion, implementation and measured evaluation distinct.
 
+Update the internal public claims ledger with actual example/pack evidence. Do not turn the README into a progress report.
+
 **Exit:** the project's main production capabilities and specialisation mechanism are demonstrated rather than merely specified.
 
 ## Stage 16 — Validate installation and repository integrity
@@ -472,6 +493,7 @@ Validate:
 
 - repository contracts;
 - deterministic checks;
+- public README conformance and absence of internal bootstrap-state leakage;
 - skill self-containment;
 - selective installation where supported;
 - project-local Skills CLI installation;
@@ -480,6 +502,8 @@ Validate:
 - no undocumented repository-relative runtime dependencies.
 
 Keep local validation and clean external installation as separate gates.
+
+Reconcile installation-related public claims in the internal claims ledger with the actual clean-consumer evidence.
 
 **Exit:** the repository works as an installable Agent Skills product, not only inside its source checkout.
 
@@ -504,6 +528,8 @@ proposed → researching → specified → scaffolded → working → benchmarke
 Repository creation alone does not change maturity. A bootstrap workspace may remain `proposed`; `researching` requires substantive research evidence, and `scaffolded` requires the production scaffold from Stage 13.
 
 A maturity label must describe demonstrated repository behaviour, not planned architecture.
+
+Before final publication/merge, reconcile the complete public claims ledger. Keep supported claims, narrow partially supported claims, remove non-essential unsupported claims, and block publication when a mandatory public promise lacks its required evidence. Do not solve an unsupported claim by adding bootstrap-stage caveats to the public README.
 
 ## Stage 19 — Review shared abstraction candidates
 
