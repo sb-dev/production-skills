@@ -2,7 +2,7 @@
 
 Central design, research, governance, and project-family repository for the `sb-dev` Production Skills ecosystem.
 
-Production Skills are independent Agent Skills projects that encode reusable production expertise for domains such as narrative, music, video, advertising, graphic novels, game development, software engineering, deep research, UI/UX, legal, business building, world/environment production, 3D, characters, animation, sound, and QA/evaluation.
+Production Skills are independent Agent Skills projects that encode reusable production expertise for domains such as narrative, music, video, advertising, graphic novels, game development, software engineering, deep research, knowledge design, UI/UX, legal, business building, world/environment production, 3D, characters, animation, sound, and QA/evaluation.
 
 This repository **does not implement those domain workflows and does not own consuming-project specifications**. It defines the family contract, holds genuinely cross-domain research, coordinates creation and maturity of Production Skills projects, and records only abstractions that have earned promotion through evidence from multiple domains.
 
@@ -29,6 +29,7 @@ These repositories provide the strongest current evidence for the family archite
 - [`game-development-skills`](https://github.com/sb-dev/game-development-skills)
 - [`software-engineering-skills`](https://github.com/sb-dev/software-engineering-skills)
 - [`deep-research-skills`](https://github.com/sb-dev/deep-research-skills)
+- [`knowledge-design-skills`](https://github.com/sb-dev/knowledge-design-skills)
 - [`legal-skills`](https://github.com/sb-dev/legal-skills)
 - [`business-building-skills`](https://github.com/sb-dev/business-building-skills)
 - [`advertising-production-skills`](https://github.com/sb-dev/advertising-production-skills)
@@ -46,6 +47,8 @@ These repositories provide the strongest current evidence for the family archite
 `advertising-production-skills` is planned as the advertising-production layer between approved business acquisition strategy and specialist creative execution. It owns campaign briefs, message/claim/proof architecture, creative strategy, cross-format variants, media plans, audience hypotheses, campaign experiments, measurement, creative-fatigue management and campaign optimisation while preserving boundaries with Business Building, Legal, Narrative, Video, Audio and UI/UX.
 
 `graphic-novel-production-skills` is planned as the sequential visual storytelling layer between approved narrative and publication-ready graphic-novel editions. It owns narrative-to-page adaptation, page/panel scripting, reading order, page-turn design, visual continuity, lettering, colour/value hierarchy and print/digital packaging while preserving boundaries with Narrative, Character Performance, 3D, Video, Legal and generic image-production tooling.
+
+`knowledge-design-skills` is planned as a toolkit for producing, adapting and reviewing explanations for different audiences and media. It will evaluate meaning preservation, clarity, factual support and human comprehension separately, and provide content handoffs to Video Production and UI/UX Design. Its [domain bootstrap](https://github.com/sb-dev/knowledge-design-skills/blob/main/docs/research-logs/2026-10-11-knowledge-design-skills-new-project-bootstrap-process.md) sets out the planned work; the production skills and evaluations have not yet been implemented.
 
 The family independently supports a common production principle:
 

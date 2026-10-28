@@ -1,0 +1,14 @@
+{
+  "id": "knowledge-design-skills",
+  "repository": "https://github.com/sb-dev/knowledge-design-skills",
+  "domain": "knowledge-design",
+  "status": "proposed",
+  "capabilities": [
+    "explanation-production",
+    "explanation-adaptation",
+    "explanation-review",
+    "meaning-preservation",
+    "comprehension-evaluation"
+  ],
+  "pactwright": "planned"
+}
