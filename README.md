@@ -48,7 +48,7 @@ These repositories provide the strongest current evidence for the family archite
 
 `graphic-novel-production-skills` is planned as the sequential visual storytelling layer between approved narrative and publication-ready graphic-novel editions. It owns narrative-to-page adaptation, page/panel scripting, reading order, page-turn design, visual continuity, lettering, colour/value hierarchy and print/digital packaging while preserving boundaries with Narrative, Character Performance, 3D, Video, Legal and generic image-production tooling.
 
-`knowledge-design-skills` is planned as a toolkit for producing, adapting and reviewing explanations for different audiences and media. It will evaluate meaning preservation, clarity, factual support and human comprehension separately, and provide content handoffs to Video Production and UI/UX Design. Its [domain bootstrap](https://github.com/sb-dev/knowledge-design-skills/blob/main/docs/research-logs/2026-10-11-knowledge-design-skills-new-project-bootstrap-process.md) sets out the planned work; the production skills and evaluations have not yet been implemented.
+`knowledge-design-skills` is planned as a Production Skills family for producing, adapting and reviewing explanations across audiences and media. It owns audience assumptions, explanatory scope, concept sequencing, examples, meaning preservation and separate clarity, factual-support and comprehension evaluations while preserving boundaries with subject specialists, Video Production and UI/UX Design.
 
 The family independently supports a common production principle:
 
